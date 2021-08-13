@@ -1,6 +1,6 @@
 --- 
 title: "My Knowledge Database for Websites"
-author: "YOUR NAME HERE"
+author: "Joffrey Anthony"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
