@@ -19,7 +19,7 @@ site: bookdown::bookdown_site
 4) **Create a Public & Private SSH-Key** in order to not always type in your password. Follow the instruction of [this Youtube-Tutorial (ab 2:40-4:03)](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=2m40s).
 5) In order **to be able to use the SSH-Key**, you need to follow my instruction in the Video on my local computer, situated on the following path: `/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov`
 
-## Bookdown-Frontend: Website
+## Create a Bookdown-Website
 
-1) Use the following [Bookdown-Template](https://github.com/jtr13/bookdown-template) to create an awesome website like this one.
+1) Use [this Bookdown-Template](https://github.com/jtr13/bookdown-template) to create an awesome website like this one, you are currently at right now.
 2) Follow all [the instruction of this 5 Minutes Youtube-Video](https://www.youtube.com/watch?v=m5D-yoH416Y).
