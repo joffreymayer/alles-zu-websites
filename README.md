@@ -1,5 +1,9 @@
 ### Welcome to my new database around Websites
 
+### Comand to Activate SSH-Key for this Repo
+
+- Use `git remote set-url origin git@github.com:joffreymayer/alles-zu-websites.git` to activate it.
+
 ### Some useful commands
 
 - Render locally with `bookdown::render_book("index.Rmd")`.
