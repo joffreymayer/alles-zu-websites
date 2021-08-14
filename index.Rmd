@@ -253,7 +253,7 @@ Hier eine Auflistung aller grammatikalischen Punkte, bei denen ich schon Problem
 - **skurril** = seltsam, **befremdlich**
 - sublim = erhaben, verfeinert
 - **subtil** = mit Feingefühl, mit Sorgfalt
-- **superb** = ausgezeichnet, vorzüglich
+- **superb** = ausgezeichnet, vorzüglich, aussergewöhnlich
 - tolerabel = annehmbar, **erträglich**
 - tradiert = überliefert, traditionell
 - triumphant = triumphierend, siegreich, erfolgreich
