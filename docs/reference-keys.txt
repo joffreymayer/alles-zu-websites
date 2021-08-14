@@ -1,15 +1,3 @@
-tees-wörterbuch
-fachwörter
-marken-artikel
-bindewörter
-synonyme
-ausdrücke
-grammatik
-alles-oder-alles
-als-erstes-oder-als-erstes
-weder-noch-mit-komma-oder-ohne
-von-tee-häufig-verwendet-wörter
-sonstige-nützliche-adjektive
-effizientes-korrigieren
-methode-um-schnell-effizient-korrekturen-vorzunehmen
+set-up
+beispiel-2
 a-caucus-race-and-a-long-tale
