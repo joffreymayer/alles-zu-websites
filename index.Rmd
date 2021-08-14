@@ -9,13 +9,15 @@ site: bookdown::bookdown_site
 
 ## Backend: Git & Github
 
-1) Create a [Github-Account](https://github.com).
-2) We also need to [download Git](https://git-scm.com/download), a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.
-3) Next, we need to **link our Github-Account to Git**. To do this, use the Terminal and type in the following two commands: 
+1) Create a **[Github-Account](https://github.com)**.
+2) We also need to **[download Git](https://git-scm.com/download)**, a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.
+3) Next, we need to **link our Github-Account to Git**. To do this, use the Terminal and type in the following two commands:
+
   3.1) `git config --global user.name "YOUR GIBHUB USERNAME HERE"`
   3.2) `git config --global user.email "your_github_email@example.com"`
-4) Create a Public & Private SSH-Key in order to not always type in your password. Follow the instruction of [this Youtube-Tutorial (ab 2:40-4:03)](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=2m40s).
-5) The SSH-Key will not work yet. For it to work, you need to follow my instruction in the Video on my local computer, situated on the following path: `/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov`
+  
+4) **Create a Public & Private SSH-Key** in order to not always type in your password. Follow the instruction of [this Youtube-Tutorial (ab 2:40-4:03)](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=2m40s).
+5) In order **to be able to use the SSH-Key**, you need to follow my instruction in the Video on my local computer, situated on the following path: `/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov`
 
 ## Bookdown-Frontend: Website
 
