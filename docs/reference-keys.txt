@@ -1,5 +1,6 @@
 set-up
 backend-git-github
 create-a-bookdown-website
-beispiel-2
+seo
+pdfs
 a-caucus-race-and-a-long-tale

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My Knowledge Database for Websites</title>
-  <meta name="description" content="My Knowledge Database for Websites" />
+  <title>Chapter 2 SEO | My Knowledge Database for Websites</title>
+  <meta name="description" content="Chapter 2 SEO | My Knowledge Database for Websites" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My Knowledge Database for Websites" />
+  <meta property="og:title" content="Chapter 2 SEO | My Knowledge Database for Websites" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My Knowledge Database for Websites" />
+  <meta name="twitter:title" content="Chapter 2 SEO | My Knowledge Database for Websites" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="seo.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="a-caucus-race-and-a-long-tale.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -100,33 +100,50 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">My Knowledge Database for Websites</h1>
-<p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-08-15</em></p>
+<div id="seo" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> SEO</h1>
+<p>Für die Webseiten-Indexierung innerhalb der Google-Suchmaschine ist es von grösster Bedeutung, dass du die Kunst des <em>Seo</em> (Search Engine Optimization) beherrschts.</p>
+<div id="pdfs" class="section level2">
+<h2><span class="header-section-number">2.1</span> PDFs</h2>
+<p>Ein PDF wird von Google grundsätzlich automatisch in die Suchmaschine aufgenommen. Oftmals verwendest du PDFs jedoch als Ergänzungen zu den</p>
+<ul>
+<li>Type in the following into you <code>.htaccess</code>-File, <strong>for Appache-Servers</strong>:</li>
+</ul>
+<pre><code>&lt;Files ~ &quot;\.pdf$&quot;&gt;
+  Header set X-Robots-Tag &quot;noindex, nofollow&quot;
+&lt;/Files&gt;</code></pre>
+<ul>
+<li>If you have <strong>NGINX</strong>, you need this code instead:</li>
+</ul>
+<pre><code>location ~* \.pdf$ {
+  add_header X-Robots-Tag &quot;noindex, nofollow&quot;;
+}</code></pre>
+<p>To check if it worked, you need to view the <code>HTTP Header</code> of your PDF. You can do this via the <em>developer tools</em> in the Google Chrome Browser (by hitting <code>F12</code>).</p>
+<div class="figure">
+<img src="docs/bilder/seo/developer-tool-pdf.png" alt="" />
+<p class="caption">Developer-Tools</p>
 </div>
-<div id="set-up" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Set-Up</h1>
-<div id="backend-git-github" class="section level2">
-<h2><span class="header-section-number">1.1</span> Backend: Git &amp; Github</h2>
-<ol style="list-style-type: decimal">
-<li>Create a <strong><a href="https://github.com">Github-Account</a></strong>.</li>
-<li>We also need to <strong><a href="https://git-scm.com/download">download Git</a></strong>, a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.</li>
-<li>Next, we need to <strong>link our Github-Account to Git</strong>. To do this, use the Terminal and type in the following two commands:</li>
-</ol>
-<p>3.1) <code>git config --global user.name "YOUR GIBHUB USERNAME HERE"</code>
-3.2) <code>git config --global user.email "your_github_email@example.com"</code></p>
-<ol start="4" style="list-style-type: decimal">
-<li><strong>Create a Public &amp; Private SSH-Key</strong> in order to not always type in your password. Follow the instruction of <a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=2m40s">this Youtube-Tutorial (ab 2:40-4:03)</a>.</li>
-<li>In order <strong>to be able to use the SSH-Key</strong>, you need to follow my instruction in the Video on my local computer, situated on the following path: <code>/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov</code></li>
-</ol>
+<p>For a more precise explanation, I recommend <a href="https://mkyong.com/computer-tips/how-to-view-http-headers-in-google-chrome/">this site</a>.</p>
+<div class="figure">
+<img src="docs/bilder/seo/x-robots-tag-in-devtool.png" alt="" />
+<p class="caption">This is the output you should see being printed</p>
 </div>
-<div id="create-a-bookdown-website" class="section level2">
-<h2><span class="header-section-number">1.2</span> Create a Bookdown-Website</h2>
-<ol style="list-style-type: decimal">
-<li>Use <a href="https://github.com/jtr13/bookdown-template">this Bookdown-Template</a> to create an awesome website like this one, you are currently at right now.</li>
-<li>Follow all <a href="https://www.youtube.com/watch?v=m5D-yoH416Y">the instruction of this 5 Minutes Youtube-Video</a>.</li>
-</ol>
+<ul>
+<li>If the solution above does not work, I have found an alternative way:</li>
+</ul>
+<pre><code>&lt;FilesMatch &quot;.pdf$&quot;&gt;
+  Header set X-Robots-Tag &quot;noindex, nofollow&quot;
+&lt;/FilesMatch&gt;</code></pre>
+<ul>
+<li>Quelle: (Google Developers, Teil 1)[<a href="https://developers.google.com/search/docs/advanced/robots/robots_meta_tag" class="uri">https://developers.google.com/search/docs/advanced/robots/robots_meta_tag</a>]</li>
+</ul>
+<blockquote>
+<p>How can I prevent my PDF files from appearing in search results; or if they already do, how can I remove them?</p>
+</blockquote>
+<p>The simplest way to prevent PDF documents from appearing in search results is to add an X-Robots-Tag: <code>noindex</code> in the HTTP header used to serve the file. If they’re already indexed, they’ll drop out over time if you use the X-Robot-Tag with the <code>noindex</code> directive. For faster removals, you can use the URL removal tool in Google Webmaster Tools.</p>
+<ul>
+<li>Quelle: <a href="https://developers.google.com/search/blog/2011/09/pdfs-in-google-search-results#:~:text=Q%3A%20How%20can%20I%20prevent,used%20to%20serve%20the%20file.">Google-Developers, Teil 2</a></li>
+</ul>
 
 </div>
 </div>
@@ -135,8 +152,8 @@
           </div>
         </div>
       </div>
-
-<a href="seo.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a-caucus-race-and-a-long-tale.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -168,7 +185,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/alles-zu-websites/edit/master/index.Rmd",
+"link": "https://github.com/joffreymayer/alles-zu-websites/edit/master/02-seo.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -176,7 +193,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/alles-zu-websites/blob/master/index.Rmd",
+"link": "https://github.com/joffreymayer/alles-zu-websites/blob/master/02-seo.Rmd",
 "text": null
 },
 "download": null,
