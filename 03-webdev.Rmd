@@ -1,0 +1,7 @@
+# Webdevelopment
+
+Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
+
+## Synonyme 
+
+- **Toggle** // Ein- & Ausschaltknopf

@@ -2,6 +2,18 @@
 
 Für die Webseiten-Indexierung innerhalb der Google-Suchmaschine ist es von grösster Bedeutung, dass du die Kunst des *Seo* (Search Engine Optimization) beherrschts.
 
+## Outline
+
+Das Wichtigste, damit deine Webseite auf dem Internet effizient in der Google-Suche gefunden wird - idealerweise auf `#1` - ist eine **"korrekte" HTML-Struktur (= _Outline_)** zu haben. 
+
+- **Seite, um dein aktuelles Outline zu checken**: https://gsnedders.html5.org/outliner/
+
+![Beispiel, für ein korrektes Outline für das Keyword **Accuphase** und der URL `https://audiophil-dreams.com/accuphase.html`](./bilder/seo/beispiel-korrekte-struktur.png)
+
+### Wenn dein Outline "falsch" ist
+
+Falls du nicht zufrieden bist mit deinem aktuellen Outline, dann empfehle ich dir die folgende Methode: https://www.youtube.com/watch?v=QDq-KVE5ZSA
+
 ## PDFs
 
 Ein PDF wird von Google grundsätzlich automatisch in die Suchmaschine aufgenommen. Oftmals verwendest du PDFs jedoch als Ergänzungen zu den 
