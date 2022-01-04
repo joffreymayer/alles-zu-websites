@@ -87,7 +87,9 @@
 <li class="chapter" data-level="3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#synonyme"><i class="fa fa-check"></i><b>3.1</b> Synonyme</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS</a><ul>
-<li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#relative-font-size"><i class="fa fa-check"></i><b>4.1</b> Relative Font-Size</a></li>
+<li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#relative-font-size"><i class="fa fa-check"></i><b>4.1</b> Relative Font-Size</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="css.html"><a href="css.html#weisse-hyper-links"><i class="fa fa-check"></i><b>4.1.1</b> Weisse Hyper-Links</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -114,11 +116,16 @@
 <h2><span class="header-section-number">4.1</span> Relative Font-Size</h2>
 <p>Wenn man eine Webeite für den Screen, für das Tablet UND für das Telefon gleichzeitig designt, dann spielen die relative <code>font-size</code> eine Rolle.</p>
 <p>Hierfür bietet <code>CSS</code> eine Reihe von verschiedenen <code>units</code> an:</p>
-<div class="figure">
-<img src="./bilder/css/font-size-units.png" alt="" />
-<p class="caption">All the different <code>font-size</code> values that you can choose from in <code>CSS</code></p>
-</div>
+<p><img src="./bilder/css/font-size-units.png" alt="All the different font-size values that you can choose from in CSS" />
+## Hover-Effekte</p>
+<div id="weisse-hyper-links" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Weisse Hyper-Links</h3>
+<p>Für eine Navigation mit weisser Farbe (= <code>#fff</code>) empfiehlt sich folgender Code für das Hovern mit der Maus, über den Link:</p>
+<pre><code>.link:hover{
+    color: #c7c7c7; /* Das ist ein leicht dunkleres Weiss, beinahe grau, ohne, dass es störend wirkt. */
+}</code></pre>
 
+</div>
 </div>
 </div>
             </section>

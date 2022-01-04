@@ -7,3 +7,14 @@ Wenn man eine Webeite für den Screen, für das Tablet UND für das Telefon glei
 Hierfür bietet `CSS` eine Reihe von verschiedenen `units` an: 
 
 ![All the different `font-size` values that you can choose from in `CSS`](./bilder/css/font-size-units.png)
+## Hover-Effekte
+
+### Weisse Hyper-Links
+
+Für eine Navigation mit weisser Farbe (= `#fff`) empfiehlt sich folgender Code für das Hovern mit der Maus, über den Link: 
+
+```
+.link:hover{
+    color: #c7c7c7; /* Das ist ein leicht dunkleres Weiss, beinahe grau, ohne, dass es störend wirkt. */
+}
+```
