@@ -1,0 +1,5 @@
+# JavaScript
+
+## Definitionen
+
+- **(Normal) Queue**: Given that you have a list // array: a "normal queue" adds new items to the back, picks item from the front of the list.
