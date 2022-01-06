@@ -2,4 +2,7 @@
 
 ## Definitionen
 
+- **Callback Function**: This is a function, which will be called by another function some time in the future. It is possible, that this function is called (by the other function) multiple times in the future.
 - **(Normal) Queue**: Given that you have a list // array: a "normal queue" adds new items to the back, picks item from the front of the list.
+- **Deffering Images**: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.
+

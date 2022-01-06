@@ -243,6 +243,13 @@ Hierfür bietet `CSS` eine Reihe von verschiedenen `units` an:
 
 ![All the different `font-size` values that you can choose from in `CSS`](./bilder/css/font-size-units.png)
 
+## Advanced Positioning
+
+- `transform: translate(x,y)`: Dies erlaubt, ein Objekt zu bewegen entlang der x- und y-Achse des PCs.
+
+![Hier ein Beispiel, wie man `translate(2,1)` anwendet zur Illustration](./bilder/css/translate-beispiel.png)
+
+
 ## Hover-Effekte
 
 ### Weisse Hyper-Links
