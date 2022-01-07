@@ -2,7 +2,9 @@
 
 ## Definitionen
 
-- **Callback Function**: This is a function, which will be called by another function some time in the future. It is possible, that this function is called (by the other function) multiple times in the future.
+- **Callback Function**: [A 25 seconds Video](https://www.youtube.com/watch?v=587qclhguQg&t=10s) that explains this concept. 
+  - <u>In my words</u>: This is a function, which will be called // executed by another function - `onClick()` is an example of such a function, which is an `Event` that occurs, when a User clicks on a `button` - some time in the future // right _after_ you executed the first function (`onClick()`). It is possible, that this function is called (by the other function) multiple times in the future.
+  - <u>Note</u>: Callback Functions - that are activated by Events - are one of the most important concepts of `JavaScript`!
 - **(Normal) Queue**: Given that you have a list // array: a "normal queue" adds new items to the back, picks item from the front of the list.
 - **Deffering Images**: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.
 
@@ -17,4 +19,10 @@
 - <u>2 possible Solutions to the Problem above</u>: 
   1) Put the `<script>`-Tag at the very bottom of your page, since this will cause the browser to always read the `JavaScript`, when everything else is loaded.
   2) If you want, you can still put your `<script>` into the `<head>`-section at the very top of the page, but the `<script>`-Tag must contain a `async` property, like it is shown in [this video, 2:47-3:30](https://www.youtube.com/watch?v=YeFzkC2awTM&t=2m47s). This will make sure the `script` is loaded SIMULTANEOUSLY to the `<body>`, hence removing the default-behavior of "stop loading everything else when loading a `<script>`-Tag". However, we - furthermore - will also need to tell `JavaScript`, that it should only start looking for the HTML-elements to interact with, when the **entire** `<body>` has already been loaded. This can be achieved by checking the `readyState`. [This video, 16:06-18:22](https://www.youtube.com/watch?v=YeFzkC2awTM&t=16m6s) shows how to do it.
+
+## Important `JavaScript`-Methods
+
+- `.html()` = This allows you to change the content of an HTML-element. For example, if you want to change something you have written in a Paragraph.
+- `.position()` = This allows you to change the position of an HTML-element on the page.
+- `.value()` = This allows you to access the value of an HTML-element. For example, if you have a slider (= that goes from a maximum to a minimum value), you can retrieve its value by using this `.value()`-method).
 

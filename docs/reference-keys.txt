@@ -37,3 +37,4 @@ sonstiges
 javascript
 definitionen-1
 important-questions-to-know-about
+important-javascript-methods

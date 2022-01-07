@@ -121,6 +121,7 @@
 <li class="chapter" data-level="5" data-path="javascript.html"><a href="javascript.html"><i class="fa fa-check"></i><b>5</b> JavaScript</a><ul>
 <li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#definitionen-1"><i class="fa fa-check"></i><b>5.1</b> Definitionen</a></li>
 <li class="chapter" data-level="5.2" data-path="javascript.html"><a href="javascript.html#important-questions-to-know-about"><i class="fa fa-check"></i><b>5.2</b> Important Questions to know about</a></li>
+<li class="chapter" data-level="5.3" data-path="javascript.html"><a href="javascript.html#important-javascript-methods"><i class="fa fa-check"></i><b>5.3</b> Important <code>JavaScript</code>-Methods</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -146,7 +147,11 @@
 <div id="definitionen-1" class="section level2">
 <h2><span class="header-section-number">5.1</span> Definitionen</h2>
 <ul>
-<li><strong>Callback Function</strong>: This is a function, which will be called by another function some time in the future. It is possible, that this function is called (by the other function) multiple times in the future.</li>
+<li><strong>Callback Function</strong>: <a href="https://www.youtube.com/watch?v=587qclhguQg&amp;t=10s">A 25 seconds Video</a> that explains this concept.
+<ul>
+<li><u>In my words</u>: This is a function, which will be called // executed by another function - <code>onClick()</code> is an example of such a function, which is an <code>Event</code> that occurs, when a User clicks on a <code>button</code> - some time in the future // right <em>after</em> you executed the first function (<code>onClick()</code>). It is possible, that this function is called (by the other function) multiple times in the future.</li>
+<li><u>Note</u>: Callback Functions - that are activated by Events - are one of the most important concepts of <code>JavaScript</code>!</li>
+</ul></li>
 <li><strong>(Normal) Queue</strong>: Given that you have a list // array: a “normal queue” adds new items to the back, picks item from the front of the list.</li>
 <li><strong>Deffering Images</strong>: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.</li>
 </ul>
@@ -164,6 +169,14 @@
 <li>Put the <code>&lt;script&gt;</code>-Tag at the very bottom of your page, since this will cause the browser to always read the <code>JavaScript</code>, when everything else is loaded.</li>
 <li>If you want, you can still put your <code>&lt;script&gt;</code> into the <code>&lt;head&gt;</code>-section at the very top of the page, but the <code>&lt;script&gt;</code>-Tag must contain a <code>async</code> property, like it is shown in <a href="https://www.youtube.com/watch?v=YeFzkC2awTM&amp;t=2m47s">this video, 2:47-3:30</a>. This will make sure the <code>script</code> is loaded SIMULTANEOUSLY to the <code>&lt;body&gt;</code>, hence removing the default-behavior of “stop loading everything else when loading a <code>&lt;script&gt;</code>-Tag”. However, we - furthermore - will also need to tell <code>JavaScript</code>, that it should only start looking for the HTML-elements to interact with, when the <strong>entire</strong> <code>&lt;body&gt;</code> has already been loaded. This can be achieved by checking the <code>readyState</code>. <a href="https://www.youtube.com/watch?v=YeFzkC2awTM&amp;t=16m6s">This video, 16:06-18:22</a> shows how to do it.</li>
 </ol></li>
+</ul>
+</div>
+<div id="important-javascript-methods" class="section level2">
+<h2><span class="header-section-number">5.3</span> Important <code>JavaScript</code>-Methods</h2>
+<ul>
+<li><code>.html()</code> = This allows you to change the content of an HTML-element. For example, if you want to change something you have written in a Paragraph.</li>
+<li><code>.position()</code> = This allows you to change the position of an HTML-element on the page.</li>
+<li><code>.value()</code> = This allows you to access the value of an HTML-element. For example, if you have a slider (= that goes from a maximum to a minimum value), you can retrieve its value by using this <code>.value()</code>-method).</li>
 </ul>
 
 </div>
