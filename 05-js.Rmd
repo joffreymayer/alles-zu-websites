@@ -6,3 +6,15 @@
 - **(Normal) Queue**: Given that you have a list // array: a "normal queue" adds new items to the back, picks item from the front of the list.
 - **Deffering Images**: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.
 
+## Important Questions to know about
+
+> Putting `<script>`-Tags on the very bottom of the page, just before the ending `</body>`-Tag VS. `<script>`-Tags in the `<head>`-Bereich, on the very top of the page, when using `JavaScript`?
+
+- <u>Fakt</u>: The very special thing about a `<script>`-Tag, is that - when the browser is reading your HTML-Document - **it will stop loading everything else, when it arrives and loads a `<script>`-Tag. 
+
+- <u>Problematische Konsequenz des obigen Faktes</u>: Thus - if you have a huge and very complicated `<script>`-Tag that takes a long time to run - the content may stop loading and the user will wait, which is NEVER a good idea. 
+
+- <u>2 possible Solutions to the Problem above</u>: 
+  1) Put the `<script>`-Tag at the very bottom of your page, since this will cause the browser to always read the `JavaScript`, when everything else is loaded.
+  2) If you want, you can still put your `<script>` into the `<head>`-section at the very top of the page, but the `<script>`-Tag must contain a `async` property, like it is shown in [this video, 2:47-3:30](https://www.youtube.com/watch?v=YeFzkC2awTM&t=2m47s)
+

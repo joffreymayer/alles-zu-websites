@@ -100,6 +100,8 @@
 <li class="chapter" data-level="4.4.1" data-path="css.html"><a href="css.html#box-sizing-border-box-property"><i class="fa fa-check"></i><b>4.4.1</b> <code>Box-Sizing: Border-Box</code> Property</a></li>
 <li class="chapter" data-level="4.4.2" data-path="css.html"><a href="css.html#css-for-images"><i class="fa fa-check"></i><b>4.4.2</b> CSS for Images</a></li>
 <li class="chapter" data-level="4.4.3" data-path="css.html"><a href="css.html#center-a-div-and-make-it-responsive"><i class="fa fa-check"></i><b>4.4.3</b> Center a <code>&lt;div&gt;</code> AND make it Responsive</a></li>
+<li class="chapter" data-level="4.4.4" data-path="css.html"><a href="css.html#use-google-fonts"><i class="fa fa-check"></i><b>4.4.4</b> Use <code>Google-Fonts</code></a></li>
+<li class="chapter" data-level="4.4.5" data-path="css.html"><a href="css.html#write-something-on-top-of-an-image"><i class="fa fa-check"></i><b>4.4.5</b> Write something on top of an Image</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="css.html"><a href="css.html#css-grid-layout-modell"><i class="fa fa-check"></i><b>4.5</b> CSS-Grid Layout-Modell</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="css.html"><a href="css.html#grundstruktur-für-das-html"><i class="fa fa-check"></i><b>4.5.1</b> Grundstruktur für das HTML</a></li>
@@ -118,6 +120,7 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="javascript.html"><a href="javascript.html"><i class="fa fa-check"></i><b>5</b> JavaScript</a><ul>
 <li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#definitionen-1"><i class="fa fa-check"></i><b>5.1</b> Definitionen</a></li>
+<li class="chapter" data-level="5.2" data-path="javascript.html"><a href="javascript.html#important-questions-to-know-about"><i class="fa fa-check"></i><b>5.2</b> Important Questions to know about</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -146,6 +149,21 @@
 <li><strong>Callback Function</strong>: This is a function, which will be called by another function some time in the future. It is possible, that this function is called (by the other function) multiple times in the future.</li>
 <li><strong>(Normal) Queue</strong>: Given that you have a list // array: a “normal queue” adds new items to the back, picks item from the front of the list.</li>
 <li><strong>Deffering Images</strong>: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.</li>
+</ul>
+</div>
+<div id="important-questions-to-know-about" class="section level2">
+<h2><span class="header-section-number">5.2</span> Important Questions to know about</h2>
+<blockquote>
+<p>Putting <code>&lt;script&gt;</code>-Tags on the very bottom of the page, just before the ending <code>&lt;/body&gt;</code>-Tag VS. <code>&lt;script&gt;</code>-Tags in the <code>&lt;head&gt;</code>-Bereich, on the very top of the page, when using <code>JavaScript</code>?</p>
+</blockquote>
+<ul>
+<li><p><u>Fakt</u>: The very special thing about a <code>&lt;script&gt;</code>-Tag, is that - when the browser is reading your HTML-Document - **it will stop loading everything else, when it arrives and loads a <code>&lt;script&gt;</code>-Tag.</p></li>
+<li><p><u>Problematische Konsequenz des obigen Faktes</u>: Thus - if you have a huge and very complicated <code>&lt;script&gt;</code>-Tag that takes a long time to run - the content may stop loading and the user will wait, which is NEVER a good idea.</p></li>
+<li><p><u>2 possible Solutions to the Problem above</u>:</p>
+<ol style="list-style-type: decimal">
+<li>Put the <code>&lt;script&gt;</code>-Tag at the very bottom of your page, since this will cause the browser to always read the <code>JavaScript</code>, when everything else is loaded.</li>
+<li>If you want, you can still put your <code>&lt;script&gt;</code> into the <code>&lt;head&gt;</code>-section at the very top of the page, but the <code>&lt;script&gt;</code>-Tag must contain a <code>async</code> property, like it is shown in <a href="https://www.youtube.com/watch?v=YeFzkC2awTM&amp;t=2m47s">this video, 2:47-3:30</a></li>
+</ol></li>
 </ul>
 
 </div>

@@ -20,6 +20,8 @@ necessary-css-in-all-projects
 box-sizing-border-box-property
 css-for-images
 center-a-div-and-make-it-responsive
+use-google-fonts
+write-something-on-top-of-an-image
 css-grid-layout-modell
 grundstruktur-für-das-html
 css-for-grid-container
@@ -34,3 +36,4 @@ weisse-hyper-links
 sonstiges
 javascript
 definitionen-1
+important-questions-to-know-about

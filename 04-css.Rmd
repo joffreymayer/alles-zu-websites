@@ -6,6 +6,7 @@ Bei `CSS` gibt es eine Vielzahl an sogenannten *Operatoren*, die verwendet werde
 
 Ich habe hier eine **Liste mit den wichtigsten CSS-Operatoren** erstellt:
 
+- `*`: This is the "Everything"-Selector.
 - `.main-container > h2`: Selects all the `<h2>`-Tags that are a DIRECT Child  of the class '.main-container'. 
 - `div.main-container.green`: Select all the `<div>`-Tags, that have the class '.main-container' **AND** also the '.green' class.
 - `.main-container, .red`: Notice the *comma* when I wrote the two classes! This means that we are going to select all HTML-Elements that have the class '.main-container' **OR** the class '.red'.
@@ -160,6 +161,61 @@ In der Code-Struktur werden diese HTML `<section>`-Elemente häufig als "Main Co
   width: 90vw; /* For Responsive design, this is the "state-of-the-art" thing to do for our containers // wrappers. */
   margin: 0 auto; /* Automatic centering of a <div>. */
   padding: 40px 0; /* Bringt Luft in das Ganze, indem man - dem obere & untere Rand - 40px mehr "white space" lässt.*/
+}
+```
+
+> Problem von `margin: 0 auto`?
+
+The `auto-margin`-property only works for `<block>`-Elements. If you have a `<inline>`-Element, then you cannot apply `width` & `height`, as well as the `top`- & `bottom`-property!
+
+- <u>**Solution**</u>: If you have an `<inline>`-Element, you can simply `display: block`! :)
+
+### Use `Google-Fonts`
+
+In your Projects, you will oftentimes want to use a beautiful font rather than the default ones.
+
+- Step 1: Go to the [Google-Fonts Website](https://fonts.google.com/)
+- Step 2: Search for a font, for example `Raleway`.
+- Step 3: Follow the steps on the image below
+
+![These are the remaining steps on this Image. You need to insert the link into your CSS file via `@import`, like in this example: https://www.youtube.com/watch?v=Sv_NAxi_jNs&t=8m6s)](.bilder/css/google-fonts.png)
+
+### Write something on top of an Image
+
+In order to write some text over an image, you can use the a trick that uses `relative`-position on a **parent** HTML-element and `absolute`-position on a **child** HTML-element.
+
+In order to use this, make sure to have the following **HTML-structure**:
+
+```
+<div class="container">
+  <img src"./images/Your_image.jpg" alt="This is an example"/>
+  <div class="text-container">
+    <h1>THE WORLDO</h1>
+    <p>Lorem Ipsum Dolor ...</p>
+  </div>
+</div>
+```
+
+Additionally, the **CSS-structure** looks like this:
+
+```
+.container {
+  position: relative; /*This is important, since it will allow to ABSOULTELY-position our CHILD-element (= hier: text-container) RELATIVELY to this parent-container.*/
+}
+
+img { /* In order to display the image properly, we need this styling... */
+  width: 100%;
+  height: auto
+}
+
+.text-container {
+  position: absolute; /*This is very important, since it will allow to ABSOULTELY-position our CHILD-element (= hier: text-container) RELATIVELY to this parent-container.*/
+  left: 50%; /* This is part of a "hacker-trick" described on the next CSS-Line...*/
+  transform: translate(-50%, -50%); /* This is a "hacker-trick" to always center our text in the middle of a screen (egal ob phone, tablet or desktop), when we absolutely porition this child-element.*/
+  text-align: center; /*The rest here is additional styling...*/
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(204,204,204, 0.65);
 }
 ```
 
