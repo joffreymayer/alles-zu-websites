@@ -16,5 +16,5 @@
 
 - <u>2 possible Solutions to the Problem above</u>: 
   1) Put the `<script>`-Tag at the very bottom of your page, since this will cause the browser to always read the `JavaScript`, when everything else is loaded.
-  2) If you want, you can still put your `<script>` into the `<head>`-section at the very top of the page, but the `<script>`-Tag must contain a `async` property, like it is shown in [this video, 2:47-3:30](https://www.youtube.com/watch?v=YeFzkC2awTM&t=2m47s)
+  2) If you want, you can still put your `<script>` into the `<head>`-section at the very top of the page, but the `<script>`-Tag must contain a `async` property, like it is shown in [this video, 2:47-3:30](https://www.youtube.com/watch?v=YeFzkC2awTM&t=2m47s). This will make sure the `script` is loaded SIMULTANEOUSLY to the `<body>`, hence removing the default-behavior of "stop loading everything else when loading a `<script>`-Tag". However, we - furthermore - will also need to tell `JavaScript`, that it should only start looking for the HTML-elements to interact with, when the **entire** `<body>` has already been loaded. This can be achieved by checking the `readyState`. [This video, 16:06-18:22](https://www.youtube.com/watch?v=YeFzkC2awTM&t=16m6s) shows how to do it.
 
