@@ -7,6 +7,7 @@ wenn-dein-outline-falsch-ist
 pdfs
 webdevelopment
 synonyme
+definitionen
 css
 css-operatoren
 responsive-design-use-media-queries
@@ -32,4 +33,4 @@ hover-effekte
 weisse-hyper-links
 sonstiges
 javascript
-definitionen
+definitionen-1

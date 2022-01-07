@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-06" />
+<meta name="date" content="2022-01-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -85,6 +85,7 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="webdevelopment.html"><a href="webdevelopment.html"><i class="fa fa-check"></i><b>3</b> Webdevelopment</a><ul>
 <li class="chapter" data-level="3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#synonyme"><i class="fa fa-check"></i><b>3.1</b> Synonyme</a></li>
+<li class="chapter" data-level="3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#definitionen"><i class="fa fa-check"></i><b>3.2</b> Definitionen</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS</a><ul>
 <li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#css-operatoren"><i class="fa fa-check"></i><b>4.1</b> CSS Operatoren</a></li>
@@ -116,7 +117,7 @@
 <li class="chapter" data-level="4.11" data-path="css.html"><a href="css.html#sonstiges"><i class="fa fa-check"></i><b>4.11</b> Sonstiges</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="javascript.html"><a href="javascript.html"><i class="fa fa-check"></i><b>5</b> JavaScript</a><ul>
-<li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#definitionen"><i class="fa fa-check"></i><b>5.1</b> Definitionen</a></li>
+<li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#definitionen-1"><i class="fa fa-check"></i><b>5.1</b> Definitionen</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -148,6 +149,8 @@
 <li><code>div.main-container.green</code>: Select all the <code>&lt;div&gt;</code>-Tags, that have the class ‘.main-container’ <strong>AND</strong> also the ‘.green’ class.</li>
 <li><code>.main-container, .red</code>: Notice the <em>comma</em> when I wrote the two classes! This means that we are going to select all HTML-Elements that have the class ‘.main-container’ <strong>OR</strong> the class ‘.red’.</li>
 <li><code>.main-container .blue</code>: Select all HTML-elements with the class ‘.main-container’ and - <strong>WITHIN</strong> those HTML-Element with the ‘.main-container’-class - it selects all the HTML-Elements that have - additionally - the class ‘.blue’. If both of these conditions are <em>NOT</em> simulatenously met, then it will <em>NOT</em> apply the blue-background color!!! Note that <strong>WITHIN</strong> means <em>not necessarily</em> that the nested HTML-Element should be a <em>direct</em> child of the ‘.main-container’ element!</li>
+<li><code>[id^=drop]</code>: Selektiert alle Elemente mit der ID, welche <strong>mit “drop” beginnt</strong>, also beispielsweise: ‘drop’, ‘drop-1’ ‘drop-2’ etc… Man kann sich diesen <code>CSS</code>-Selektor als eine Art Regular-Expression vorstellen.</li>
+<li><code>.toggle + a</code>: Selects the first <a>-element that is placed <strong>immediately after</strong> each element that has the <code>.toggle</code>-class.</li>
 </ul>
 </div>
 <div id="responsive-design-use-media-queries" class="section level2">

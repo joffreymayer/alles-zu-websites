@@ -5,3 +5,9 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 ## Synonyme 
 
 - **Toggle** // Ein- & Ausschaltknopf
+
+## Definitionen
+
+- **Usability Testing**: Suche jemand, der deine Webseite austestet, die du gerade konstruiert hast. Er soll dir ein ehrliches Feedback geben.
+  <u>Wichtig</u>: We test the Site, not the user. It is important that the user knows, that he is not tested, but rather the website. The user can't do anything wrong. 
+
