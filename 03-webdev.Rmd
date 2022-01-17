@@ -8,6 +8,15 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 
 ## Definitionen
 
+- **Dependency // Dependencies**: A dependency is a **third-party bit of software** that was probably written by someone else and ideally solves a single problem for you. A web project can have any number of dependencies, ranging from none to many, and **your dependencies might include sub-dependencies that you didn't explicitly install** — your dependencies may have their own dependencies.
+  - <u>Example</u>: A useful dependency that your project might need is some **code to calculate relative dates as human-readable text**. You could certainly code this yourself, but there's a strong chance that someone else has already solved this problem 
+  — <u>Vorteil 1</u>: *Why waste time reinventing the wheel?*
+  - <u>Vorteil 2</u>:  Moreover, a reliable third-party dependency will likely have been tested in a lot of different situations, making it **more robust and cross-browser compatible** than your own solution.
+- **Package Manager**: **A package manager is a system that will manage your project dependencies**. 
+  - <u>Example</u>: When you use a dependenciy // third-party code, you will need to update it, if a new version gets released. If you have MANY dependencies, then you will need a *package manager* such as **`npm`**, because it will guarantee that the *updated* code is added and the *old one* is removed cleanly.
+  - <u>Why should you use a packet manager?</u>: _In theory_, you may <u>not</u> need a package manager and you could manually download and store your project dependencies, but a package manager will seamlessly handle installing and uninstalling packages.
+  - <u>Important Detail about `npm`</u>: The `npm` packet manager for `JavaScript` is the analog thing as a **virtual environment** in `python`!
+    - <u>Quelle</u>: See the last answer on [this Stack-Overflow](https://stackoverflow.com/questions/47272966/is-installing-nodejs-packages-locally-equivalent-to-pythons-virtualenv/47284674) thread.
 - **Usability Testing**: Suche jemand, der deine Webseite austestet, die du gerade konstruiert hast. Er soll dir ein ehrliches Feedback geben.
   <u>Wichtig</u>: We test the Site, not the user. It is important that the user knows, that he is not tested, but rather the website. The user can't do anything wrong. 
 

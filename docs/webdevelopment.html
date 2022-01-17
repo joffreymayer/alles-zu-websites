@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-07" />
+<meta name="date" content="2022-01-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -154,6 +154,21 @@
 <div id="definitionen" class="section level2">
 <h2><span class="header-section-number">3.2</span> Definitionen</h2>
 <ul>
+<li><strong>Dependency // Dependencies</strong>: A dependency is a <strong>third-party bit of software</strong> that was probably written by someone else and ideally solves a single problem for you. A web project can have any number of dependencies, ranging from none to many, and <strong>your dependencies might include sub-dependencies that you didn’t explicitly install</strong> — your dependencies may have their own dependencies.
+<ul>
+<li><u>Example</u>: A useful dependency that your project might need is some <strong>code to calculate relative dates as human-readable text</strong>. You could certainly code this yourself, but there’s a strong chance that someone else has already solved this problem
+— <u>Vorteil 1</u>: <em>Why waste time reinventing the wheel?</em></li>
+<li><u>Vorteil 2</u>: Moreover, a reliable third-party dependency will likely have been tested in a lot of different situations, making it <strong>more robust and cross-browser compatible</strong> than your own solution.</li>
+</ul></li>
+<li><strong>Package Manager</strong>: <strong>A package manager is a system that will manage your project dependencies</strong>.
+<ul>
+<li><u>Example</u>: When you use a dependenciy // third-party code, you will need to update it, if a new version gets released. If you have MANY dependencies, then you will need a <em>package manager</em> such as <strong><code>npm</code></strong>, because it will guarantee that the <em>updated</em> code is added and the <em>old one</em> is removed cleanly.</li>
+<li><u>Why should you use a packet manager?</u>: <em>In theory</em>, you may <u>not</u> need a package manager and you could manually download and store your project dependencies, but a package manager will seamlessly handle installing and uninstalling packages.</li>
+<li><u>Important Detail about <code>npm</code></u>: The <code>npm</code> packet manager for <code>JavaScript</code> is the analog thing as a <strong>virtual environment</strong> in <code>python</code>!
+<ul>
+<li><u>Quelle</u>: See the last answer on <a href="https://stackoverflow.com/questions/47272966/is-installing-nodejs-packages-locally-equivalent-to-pythons-virtualenv/47284674">this Stack-Overflow</a> thread.</li>
+</ul></li>
+</ul></li>
 <li><strong>Usability Testing</strong>: Suche jemand, der deine Webseite austestet, die du gerade konstruiert hast. Er soll dir ein ehrliches Feedback geben.
 <u>Wichtig</u>: We test the Site, not the user. It is important that the user knows, that he is not tested, but rather the website. The user can’t do anything wrong.</li>
 </ul>
