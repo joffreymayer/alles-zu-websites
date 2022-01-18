@@ -31,6 +31,9 @@ adding-box-shadows
 optional-line-break
 relative-font-size
 advanced-positioning
+color-gradients-for-text
+when-to-use
+quellen
 hover-effekte
 weisse-hyper-links
 sonstiges

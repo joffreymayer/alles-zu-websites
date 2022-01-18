@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-17" />
+<meta name="date" content="2022-01-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -113,10 +113,14 @@
 <li class="chapter" data-level="4.7" data-path="css.html"><a href="css.html#optional-line-break"><i class="fa fa-check"></i><b>4.7</b> Optional Line-Break</a></li>
 <li class="chapter" data-level="4.8" data-path="css.html"><a href="css.html#relative-font-size"><i class="fa fa-check"></i><b>4.8</b> Relative Font-Size</a></li>
 <li class="chapter" data-level="4.9" data-path="css.html"><a href="css.html#advanced-positioning"><i class="fa fa-check"></i><b>4.9</b> Advanced Positioning</a></li>
-<li class="chapter" data-level="4.10" data-path="css.html"><a href="css.html#hover-effekte"><i class="fa fa-check"></i><b>4.10</b> Hover-Effekte</a><ul>
-<li class="chapter" data-level="4.10.1" data-path="css.html"><a href="css.html#weisse-hyper-links"><i class="fa fa-check"></i><b>4.10.1</b> Weisse Hyper-Links</a></li>
+<li class="chapter" data-level="4.10" data-path="css.html"><a href="css.html#color-gradients-for-text"><i class="fa fa-check"></i><b>4.10</b> Color-Gradients for Text</a><ul>
+<li class="chapter" data-level="4.10.1" data-path="css.html"><a href="css.html#when-to-use"><i class="fa fa-check"></i><b>4.10.1</b> When to use?</a></li>
+<li class="chapter" data-level="4.10.2" data-path="css.html"><a href="css.html#quellen"><i class="fa fa-check"></i><b>4.10.2</b> Quellen</a></li>
 </ul></li>
-<li class="chapter" data-level="4.11" data-path="css.html"><a href="css.html#sonstiges"><i class="fa fa-check"></i><b>4.11</b> Sonstiges</a></li>
+<li class="chapter" data-level="4.11" data-path="css.html"><a href="css.html#hover-effekte"><i class="fa fa-check"></i><b>4.11</b> Hover-Effekte</a><ul>
+<li class="chapter" data-level="4.11.1" data-path="css.html"><a href="css.html#weisse-hyper-links"><i class="fa fa-check"></i><b>4.11.1</b> Weisse Hyper-Links</a></li>
+</ul></li>
+<li class="chapter" data-level="4.12" data-path="css.html"><a href="css.html#sonstiges"><i class="fa fa-check"></i><b>4.12</b> Sonstiges</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="javascript.html"><a href="javascript.html"><i class="fa fa-check"></i><b>5</b> JavaScript</a><ul>
 <li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#definitionen-1"><i class="fa fa-check"></i><b>5.1</b> Definitionen</a></li>
@@ -420,10 +424,29 @@ img { /* In order to display the image properly, we need this styling... */
 <p class="caption">Hier ein Beispiel, wie man <code>translate(2,1)</code> anwendet zur Illustration</p>
 </div>
 </div>
+<div id="color-gradients-for-text" class="section level2">
+<h2><span class="header-section-number">4.10</span> Color-Gradients for Text</h2>
+<p>For styling reasons, it can be very nice to make your website stand out by using colors for your fonts that gradially become darker / brighter.</p>
+<p>Here is the code that you need to implement into your <code>CSS</code> (note: here, I give you the code that can be implemented into the <code>html</code> directly):</p>
+<pre><code>style=&quot;
+  background: -webkit-linear-gradient(#ee9c38, #b3680e); 
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;&quot;</code></pre>
+<div id="when-to-use" class="section level3">
+<h3><span class="header-section-number">4.10.1</span> When to use?</h3>
+<p>This method should be used at the very end, when you are styling your website and the whole code is already implemented.</p>
+</div>
+<div id="quellen" class="section level3">
+<h3><span class="header-section-number">4.10.2</span> Quellen</h3>
+<ul>
+<li><u>Webseite mit Tools</u>:</li>
+</ul>
+</div>
+</div>
 <div id="hover-effekte" class="section level2">
-<h2><span class="header-section-number">4.10</span> Hover-Effekte</h2>
+<h2><span class="header-section-number">4.11</span> Hover-Effekte</h2>
 <div id="weisse-hyper-links" class="section level3">
-<h3><span class="header-section-number">4.10.1</span> Weisse Hyper-Links</h3>
+<h3><span class="header-section-number">4.11.1</span> Weisse Hyper-Links</h3>
 <p>Für eine Navigation mit weisser Farbe (= <code>#fff</code>) empfiehlt sich folgender Code für das Hovern mit der Maus, über den Link:</p>
 <pre><code>.link:hover{
     color: #c7c7c7; /* Das ist ein leicht dunkleres Weiss, beinahe grau, ohne, dass es störend wirkt. */
@@ -431,7 +454,7 @@ img { /* In order to display the image properly, we need this styling... */
 </div>
 </div>
 <div id="sonstiges" class="section level2">
-<h2><span class="header-section-number">4.11</span> Sonstiges</h2>
+<h2><span class="header-section-number">4.12</span> Sonstiges</h2>
 <ul>
 <li><code>100 vh</code> = Full screen of the Browser-Fenster.
 <ul>

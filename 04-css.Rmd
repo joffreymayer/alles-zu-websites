@@ -308,6 +308,27 @@ Hierfür bietet `CSS` eine Reihe von verschiedenen `units` an:
 ![Hier ein Beispiel, wie man `translate(2,1)` anwendet zur Illustration](./bilder/css/translate-beispiel.png)
 
 
+## Color-Gradients for Text
+
+For styling reasons, it can be very nice to make your website stand out by using colors for your fonts that gradially become darker / brighter. 
+
+Here is the code that you need to implement into your `CSS` (note: here, I give you the code that can be implemented into the `html` directly):
+
+```
+style="
+  background: -webkit-linear-gradient(#ee9c38, #b3680e); 
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;"
+```
+
+### When to use?
+
+This method should be used at the very end, when you are styling your website and the whole code is already implemented. 
+
+### Quellen
+
+- <u>Webseite mit Tools</u>:
+
 ## Hover-Effekte
 
 ### Weisse Hyper-Links
