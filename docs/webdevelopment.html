@@ -210,15 +210,19 @@
 <h4><span class="header-section-number">3.3.1.1</span> The Problem</h4>
 <p>By storing the images on our website’s server (VTX), the user’s browser will have to always make requests. Because I have many images, we have <em>a lot of image-requests per page</em> that the user renders on his phone. Hence, the loading time takes long.</p>
 </div>
-<div id="the-solution" class="section level4">
-<h4><span class="header-section-number">3.3.1.2</span> The Solution</h4>
+<div id="the-theoretical-solution" class="section level4">
+<h4><span class="header-section-number">3.3.1.2</span> The theoretical Solution</h4>
 <p><mark>It would be much more efficient - from a performance // loading perspective - if the user had those images already stored in their computer’s internal (cache) memory. This is where CDNs come into play: those are servers that are distributed all across the globe and that</mark>:</p>
 <ol style="list-style-type: decimal">
 <li>Visit our website.</li>
 <li>Then cache // store the images on their server, <em>which is close to the user, from a <u>geographical</u> standpoint</em>.</li>
 </ol>
 <p>When a user visit our website, the requests for images will be forwarded to the (geographically, much more close the user) CDNs that will already have downloaded the images of our site.</p>
-<p><em>This results in a much faster loading-time of our website and an increase in the user’s experience. In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:</em></p>
+<p><em>This results in a much faster loading-time of our website and an increase in the user’s experience.</em></p>
+</div>
+<div id="the-practical-solution" class="section level4">
+<h4><span class="header-section-number">3.3.1.3</span> The practical Solution</h4>
+<p>In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:</p>
 <ul>
 <li><a href="https://imagekit.io/" class="uri">https://imagekit.io/</a></li>
 </ul>
@@ -231,11 +235,15 @@
 <p>When you code an HTML-page and you include a bunch of images, you will have to tell the browser, on which path the images can be loaded via the <code>src</code>-atribute of the <code>&lt;img&gt;</code>-tag.</p>
 <p><em>However - IF you have many <code>&lt;img src=....&gt;</code>-tags on your site - the browser will <strong>automatically load them all at once</strong>. And because loading image-entities is one of the most slow process when it comes to make everything visible on the user’s browser, having lot’s of images can take a long time to load. More specifically, <strong>IF a user directly follows a link to another page on our site</strong>, having downloaded all the pages is very inefficient, since the website-visitor will not have seen those images that are at the bottom of the site.</em></p>
 </div>
-<div id="the-solution-1" class="section level4">
-<h4><span class="header-section-number">3.3.2.2</span> The Solution</h4>
+<div id="the-theoretical-solution-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.2</span> The theoretical Solution</h4>
 <p>With JavaScript, we can change the behavior of how load <code>&lt;img src="..."&gt;</code>-tags.
 <strong>In lazy-loading</strong>, we can tell the browser - with the help of some JavaScript code - that it only needs to load the images, that are visible in the user’s viewport // browser-window (= visible portion of the screen).</p>
 <p><em>This way, all the images that are on the bottom of our pages, will NEVER be loaded, if the user clicks on a link at the TOP of our page</em>.</p>
+</div>
+<div id="the-practical-solution-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.3</span> The practical Solution</h4>
+<p>Use the code - which is <strong>written in vanilla JavaScript</strong> - from <a href="https://www.youtube.com/watch?v=aUjBvuUdkhg">this Fireship Youtube-Video</a> to make Lazy-Loading possible.</p>
 
 </div>
 </div>

@@ -45,7 +45,7 @@ When using a website, the images oftentimes stay relatively "static", that is th
 
 By storing the images on our website's server (VTX), the user's browser will have to always make requests. Because I have many images, we have _a lot of image-requests per page_ that the user renders on his phone. Hence, the loading time takes long. 
 
-#### The Solution
+#### The theoretical Solution
 
 <mark>It would be much more efficient - from a performance // loading perspective - if the user had those images already stored in their computer's internal (cache) memory. This is where CDNs come into play: those are servers that are distributed all across the globe and that</mark>: 
 
@@ -54,7 +54,11 @@ By storing the images on our website's server (VTX), the user's browser will hav
 
 When a user visit our website, the requests for images will be forwarded to the (geographically, much more close the user) CDNs that will already have downloaded the images of our site.
 
-_This results in a much faster loading-time of our website and an increase in the user's experience. In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:_
+_This results in a much faster loading-time of our website and an increase in the user's experience._
+
+#### The practical Solution
+
+In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:
 
 - https://imagekit.io/
 
@@ -67,10 +71,13 @@ When you code an HTML-page and you include a bunch of images, you will have to t
 
 _However - IF you have many `<img src=....>`-tags on your site - the browser will **automatically load them all at once**. And because loading image-entities is one of the most slow process when it comes to make everything visible on the user's browser, having lot's of images can take a long time to load. More specifically, **IF a user directly follows a link to another page on our site**, having downloaded all the pages is very inefficient, since the website-visitor will not have seen those images that are at the bottom of the site._
 
-#### The Solution 
+#### The theoretical Solution 
 
 With JavaScript, we can change the behavior of how load `<img src="...">`-tags. 
 **In lazy-loading**, we can tell the browser - with the help of some JavaScript code - that it only needs to load the images, that are visible in the user's viewport // browser-window (= visible portion of the screen). 
 
 *This way, all the images that are on the bottom of our pages, will NEVER be loaded, if the user clicks on a link at the TOP of our page*.
 
+#### The practical Solution
+
+Use the code - which is **written in vanilla JavaScript** - from [this Fireship Youtube-Video](https://www.youtube.com/watch?v=aUjBvuUdkhg) to make Lazy-Loading possible.

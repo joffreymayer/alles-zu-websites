@@ -11,10 +11,12 @@ definitionen
 image-management
 cache
 the-problem
-the-solution
+the-theoretical-solution
+the-practical-solution
 lazy-loading
 the-problem-1
-the-solution-1
+the-theoretical-solution-1
+the-practical-solution-1
 css
 css-operatoren
 responsive-design-use-media-queries
