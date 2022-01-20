@@ -52,9 +52,11 @@ By storing the images on our website's server (VTX), the user's browser will hav
 1) Visit our website.
 2) Then cache // store the images on their server, _which is close to the user, from a <u>geographical</u> standpoint_.
 
-<mark>When a user visit our website, the requests for images will be forwarded to the (geographically, much more close the user) CDNs that will already have downloaded the images of our site.</mark>
+When a user visit our website, the requests for images will be forwarded to the (geographically, much more close the user) CDNs that will already have downloaded the images of our site.
 
-_This results in a much faster loading-time of our website and an increase in the user's experience._
+_This results in a much faster loading-time of our website and an increase in the user's experience. In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:_
+
+- https://imagekit.io/
 
 
 ### Lazy-Loading

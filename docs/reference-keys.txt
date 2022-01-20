@@ -8,6 +8,13 @@ pdfs
 webdevelopment
 synonyme
 definitionen
+image-management
+cache
+the-problem
+the-solution
+lazy-loading
+the-problem-1
+the-solution-1
 css
 css-operatoren
 responsive-design-use-media-queries
@@ -41,3 +48,8 @@ javascript
 definitionen-1
 important-questions-to-know-about
 important-javascript-methods
+gsap
+advantages-of-using-gsap
+api
+most-frequent-methods-when-using-tweens-classes
+synonyme-1

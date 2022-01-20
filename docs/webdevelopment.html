@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-18" />
+<meta name="date" content="2022-01-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -86,6 +86,10 @@
 <li class="chapter" data-level="3" data-path="webdevelopment.html"><a href="webdevelopment.html"><i class="fa fa-check"></i><b>3</b> Webdevelopment</a><ul>
 <li class="chapter" data-level="3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#synonyme"><i class="fa fa-check"></i><b>3.1</b> Synonyme</a></li>
 <li class="chapter" data-level="3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#definitionen"><i class="fa fa-check"></i><b>3.2</b> Definitionen</a></li>
+<li class="chapter" data-level="3.3" data-path="webdevelopment.html"><a href="webdevelopment.html#image-management"><i class="fa fa-check"></i><b>3.3</b> Image-Management</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.1</b> Cache</a></li>
+<li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.2</b> Lazy-Loading</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS</a><ul>
 <li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#css-operatoren"><i class="fa fa-check"></i><b>4.1</b> CSS Operatoren</a></li>
@@ -127,6 +131,13 @@
 <li class="chapter" data-level="5.2" data-path="javascript.html"><a href="javascript.html#important-questions-to-know-about"><i class="fa fa-check"></i><b>5.2</b> Important Questions to know about</a></li>
 <li class="chapter" data-level="5.3" data-path="javascript.html"><a href="javascript.html#important-javascript-methods"><i class="fa fa-check"></i><b>5.3</b> Important <code>JavaScript</code>-Methods</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="gsap.html"><a href="gsap.html"><i class="fa fa-check"></i><b>6</b> GSAP</a><ul>
+<li class="chapter" data-level="6.1" data-path="gsap.html"><a href="gsap.html#advantages-of-using-gsap"><i class="fa fa-check"></i><b>6.1</b> Advantages of using GSAP</a></li>
+<li class="chapter" data-level="6.2" data-path="gsap.html"><a href="gsap.html#api"><i class="fa fa-check"></i><b>6.2</b> API</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="gsap.html"><a href="gsap.html#most-frequent-methods-when-using-tweens-classes"><i class="fa fa-check"></i><b>6.2.1</b> Most frequent Methods when using <code>Tweens</code>-Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="gsap.html"><a href="gsap.html#synonyme-1"><i class="fa fa-check"></i><b>6.3</b> Synonyme</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -153,6 +164,11 @@
 <h2><span class="header-section-number">3.1</span> Synonyme</h2>
 <ul>
 <li><strong>Toggle</strong> // Ein- &amp; Ausschaltknopf</li>
+<li><strong>Weiterleitung</strong> // forwarding // routing(?)</li>
+<li><strong>Parse</strong> // In der Umwandlung <code>A --&gt; B</code>, ist mit dem <strong><u>Pfeil</u></strong> das “parsen” gemeint!
+<ul>
+<li><u>Beispiel</u>: Umwandlung - beispielsweise der HTML-Sprache - in die Dokumentstruktur “DOM”, damit diese - via einem Renderer - visuell dargestellt werden kann im Browser.</li>
+</ul></li>
 </ul>
 </div>
 <div id="definitionen" class="section level2">
@@ -176,7 +192,53 @@
 <li><strong>Usability Testing</strong>: Suche jemand, der deine Webseite austestet, die du gerade konstruiert hast. Er soll dir ein ehrliches Feedback geben.
 <u>Wichtig</u>: We test the Site, not the user. It is important that the user knows, that he is not tested, but rather the website. The user can’t do anything wrong.</li>
 </ul>
+</div>
+<div id="image-management" class="section level2">
+<h2><span class="header-section-number">3.3</span> Image-Management</h2>
+<p>A website’s browser has the task of downloading those images when it reads an HTML-document.</p>
+<p><mark>Most of the time, images are the entities that need the most time to load on a website, which is why a site with <em>many</em> images can have a big (negative) impact on the website’s performance, because many images take a looot of time to load and - therefore - you will have a poor user-experience, especially on mobile</mark>.</p>
+<p><em>That’s why you need a good image-management when building websites</em>.</p>
+<p><u>The following areas lead to a better image-management and - hence - better site-performance</u>:</p>
+<ul>
+<li>Caching strategies tha use CDNs</li>
+<li>Implement Lazy-Loading</li>
+</ul>
+<div id="cache" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Cache</h3>
+<p>When using a website, the images oftentimes stay relatively “static”, that is they - oftentimes - <em>do not change over time</em>. This fact - that the image-content does almost never change over time - can be exploited in order to dimish loading-time significantly with the help of a cache-strategy.</p>
+<div id="the-problem" class="section level4">
+<h4><span class="header-section-number">3.3.1.1</span> The Problem</h4>
+<p>By storing the images on our website’s server (VTX), the user’s browser will have to always make requests. Because I have many images, we have <em>a lot of image-requests per page</em> that the user renders on his phone. Hence, the loading time takes long.</p>
+</div>
+<div id="the-solution" class="section level4">
+<h4><span class="header-section-number">3.3.1.2</span> The Solution</h4>
+<p><mark>It would be much more efficient - from a performance // loading perspective - if the user had those images already stored in their computer’s internal (cache) memory. This is where CDNs come into play: those are servers that are distributed all across the globe and that</mark>:</p>
+<ol style="list-style-type: decimal">
+<li>Visit our website.</li>
+<li>Then cache // store the images on their server, <em>which is close to the user, from a <u>geographical</u> standpoint</em>.</li>
+</ol>
+<p>When a user visit our website, the requests for images will be forwarded to the (geographically, much more close the user) CDNs that will already have downloaded the images of our site.</p>
+<p><em>This results in a much faster loading-time of our website and an increase in the user’s experience. In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:</em></p>
+<ul>
+<li><a href="https://imagekit.io/" class="uri">https://imagekit.io/</a></li>
+</ul>
+</div>
+</div>
+<div id="lazy-loading" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Lazy-Loading</h3>
+<div id="the-problem-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.1</span> The Problem</h4>
+<p>When you code an HTML-page and you include a bunch of images, you will have to tell the browser, on which path the images can be loaded via the <code>src</code>-atribute of the <code>&lt;img&gt;</code>-tag.</p>
+<p><em>However - IF you have many <code>&lt;img src=....&gt;</code>-tags on your site - the browser will <strong>automatically load them all at once</strong>. And because loading image-entities is one of the most slow process when it comes to make everything visible on the user’s browser, having lot’s of images can take a long time to load. More specifically, <strong>IF a user directly follows a link to another page on our site</strong>, having downloaded all the pages is very inefficient, since the website-visitor will not have seen those images that are at the bottom of the site.</em></p>
+</div>
+<div id="the-solution-1" class="section level4">
+<h4><span class="header-section-number">3.3.2.2</span> The Solution</h4>
+<p>With JavaScript, we can change the behavior of how load <code>&lt;img src="..."&gt;</code>-tags.
+<strong>In lazy-loading</strong>, we can tell the browser - with the help of some JavaScript code - that it only needs to load the images, that are visible in the user’s viewport // browser-window (= visible portion of the screen).</p>
+<p><em>This way, all the images that are on the bottom of our pages, will NEVER be loaded, if the user clicks on a link at the TOP of our page</em>.</p>
 
+</div>
+</div>
 </div>
 </div>
             </section>
