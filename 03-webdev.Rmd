@@ -5,6 +5,10 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 ## Synonyme 
 
 - **Toggle** // Ein- & Ausschaltknopf
+- **Weiterleitung** // forwarding // routing(?)
+- **Parse** // In der Umwandlung `A --> B`, ist mit dem **<u>Pfeil</u>** das "parsen" gemeint! 
+  - <u>Beispiel</u>: Umwandlung - beispielsweise der HTML-Sprache - in die Dokumentstruktur "DOM", damit diese - via einem Renderer - visuell dargestellt werden kann im Browser.
+
 
 ## Definitionen
 
@@ -19,4 +23,52 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
     - <u>Quelle</u>: See the last answer on [this Stack-Overflow](https://stackoverflow.com/questions/47272966/is-installing-nodejs-packages-locally-equivalent-to-pythons-virtualenv/47284674) thread.
 - **Usability Testing**: Suche jemand, der deine Webseite austestet, die du gerade konstruiert hast. Er soll dir ein ehrliches Feedback geben.
   <u>Wichtig</u>: We test the Site, not the user. It is important that the user knows, that he is not tested, but rather the website. The user can't do anything wrong. 
+
+## Image-Management
+
+A website's browser has the task of downloading those images when it reads an HTML-document. 
+
+<mark>Most of the time, images are the entities that need the most time to load on a website, which is why a site with _many_ images can have a big (negative) impact on the website's performance, because many images take a looot of time to load and - therefore - you will have a poor user-experience, especially on mobile</mark>.
+
+_That's why you need a good image-management when building websites_.
+
+<u>The following areas lead to a better image-management and - hence - better site-performance</u>:
+
+- Caching strategies tha use CDNs
+- Implement Lazy-Loading
+
+### Cache
+
+When using a website, the images oftentimes stay relatively "static", that is they - oftentimes - *do not change over time*. This fact - that the image-content does almost never change over time - can be exploited in order to dimish loading-time significantly with the help of a cache-strategy. 
+
+#### The Problem 
+
+By storing the images on our website's server (VTX), the user's browser will have to always make requests. Because I have many images, we have _a lot of image-requests per page_ that the user renders on his phone. Hence, the loading time takes long. 
+
+#### The Solution
+
+<mark>It would be much more efficient - from a performance // loading perspective - if the user had those images already stored in their computer's internal (cache) memory. This is where CDNs come into play: those are servers that are distributed all across the globe and that</mark>: 
+
+1) Visit our website.
+2) Then cache // store the images on their server, _which is close to the user, from a <u>geographical</u> standpoint_.
+
+<mark>When a user visit our website, the requests for images will be forwarded to the (geographically, much more close the user) CDNs that will already have downloaded the images of our site.</mark>
+
+_This results in a much faster loading-time of our website and an increase in the user's experience._
+
+
+### Lazy-Loading
+
+#### The Problem 
+
+When you code an HTML-page and you include a bunch of images, you will have to tell the browser, on which path the images can be loaded via the `src`-atribute of the `<img>`-tag. 
+
+_However - IF you have many `<img src=....>`-tags on your site - the browser will **automatically load them all at once**. And because loading image-entities is one of the most slow process when it comes to make everything visible on the user's browser, having lot's of images can take a long time to load. More specifically, **IF a user directly follows a link to another page on our site**, having downloaded all the pages is very inefficient, since the website-visitor will not have seen those images that are at the bottom of the site._
+
+#### The Solution 
+
+With JavaScript, we can change the behavior of how load `<img src="...">`-tags. 
+**In lazy-loading**, we can tell the browser - with the help of some JavaScript code - that it only needs to load the images, that are visible in the user's viewport // browser-window (= visible portion of the screen). 
+
+*This way, all the images that are on the bottom of our pages, will NEVER be loaded, if the user clicks on a link at the TOP of our page*.
 

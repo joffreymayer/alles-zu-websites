@@ -1,0 +1,50 @@
+# GSAP
+
+`GSAP` is a *JavaScript library* to handle animations. It can be used for:
+
+  - **Lazy Loading Images**: This is the main purpose of why I am using `GSAP`, since it allows me to *load images <u>only when</u> they enter the viewport // visible screen of the user*.
+
+## Advantages of using GSAP
+
+- It is **free** for you to use (as long don't sell projects to anyone).
+- There are many examples of implementations on `Codepen`.
+
+## API
+
+- `Tween` (all these methods return a **Tween-Instance**):
+  - `gsap.to()`
+    - <u>Example</u>: `gsap.to(".box", {rotation: 27, x: 100, duration: 1});` 
+  - `gsap.from()`
+  - `gsap.fromTo()`
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween
+- `Timelines`: Animate multiple objects, *one after the other*. It **acts as a container for `Tweens`**, making it simple to control them as a whole --> you don't need to add a `delay`-animation after *every* following object.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Timeline
+  
+### Most frequent Methods when using `Tweens`-Classes
+
+- `pause( atTime:Number, suppressEvents:Boolean )`: Pauses the instance, optionally jumping to a specific time.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/pause()
+- `progress( value:Number, suppressEvents:Boolean )`: Gets or sets the tween’s progress which is a value between 0 and 1 indicating the position of the virtual playhead (excluding repeats) where 0 is at the beginning, 0.5 is halfway complete, and 1 is complete.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/progress()
+- `restart( includeDelay:Boolean, suppressEvents:Boolean )`: Restarts and begins playing forward from the beginning.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/restart()
+- `resume()`: Resumes (= Forstsetzung) playing (= Wiedergabe) without altering direction (forward or reversed).
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/resume()
+- `reverse( from:*, suppressEvents:Boolean )`: Reverses playback so that all aspects of the animation are oriented backwards including, for example, a tween's ease.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/reverse()
+- `reverse( time:*, suppressEvents:Boolean )`: Jumps to a specific time without affecting whether or not the instance is paused or reversed.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/seek()
+- `time( value:Number, suppressEvents:Boolean )`: Gets or sets the local position of the playhead (essentially the current time), **not** including any repeats or repeatDelays.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/time()
+- `duration( value:Number )`: Gets or sets the animation’s `duration`, not including any `repeats` or `repeatDelays`.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/duration()
+- `timeScale( value:Number )`: Factor that’s used to scale time in the animation where 1 = normal speed (the default), 0.5 = half speed, 2 = double speed, -1 = go backwards at normal speed, etc.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/timeScale()
+- `kill( target:Object, propertiesList:String )`: Kills the animation entirely or in part depending on the parameters. Simply calling `kill()` (<u>without</u> using any parameters // inputs) will immediately stop the animation, remove it from its parent timeline, wipe out any property tweens and release it for garbage collection.
+  - <u>Quelle</u>: https://greensock.com/docs/v3/GSAP/Tween/kill()
+
+## Synonyme
+
+- **Targets** // Objects you want to animate
+- **inputs** // parameters
+
