@@ -34,6 +34,20 @@ $ git branch  NEW_BRANCH_NAME
 $ git checkout  NEW_BRANCH_NAME
 ```
 
+### Merge Changes in "new branch" into "Master"-Branch
+
+This can be achieved via a **pull-request**. All you have to do is:
+
+1) check out // switch to the branch you wish to merge into (= this is usually the master-branch) 
+2) and then run the git merge command:
+
+```
+$ git checkout master
+Switched to branch 'master'
+$ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
+Merge made by the 'recursive' strategy.
+```
+
 
 ## Create a Bookdown-Website
 

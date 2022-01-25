@@ -76,6 +76,7 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>1.1.2</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.2</b> Create a Bookdown-Website</a></li>
 </ul></li>
@@ -192,6 +193,18 @@
 </ul>
 <pre><code>$ git branch  NEW_BRANCH_NAME
 $ git checkout  NEW_BRANCH_NAME</code></pre>
+</div>
+<div id="merge-changes-in-new-branch-into-master-branch" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Merge Changes in “new branch” into “Master”-Branch</h3>
+<p>This can be achieved via a <strong>pull-request</strong>. All you have to do is:</p>
+<ol style="list-style-type: decimal">
+<li>check out // switch to the branch you wish to merge into (= this is usually the master-branch)</li>
+<li>and then run the git merge command:</li>
+</ol>
+<pre><code>$ git checkout master
+Switched to branch &#39;master&#39;
+$ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
+Merge made by the &#39;recursive&#39; strategy.</code></pre>
 </div>
 </div>
 <div id="create-a-bookdown-website" class="section level2">

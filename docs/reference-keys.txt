@@ -1,6 +1,7 @@
 set-up
 backend-git-github
 create-a-new-branch
+merge-changes-in-new-branch-into-master-branch
 create-a-bookdown-website
 seo
 outline
