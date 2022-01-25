@@ -1,5 +1,6 @@
 set-up
 backend-git-github
+create-a-new-branch
 create-a-bookdown-website
 seo
 outline
@@ -17,9 +18,12 @@ lazy-loading
 the-problem-1
 the-theoretical-solution-1
 the-practical-solution-1
+how-front-end-backend-work-together
+how-to-build-and-think-about-an-application
 css
 css-operatoren
 responsive-design-use-media-queries
+good-rule-of-thumb-for-image-grid
 padding-abkürzung
 fall-1-margin-padding-has-4-values
 fall-2-margin-padding-has-3-values

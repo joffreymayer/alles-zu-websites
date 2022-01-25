@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-20" />
+<meta name="date" content="2022-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +74,9 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
+</ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.2</b> Create a Bookdown-Website</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
@@ -90,10 +92,14 @@
 <li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.1</b> Cache</a></li>
 <li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.2</b> Lazy-Loading</a></li>
 </ul></li>
+<li class="chapter" data-level="3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#how-front-end-backend-work-together"><i class="fa fa-check"></i><b>3.4</b> How Front-End &amp; Backend work together</a></li>
+<li class="chapter" data-level="3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#how-to-build-and-think-about-an-application"><i class="fa fa-check"></i><b>3.5</b> How to build and think about an Application</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS</a><ul>
 <li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#css-operatoren"><i class="fa fa-check"></i><b>4.1</b> CSS Operatoren</a></li>
-<li class="chapter" data-level="4.2" data-path="css.html"><a href="css.html#responsive-design-use-media-queries"><i class="fa fa-check"></i><b>4.2</b> Responsive-Design: use Media-Queries</a></li>
+<li class="chapter" data-level="4.2" data-path="css.html"><a href="css.html#responsive-design-use-media-queries"><i class="fa fa-check"></i><b>4.2</b> Responsive-Design: use Media-Queries</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="css.html"><a href="css.html#good-rule-of-thumb-for-image-grid"><i class="fa fa-check"></i><b>4.2.1</b> Good rule-of-thumb for image-grid</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="css.html"><a href="css.html#padding-abkürzung"><i class="fa fa-check"></i><b>4.3</b> Padding-Abkürzung</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="css.html"><a href="css.html#fall-1-margin-padding-has-4-values"><i class="fa fa-check"></i><b>4.3.1</b> Fall 1: Margin / Padding has 4 Values</a></li>
 <li class="chapter" data-level="4.3.2" data-path="css.html"><a href="css.html#fall-2-margin-padding-has-3-values"><i class="fa fa-check"></i><b>4.3.2</b> Fall 2: Margin / Padding has 3 Values</a></li>
@@ -160,7 +166,7 @@
 <div id="header">
 <h1 class="title">My Knowledge Database for Websites</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-01-20</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2022-01-25</em></p>
 </div>
 <div id="set-up" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Set-Up</h1>
@@ -177,6 +183,16 @@
 <li><strong>Create a Public &amp; Private SSH-Key</strong> in order to not always type in your password. Follow the instruction of <a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=2m40s">this Youtube-Tutorial (ab 2:40-4:03)</a>.</li>
 <li>In order <strong>to be able to use the SSH-Key</strong>, you need to follow my instruction in the Video on my local computer, situated on the following path: <code>/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov</code>. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: <code>git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git</code></li>
 </ol>
+<div id="create-a-new-branch" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Create a new Branch</h3>
+<p>To create a new branch AND switch to it at the same time, you can use the <em>short-hand</em> command in the terminal:</p>
+<pre><code>git checkout -b NEW_BRANCH_NAME</code></pre>
+<ul>
+<li><u>The above is the same as the following (longer) code</u>:</li>
+</ul>
+<pre><code>$ git branch  NEW_BRANCH_NAME
+$ git checkout  NEW_BRANCH_NAME</code></pre>
+</div>
 </div>
 <div id="create-a-bookdown-website" class="section level2">
 <h2><span class="header-section-number">1.2</span> Create a Bookdown-Website</h2>

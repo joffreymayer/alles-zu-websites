@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-20" />
+<meta name="date" content="2022-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +74,9 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
+</ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.2</b> Create a Bookdown-Website</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
@@ -90,10 +92,14 @@
 <li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.1</b> Cache</a></li>
 <li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.2</b> Lazy-Loading</a></li>
 </ul></li>
+<li class="chapter" data-level="3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#how-front-end-backend-work-together"><i class="fa fa-check"></i><b>3.4</b> How Front-End &amp; Backend work together</a></li>
+<li class="chapter" data-level="3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#how-to-build-and-think-about-an-application"><i class="fa fa-check"></i><b>3.5</b> How to build and think about an Application</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS</a><ul>
 <li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#css-operatoren"><i class="fa fa-check"></i><b>4.1</b> CSS Operatoren</a></li>
-<li class="chapter" data-level="4.2" data-path="css.html"><a href="css.html#responsive-design-use-media-queries"><i class="fa fa-check"></i><b>4.2</b> Responsive-Design: use Media-Queries</a></li>
+<li class="chapter" data-level="4.2" data-path="css.html"><a href="css.html#responsive-design-use-media-queries"><i class="fa fa-check"></i><b>4.2</b> Responsive-Design: use Media-Queries</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="css.html"><a href="css.html#good-rule-of-thumb-for-image-grid"><i class="fa fa-check"></i><b>4.2.1</b> Good rule-of-thumb for image-grid</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="css.html"><a href="css.html#padding-abkürzung"><i class="fa fa-check"></i><b>4.3</b> Padding-Abkürzung</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="css.html"><a href="css.html#fall-1-margin-padding-has-4-values"><i class="fa fa-check"></i><b>4.3.1</b> Fall 1: Margin / Padding has 4 Values</a></li>
 <li class="chapter" data-level="4.3.2" data-path="css.html"><a href="css.html#fall-2-margin-padding-has-3-values"><i class="fa fa-check"></i><b>4.3.2</b> Fall 2: Margin / Padding has 3 Values</a></li>
@@ -198,6 +204,16 @@
 <p>Wenn du auf Screen-Grössen <strong>zwischen</strong> zwei bestimmten Werten abzielst, dann kann man dies auch tun:</p>
 <pre><code>@media only screen and (min-width: 480px) and (max-width: 989px) {
 }</code></pre>
+<div id="good-rule-of-thumb-for-image-grid" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Good rule-of-thumb for image-grid</h3>
+<p>In this example, we have a layout that has:
+- <strong>4 columns</strong> on screens <u>larger than 768px</u>,
+- <strong>2 columns</strong> on screens that have a <u>size between 376px-786px</u>, and
+- <strong>1 column</strong> on screens that are <u>smaller than (or equal to) 375px</u>.</p>
+<ul>
+<li><u>Quelle</u>: <a href="https://formidable.com/blog/2019/responsive-images/" class="uri">https://formidable.com/blog/2019/responsive-images/</a></li>
+</ul>
+</div>
 </div>
 <div id="padding-abkürzung" class="section level2">
 <h2><span class="header-section-number">4.3</span> Padding-Abkürzung</h2>

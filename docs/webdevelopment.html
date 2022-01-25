@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-20" />
+<meta name="date" content="2022-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +74,9 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
+</ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.2</b> Create a Bookdown-Website</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
@@ -90,10 +92,14 @@
 <li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.1</b> Cache</a></li>
 <li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.2</b> Lazy-Loading</a></li>
 </ul></li>
+<li class="chapter" data-level="3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#how-front-end-backend-work-together"><i class="fa fa-check"></i><b>3.4</b> How Front-End &amp; Backend work together</a></li>
+<li class="chapter" data-level="3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#how-to-build-and-think-about-an-application"><i class="fa fa-check"></i><b>3.5</b> How to build and think about an Application</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS</a><ul>
 <li class="chapter" data-level="4.1" data-path="css.html"><a href="css.html#css-operatoren"><i class="fa fa-check"></i><b>4.1</b> CSS Operatoren</a></li>
-<li class="chapter" data-level="4.2" data-path="css.html"><a href="css.html#responsive-design-use-media-queries"><i class="fa fa-check"></i><b>4.2</b> Responsive-Design: use Media-Queries</a></li>
+<li class="chapter" data-level="4.2" data-path="css.html"><a href="css.html#responsive-design-use-media-queries"><i class="fa fa-check"></i><b>4.2</b> Responsive-Design: use Media-Queries</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="css.html"><a href="css.html#good-rule-of-thumb-for-image-grid"><i class="fa fa-check"></i><b>4.2.1</b> Good rule-of-thumb for image-grid</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="css.html"><a href="css.html#padding-abkürzung"><i class="fa fa-check"></i><b>4.3</b> Padding-Abkürzung</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="css.html"><a href="css.html#fall-1-margin-padding-has-4-values"><i class="fa fa-check"></i><b>4.3.1</b> Fall 1: Margin / Padding has 4 Values</a></li>
 <li class="chapter" data-level="4.3.2" data-path="css.html"><a href="css.html#fall-2-margin-padding-has-3-values"><i class="fa fa-check"></i><b>4.3.2</b> Fall 2: Margin / Padding has 3 Values</a></li>
@@ -163,17 +169,43 @@
 <div id="synonyme" class="section level2">
 <h2><span class="header-section-number">3.1</span> Synonyme</h2>
 <ul>
+<li><strong>Backend</strong> // Server</li>
+<li><strong>Constraint</strong> // Rule // Annahme(n)</li>
+<li><strong>(above the) Fold</strong> // Viewport // Alles, was beim Laden einer HTML-Seite “visible” wird auf dem Screen eines Users</li>
+<li><strong>Store data (for example, in an array)</strong> // present data</li>
 <li><strong>Toggle</strong> // Ein- &amp; Ausschaltknopf</li>
+<li><strong>user agent</strong> // browser</li>
 <li><strong>Weiterleitung</strong> // forwarding // routing(?)</li>
 <li><strong>Parse</strong> // In der Umwandlung <code>A --&gt; B</code>, ist mit dem <strong><u>Pfeil</u></strong> das “parsen” gemeint!
 <ul>
 <li><u>Beispiel</u>: Umwandlung - beispielsweise der HTML-Sprache - in die Dokumentstruktur “DOM”, damit diese - via einem Renderer - visuell dargestellt werden kann im Browser.</li>
 </ul></li>
+<li><strong>DPR</strong> // device-pixel-ratio</li>
 </ul>
 </div>
 <div id="definitionen" class="section level2">
 <h2><span class="header-section-number">3.2</span> Definitionen</h2>
 <ul>
+<li><strong>Bandwidth</strong>: Bandwidth in website hosting is the amount of data your website can transfer to your users in a given amount of time.
+<ul>
+<li><u>Why is this important</u>: When you deal with <strong>images, especially for smaller screens, such as phones</strong>. The problem here is, that a <strong>very big images can take alot of bandwidth (up to 60%)</strong>. As a consequence, it slows down the performance of the site, which is the most important thing Google cares about when ranking websites!</li>
+</ul></li>
+<li><strong>CRUD</strong>: This is an acronym, which refers to the <strong>4 functions, that are considered necessary to implement a persistent storage application</strong>:
+<ul>
+<li><strong><u>c</u></strong>reat</li>
+<li><strong><u>r</u></strong>ead,</li>
+<li><strong><u>u</u></strong>pdate and</li>
+<li><strong><u>d</u></strong>elete.
+<ul>
+<li><u>Example of a CRUD Application</u>: Facebook, Instagram or TikTok, because each of those apps lets you:
+<ul>
+<li><strong>C-</strong> Create posts, videos, comments, likes etc.</li>
+<li><strong>R-</strong> Read posts, view pictures, see like counts, see followers of other users etc.</li>
+<li><strong>U-</strong> Edit posts, pictures, comments, profiles and update them etc. and finally</li>
+<li><strong>D-</strong> Delete posts, pictures, comments, videos etc.</li>
+</ul></li>
+</ul></li>
+</ul></li>
 <li><strong>Dependency // Dependencies</strong>: A dependency is a <strong>third-party bit of software</strong> that was probably written by someone else and ideally solves a single problem for you. A web project can have any number of dependencies, ranging from none to many, and <strong>your dependencies might include sub-dependencies that you didn’t explicitly install</strong> — your dependencies may have their own dependencies.
 <ul>
 <li><u>Example</u>: A useful dependency that your project might need is some <strong>code to calculate relative dates as human-readable text</strong>. You could certainly code this yourself, but there’s a strong chance that someone else has already solved this problem
@@ -244,9 +276,21 @@
 <div id="the-practical-solution-1" class="section level4">
 <h4><span class="header-section-number">3.3.2.3</span> The practical Solution</h4>
 <p>Use the code - which is <strong>written in vanilla JavaScript</strong> - from <a href="https://www.youtube.com/watch?v=aUjBvuUdkhg">this Fireship Youtube-Video</a> to make Lazy-Loading possible.</p>
+</div>
+</div>
+</div>
+<div id="how-front-end-backend-work-together" class="section level2">
+<h2><span class="header-section-number">3.4</span> How Front-End &amp; Backend work together</h2>
+<ul>
+<li><u>Very good example &amp; explanations</u>: <a href="https://dev.to/gbudjeakp/how-to-connect-your-client-side-to-your-server-side-using-node-and-express-2i71" class="uri">https://dev.to/gbudjeakp/how-to-connect-your-client-side-to-your-server-side-using-node-and-express-2i71</a></li>
+</ul>
+</div>
+<div id="how-to-build-and-think-about-an-application" class="section level2">
+<h2><span class="header-section-number">3.5</span> How to build and think about an Application</h2>
+<ul>
+<li><u>Very good example (read the section “App Structure”): <a href="https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg" class="uri">https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg</a></li>
+</ul>
 
-</div>
-</div>
 </div>
 </div>
             </section>

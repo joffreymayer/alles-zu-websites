@@ -19,6 +19,22 @@ site: bookdown::bookdown_site
 4) **Create a Public & Private SSH-Key** in order to not always type in your password. Follow the instruction of [this Youtube-Tutorial (ab 2:40-4:03)](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=2m40s).
 5) In order **to be able to use the SSH-Key**, you need to follow my instruction in the Video on my local computer, situated on the following path: `/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov`. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: `git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git`
 
+### Create a new Branch
+
+To create a new branch AND switch to it at the same time, you can use the _short-hand_ command in the terminal:
+
+```
+git checkout -b NEW_BRANCH_NAME
+```
+
+- <u>The above is the same as the following (longer) code</u>:
+
+```
+$ git branch  NEW_BRANCH_NAME
+$ git checkout  NEW_BRANCH_NAME
+```
+
+
 ## Create a Bookdown-Website
 
 1) Use [this Bookdown-Template](https://github.com/jtr13/bookdown-template) to create an awesome website like this one, you are currently at right now.

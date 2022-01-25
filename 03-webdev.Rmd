@@ -4,14 +4,32 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 
 ## Synonyme 
 
+- **Backend** // Server
+- **Constraint** // Rule // Annahme(n)
+- **(above the) Fold** // Viewport // Alles, was beim Laden einer HTML-Seite "visible" wird auf dem Screen eines Users
+- **Store data (for example, in an array)** // present data
 - **Toggle** // Ein- & Ausschaltknopf
+- **user agent** // browser 
 - **Weiterleitung** // forwarding // routing(?)
 - **Parse** // In der Umwandlung `A --> B`, ist mit dem **<u>Pfeil</u>** das "parsen" gemeint! 
   - <u>Beispiel</u>: Umwandlung - beispielsweise der HTML-Sprache - in die Dokumentstruktur "DOM", damit diese - via einem Renderer - visuell dargestellt werden kann im Browser.
+- **DPR** // device-pixel-ratio
 
 
 ## Definitionen
 
+- **Bandwidth**: Bandwidth in website hosting is the amount of data your website can transfer to your users in a given amount of time.
+  - <u>Why is this important</u>: When you deal with **images, especially for smaller screens, such as phones**. The problem here is, that a **very big images can take alot of bandwidth (up to 60%)**. As a consequence, it slows down the performance of the site, which is the most important thing Google cares about when ranking websites!
+- **CRUD**: This is an acronym, which refers to the **4 functions, that are considered necessary to implement a persistent storage application**:
+  - **<u>c</u>**reat
+  - **<u>r</u>**ead, 
+  - **<u>u</u>**pdate and 
+  - **<u>d</u>**elete.
+    - <u>Example of a CRUD Application</u>: Facebook, Instagram or TikTok, because each of those apps lets you:
+      - **C-** Create posts, videos, comments, likes etc. 
+      - **R-** Read posts, view pictures, see like counts, see followers of other users etc. 
+      - **U-** Edit posts, pictures, comments, profiles and update them etc. and finally 
+      - **D-** Delete posts, pictures, comments, videos etc.
 - **Dependency // Dependencies**: A dependency is a **third-party bit of software** that was probably written by someone else and ideally solves a single problem for you. A web project can have any number of dependencies, ranging from none to many, and **your dependencies might include sub-dependencies that you didn't explicitly install** — your dependencies may have their own dependencies.
   - <u>Example</u>: A useful dependency that your project might need is some **code to calculate relative dates as human-readable text**. You could certainly code this yourself, but there's a strong chance that someone else has already solved this problem 
   — <u>Vorteil 1</u>: *Why waste time reinventing the wheel?*
@@ -81,3 +99,11 @@ With JavaScript, we can change the behavior of how load `<img src="...">`-tags.
 #### The practical Solution
 
 Use the code - which is **written in vanilla JavaScript** - from [this Fireship Youtube-Video](https://www.youtube.com/watch?v=aUjBvuUdkhg) to make Lazy-Loading possible.
+
+## How Front-End &amp; Backend work together
+
+- <u>Very good example &amp; explanations</u>: https://dev.to/gbudjeakp/how-to-connect-your-client-side-to-your-server-side-using-node-and-express-2i71
+
+## How to build and think about an Application
+
+- <u>Very good example (read the section "App Structure"): https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg

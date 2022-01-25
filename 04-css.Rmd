@@ -49,6 +49,15 @@ Wenn du auf Screen-Grössen **zwischen** zwei bestimmten Werten abzielst, dann k
 }
 ```
 
+### Good rule-of-thumb for image-grid
+
+In this example, we have a layout that has:
+- **4 columns** on screens <u>larger than 768px</u>, 
+- **2 columns** on screens that have a <u>size between 376px-786px</u>, and 
+- **1 column** on screens that are <u>smaller than (or equal to) 375px</u>.
+
+- <u>Quelle</u>: https://formidable.com/blog/2019/responsive-images/
+
 ## Padding-Abkürzung
 
 Es gibt bei CSS diverse Abkürzungen, insbesondere wirst du vor allem diejenige `margin` und `padding` sehr oft begenenen:
