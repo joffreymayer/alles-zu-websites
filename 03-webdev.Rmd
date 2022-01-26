@@ -75,7 +75,7 @@ _As a consequence, the performance (in terms of loading time) of your site is po
 
 Nevertheless - **with the help of the `picture`- & `source`-element** - you can solve the problem of a _memory-intensive_ image that need to be downloaded for a hero-image.
 
-In [this Youtube-Video of myself](), I show & explain the solution I have chosen.
+In [this Youtube-Video of myself](https://www.youtube.com/watch?v=Ud3mdXwqdtc), I show & explain the solution I have chosen.
 
 - <u>To get a very solid foundation about the topic</u>: `https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images`
 - <u>To get a very good example of applying this foundation in practice</u>: `https://formidable.com/blog/2019/responsive-images/` 
