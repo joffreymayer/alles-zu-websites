@@ -77,9 +77,9 @@ Nevertheless - **with the help of the `picture`- & `source`-element** - you can 
 
 In [this Youtube-Video of myself](), I show & explain the solution I have chosen.
 
-- <u>To get a very solid foundation about the topic</u>: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
-- <u>To get a very good example of applying this foundation in practice</u>:https://formidable.com/blog/2019/responsive-images/ 
-  - <u>A second good example</u>: https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/
+- <u>To get a very solid foundation about the topic</u>: `https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images`
+- <u>To get a very good example of applying this foundation in practice</u>: `https://formidable.com/blog/2019/responsive-images/` 
+  - <u>A second good example</u>: `https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/`
 
 ### Useful things to know about the Topic
 
@@ -110,7 +110,7 @@ _This results in a much faster loading-time of our website and an increase in th
 
 In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:
 
-- https://imagekit.io/
+- `https://imagekit.io/`
 
 
 ### Lazy-Loading
@@ -134,8 +134,8 @@ Use the code - which is **written in vanilla JavaScript** - from [this Fireship 
 
 ## How Front-End &amp; Backend work together
 
-- <u>Very good example &amp; explanations</u>: https://dev.to/gbudjeakp/how-to-connect-your-client-side-to-your-server-side-using-node-and-express-2i71
+- <u>Very good example &amp; explanations</u>: `https://dev.to/gbudjeakp/how-to-connect-your-client-side-to-your-server-side-using-node-and-express-2i71`
 
 ## How to build and think about an Application
 
-- <u>Very good example (read the section "App Structure"): https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg
+- <u>Very good example (read the section "App Structure"): `https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg`
