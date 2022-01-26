@@ -138,4 +138,4 @@ Use the code - which is **written in vanilla JavaScript** - from [this Fireship 
 
 ## How to build and think about an Application
 
-- <u>Very good example (read the section "App Structure"): `https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg`
+- <u>Very good example (read the section "App Structure")</u>: `https://dev.to/gbudjeakp/how-to-make-applications-from-scratch-without-tutorials-for-beginners-26bg`
