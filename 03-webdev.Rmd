@@ -18,6 +18,7 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 
 ## Definitionen
 
+- **Art Direction Problem**: This is the problem of a responsive image, which - on the Computer // _landscape-mode_ - you can see the relevant parts of the image, but - on an Ipad // Iphone // _potrait-mode_ - you need to crop the image differently, otherwise you . This problem can be solved with the `<picture>`- & `<source>`-element in HTML (as well as the `srcset`-attribute in the CSS of the `<source`-element), that allows you tell the browser, which image it needs to select, based on the screen-size it faces.
 - **Bandwidth**: Bandwidth in website hosting is the amount of data your website can transfer to your users in a given amount of time.
   - <u>Why is this important</u>: When you deal with **images, especially for smaller screens, such as phones**. The problem here is, that a **very big images can take alot of bandwidth (up to 60%)**. As a consequence, it slows down the performance of the site, which is the most important thing Google cares about when ranking websites!
 - **CRUD**: This is an acronym, which refers to the **4 functions, that are considered necessary to implement a persistent storage application**:
@@ -52,8 +53,39 @@ _That's why you need a good image-management when building websites_.
 
 <u>The following areas lead to a better image-management and - hence - better site-performance</u>:
 
+- Resolution of images
 - Caching strategies tha use CDNs
 - Implement Lazy-Loading
+
+### Resolution of images
+
+When you need a responsive-solution for your images, the _least complicated_ thing to do, is to tackle the image-resolution of your images that are displayed on the screen. 
+
+_It may seem complicated at first sight, but understanding this chapter will be key for later simplicity & a significant increase in the site's performance_.
+
+### The Problem
+
+As you may know, I like to show my visitors on the site a beautiful hero-image. I am convinced that a it increases the visitor's interest in the site. 
+
+However - from a technical point of view - you get **terrible LCP-Scores** (= _largest contentful paint_), since the _mermory-heavy_ image you need to show to the user needs to be downloaded from a server. This can take a large amount of data to transfer (up to 60%) - **especially when big images are requested from a user // browser to the server** - which is why the loading time can be very long. 
+
+_As a consequence, the performance (in terms of loading time) of your site is poor - particularly on phones - and the visitor is going to leave your site, IF the loading takes too long_.
+
+### The solution 
+
+Nevertheless - **with the help of the `picture`- & `source`-element** - you can solve the problem of a _memory-intensive_ image that need to be downloaded for a hero-image.
+
+In [this Youtube-Video of myself](), I show & explain the solution I have chosen.
+
+- <u>To get a very solid foundation about the topic</u>: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+- <u>To get a very good example of applying this foundation in practice</u>:https://formidable.com/blog/2019/responsive-images/ 
+  - <u>A second good example</u>: https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/
+
+### Useful things to know about the Topic
+
+When you use the `<picture>`-element in combination with the `<source>`-element, it is required that you use a `<img>`-Tag at the end. Most of the websites - and even the "official" source - however, don't tell you how this `<img>` work exactly (but I will, because this little bit of keyknowledge will make you understand, why the "performance"-score in the light-house is improved after you use the `<picture>`- & `<source>`-elements):
+
+- <u>Important</u>: The `<picture>`-element itself is invisible, a bit like a magical span. Its `source`-element<u>s</u> are just there for the browser to draw alternate versions of the image from. <mark>Once a source URL is chosen, that URL is fed to the `<img>`-Element</mark>. _Additionally_, this means that any styles that you want to apply to your rendered image (like, say, max-width: 100%) need to be applied to the `<img>`-element, <u>not</u> to the `<picture>`-element.
 
 ### Cache
 

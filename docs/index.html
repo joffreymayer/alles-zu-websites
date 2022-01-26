@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-25" />
+<meta name="date" content="2022-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,9 +76,10 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>1.1.2</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#check-current-branch-you-are-currently-on"><i class="fa fa-check"></i><b>1.1.2</b> Check current Branch you are currently on</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>1.1.3</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.1.4</b> Create a Bookdown-Website</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.2</b> Create a Bookdown-Website</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
 <li class="chapter" data-level="2.1" data-path="seo.html"><a href="seo.html#outline"><i class="fa fa-check"></i><b>2.1</b> Outline</a><ul>
@@ -90,8 +91,12 @@
 <li class="chapter" data-level="3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#synonyme"><i class="fa fa-check"></i><b>3.1</b> Synonyme</a></li>
 <li class="chapter" data-level="3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#definitionen"><i class="fa fa-check"></i><b>3.2</b> Definitionen</a></li>
 <li class="chapter" data-level="3.3" data-path="webdevelopment.html"><a href="webdevelopment.html#image-management"><i class="fa fa-check"></i><b>3.3</b> Image-Management</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.1</b> Cache</a></li>
-<li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.2</b> Lazy-Loading</a></li>
+<li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#resolution-of-images"><i class="fa fa-check"></i><b>3.3.1</b> Resolution of images</a></li>
+<li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#the-problem"><i class="fa fa-check"></i><b>3.3.2</b> The Problem</a></li>
+<li class="chapter" data-level="3.3.3" data-path="webdevelopment.html"><a href="webdevelopment.html#the-solution"><i class="fa fa-check"></i><b>3.3.3</b> The solution</a></li>
+<li class="chapter" data-level="3.3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#useful-things-to-know-about-the-topic"><i class="fa fa-check"></i><b>3.3.4</b> Useful things to know about the Topic</a></li>
+<li class="chapter" data-level="3.3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.5</b> Cache</a></li>
+<li class="chapter" data-level="3.3.6" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.6</b> Lazy-Loading</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#how-front-end-backend-work-together"><i class="fa fa-check"></i><b>3.4</b> How Front-End &amp; Backend work together</a></li>
 <li class="chapter" data-level="3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#how-to-build-and-think-about-an-application"><i class="fa fa-check"></i><b>3.5</b> How to build and think about an Application</a></li>
@@ -167,7 +172,7 @@
 <div id="header">
 <h1 class="title">My Knowledge Database for Websites</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-01-25</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2022-01-26</em></p>
 </div>
 <div id="set-up" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Set-Up</h1>
@@ -193,9 +198,17 @@
 </ul>
 <pre><code>$ git branch  NEW_BRANCH_NAME
 $ git checkout  NEW_BRANCH_NAME</code></pre>
+<ul>
+<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you create a new branch, make sure to have committed every change, because <code>git</code> will be very confused otherwise!</li>
+</ul>
+</div>
+<div id="check-current-branch-you-are-currently-on" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Check current Branch you are currently on</h3>
+<p>The following code should show you <em>all</em> the local branches of your repo. The <strong>starred branch is your current branch</strong>:</p>
+<pre><code>git branch</code></pre>
 </div>
 <div id="merge-changes-in-new-branch-into-master-branch" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Merge Changes in “new branch” into “Master”-Branch</h3>
+<h3><span class="header-section-number">1.1.3</span> Merge Changes in “new branch” into “Master”-Branch</h3>
 <p>This can be achieved via a <strong>pull-request</strong>. All you have to do is:</p>
 <ol style="list-style-type: decimal">
 <li>check out // switch to the branch you wish to merge into (= this is usually the master-branch)</li>
@@ -205,15 +218,18 @@ $ git checkout  NEW_BRANCH_NAME</code></pre>
 Switched to branch &#39;master&#39;
 $ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
 Merge made by the &#39;recursive&#39; strategy.</code></pre>
+<ul>
+<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you merge back your changes that are on your branc, make sure to commit every change, because <code>git</code> will NOT allow you to switch to your master-branch otherwise!</li>
+</ul>
 </div>
-</div>
-<div id="create-a-bookdown-website" class="section level2">
-<h2><span class="header-section-number">1.2</span> Create a Bookdown-Website</h2>
+<div id="create-a-bookdown-website" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Create a Bookdown-Website</h3>
 <ol style="list-style-type: decimal">
 <li>Use <a href="https://github.com/jtr13/bookdown-template">this Bookdown-Template</a> to create an awesome website like this one, you are currently at right now.</li>
 <li>Follow all <a href="https://www.youtube.com/watch?v=m5D-yoH416Y">the instruction of this 5 Minutes Youtube-Video</a>.</li>
 </ol>
 
+</div>
 </div>
 </div>
             </section>

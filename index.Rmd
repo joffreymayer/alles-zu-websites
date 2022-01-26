@@ -34,6 +34,16 @@ $ git branch  NEW_BRANCH_NAME
 $ git checkout  NEW_BRANCH_NAME
 ```
 
+- <u>**Achtung**</u>: _BEFORE_ you create a new branch, make sure to have committed every change, because `git` will be very confused otherwise!
+
+### Check current Branch you are currently on
+
+The following code should show you _all_ the local branches of your repo. The **starred branch is your current branch**:
+
+```
+git branch
+```
+
 ### Merge Changes in "new branch" into "Master"-Branch
 
 This can be achieved via a **pull-request**. All you have to do is:
@@ -47,9 +57,12 @@ Switched to branch 'master'
 $ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
 Merge made by the 'recursive' strategy.
 ```
+- <u>**Achtung**</u>: _BEFORE_ you merge back your changes that are on your branc, make sure to commit every change, because `git` will NOT allow you to switch to your master-branch otherwise!
 
 
-## Create a Bookdown-Website
+### Create a Bookdown-Website
 
 1) Use [this Bookdown-Template](https://github.com/jtr13/bookdown-template) to create an awesome website like this one, you are currently at right now.
 2) Follow all [the instruction of this 5 Minutes Youtube-Video](https://www.youtube.com/watch?v=m5D-yoH416Y).
+
+

@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-25" />
+<meta name="date" content="2022-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,9 +76,10 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>1.1.2</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#check-current-branch-you-are-currently-on"><i class="fa fa-check"></i><b>1.1.2</b> Check current Branch you are currently on</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>1.1.3</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.1.4</b> Create a Bookdown-Website</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.2</b> Create a Bookdown-Website</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
 <li class="chapter" data-level="2.1" data-path="seo.html"><a href="seo.html#outline"><i class="fa fa-check"></i><b>2.1</b> Outline</a><ul>
@@ -90,8 +91,12 @@
 <li class="chapter" data-level="3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#synonyme"><i class="fa fa-check"></i><b>3.1</b> Synonyme</a></li>
 <li class="chapter" data-level="3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#definitionen"><i class="fa fa-check"></i><b>3.2</b> Definitionen</a></li>
 <li class="chapter" data-level="3.3" data-path="webdevelopment.html"><a href="webdevelopment.html#image-management"><i class="fa fa-check"></i><b>3.3</b> Image-Management</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.1</b> Cache</a></li>
-<li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.2</b> Lazy-Loading</a></li>
+<li class="chapter" data-level="3.3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#resolution-of-images"><i class="fa fa-check"></i><b>3.3.1</b> Resolution of images</a></li>
+<li class="chapter" data-level="3.3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#the-problem"><i class="fa fa-check"></i><b>3.3.2</b> The Problem</a></li>
+<li class="chapter" data-level="3.3.3" data-path="webdevelopment.html"><a href="webdevelopment.html#the-solution"><i class="fa fa-check"></i><b>3.3.3</b> The solution</a></li>
+<li class="chapter" data-level="3.3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#useful-things-to-know-about-the-topic"><i class="fa fa-check"></i><b>3.3.4</b> Useful things to know about the Topic</a></li>
+<li class="chapter" data-level="3.3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#cache"><i class="fa fa-check"></i><b>3.3.5</b> Cache</a></li>
+<li class="chapter" data-level="3.3.6" data-path="webdevelopment.html"><a href="webdevelopment.html#lazy-loading"><i class="fa fa-check"></i><b>3.3.6</b> Lazy-Loading</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="webdevelopment.html"><a href="webdevelopment.html#how-front-end-backend-work-together"><i class="fa fa-check"></i><b>3.4</b> How Front-End &amp; Backend work together</a></li>
 <li class="chapter" data-level="3.5" data-path="webdevelopment.html"><a href="webdevelopment.html#how-to-build-and-think-about-an-application"><i class="fa fa-check"></i><b>3.5</b> How to build and think about an Application</a></li>
@@ -187,6 +192,7 @@
 <div id="definitionen" class="section level2">
 <h2><span class="header-section-number">3.2</span> Definitionen</h2>
 <ul>
+<li><strong>Art Direction Problem</strong>: This is the problem of a responsive image, which - on the Computer // <em>landscape-mode</em> - you can see the relevant parts of the image, but - on an Ipad // Iphone // <em>potrait-mode</em> - you need to crop the image differently, otherwise you . This problem can be solved with the <code>&lt;picture&gt;</code>- &amp; <code>&lt;source&gt;</code>-element in HTML (as well as the <code>srcset</code>-attribute in the CSS of the <code>&lt;source</code>-element), that allows you tell the browser, which image it needs to select, based on the screen-size it faces.</li>
 <li><strong>Bandwidth</strong>: Bandwidth in website hosting is the amount of data your website can transfer to your users in a given amount of time.
 <ul>
 <li><u>Why is this important</u>: When you deal with <strong>images, especially for smaller screens, such as phones</strong>. The problem here is, that a <strong>very big images can take alot of bandwidth (up to 60%)</strong>. As a consequence, it slows down the performance of the site, which is the most important thing Google cares about when ranking websites!</li>
@@ -233,18 +239,49 @@
 <p><em>That’s why you need a good image-management when building websites</em>.</p>
 <p><u>The following areas lead to a better image-management and - hence - better site-performance</u>:</p>
 <ul>
+<li>Resolution of images</li>
 <li>Caching strategies tha use CDNs</li>
 <li>Implement Lazy-Loading</li>
 </ul>
+<div id="resolution-of-images" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Resolution of images</h3>
+<p>When you need a responsive-solution for your images, the <em>least complicated</em> thing to do, is to tackle the image-resolution of your images that are displayed on the screen.</p>
+<p><em>It may seem complicated at first sight, but understanding this chapter will be key for later simplicity &amp; a significant increase in the site’s performance</em>.</p>
+</div>
+<div id="the-problem" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> The Problem</h3>
+<p>As you may know, I like to show my visitors on the site a beautiful hero-image. I am convinced that a it increases the visitor’s interest in the site.</p>
+<p>However - from a technical point of view - you get <strong>terrible LCP-Scores</strong> (= <em>largest contentful paint</em>), since the <em>mermory-heavy</em> image you need to show to the user needs to be downloaded from a server. This can take a large amount of data to transfer (up to 60%) - <strong>especially when big images are requested from a user // browser to the server</strong> - which is why the loading time can be very long.</p>
+<p><em>As a consequence, the performance (in terms of loading time) of your site is poor - particularly on phones - and the visitor is going to leave your site, IF the loading takes too long</em>.</p>
+</div>
+<div id="the-solution" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> The solution</h3>
+<p>Nevertheless - <strong>with the help of the <code>picture</code>- &amp; <code>source</code>-element</strong> - you can solve the problem of a <em>memory-intensive</em> image that need to be downloaded for a hero-image.</p>
+<p>In <a href="">this Youtube-Video of myself</a>, I show &amp; explain the solution I have chosen.</p>
+<ul>
+<li><u>To get a very solid foundation about the topic</u>: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" class="uri">https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images</a></li>
+<li><u>To get a very good example of applying this foundation in practice</u>:<a href="https://formidable.com/blog/2019/responsive-images/" class="uri">https://formidable.com/blog/2019/responsive-images/</a>
+<ul>
+<li><u>A second good example</u>: <a href="https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/" class="uri">https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="useful-things-to-know-about-the-topic" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Useful things to know about the Topic</h3>
+<p>When you use the <code>&lt;picture&gt;</code>-element in combination with the <code>&lt;source&gt;</code>-element, it is required that you use a <code>&lt;img&gt;</code>-Tag at the end. Most of the websites - and even the “official” source - however, don’t tell you how this <code>&lt;img&gt;</code> work exactly (but I will, because this little bit of keyknowledge will make you understand, why the “performance”-score in the light-house is improved after you use the <code>&lt;picture&gt;</code>- &amp; <code>&lt;source&gt;</code>-elements):</p>
+<ul>
+<li><u>Important</u>: The <code>&lt;picture&gt;</code>-element itself is invisible, a bit like a magical span. Its <code>source</code>-element<u>s</u> are just there for the browser to draw alternate versions of the image from. <mark>Once a source URL is chosen, that URL is fed to the <code>&lt;img&gt;</code>-Element</mark>. <em>Additionally</em>, this means that any styles that you want to apply to your rendered image (like, say, max-width: 100%) need to be applied to the <code>&lt;img&gt;</code>-element, <u>not</u> to the <code>&lt;picture&gt;</code>-element.</li>
+</ul>
+</div>
 <div id="cache" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Cache</h3>
+<h3><span class="header-section-number">3.3.5</span> Cache</h3>
 <p>When using a website, the images oftentimes stay relatively “static”, that is they - oftentimes - <em>do not change over time</em>. This fact - that the image-content does almost never change over time - can be exploited in order to dimish loading-time significantly with the help of a cache-strategy.</p>
-<div id="the-problem" class="section level4">
-<h4><span class="header-section-number">3.3.1.1</span> The Problem</h4>
+<div id="the-problem-1" class="section level4">
+<h4><span class="header-section-number">3.3.5.1</span> The Problem</h4>
 <p>By storing the images on our website’s server (VTX), the user’s browser will have to always make requests. Because I have many images, we have <em>a lot of image-requests per page</em> that the user renders on his phone. Hence, the loading time takes long.</p>
 </div>
 <div id="the-theoretical-solution" class="section level4">
-<h4><span class="header-section-number">3.3.1.2</span> The theoretical Solution</h4>
+<h4><span class="header-section-number">3.3.5.2</span> The theoretical Solution</h4>
 <p><mark>It would be much more efficient - from a performance // loading perspective - if the user had those images already stored in their computer’s internal (cache) memory. This is where CDNs come into play: those are servers that are distributed all across the globe and that</mark>:</p>
 <ol style="list-style-type: decimal">
 <li>Visit our website.</li>
@@ -254,7 +291,7 @@
 <p><em>This results in a much faster loading-time of our website and an increase in the user’s experience.</em></p>
 </div>
 <div id="the-practical-solution" class="section level4">
-<h4><span class="header-section-number">3.3.1.3</span> The practical Solution</h4>
+<h4><span class="header-section-number">3.3.5.3</span> The practical Solution</h4>
 <p>In order to use a CDN, I recommend this website as a tool to implement a caching-strategy:</p>
 <ul>
 <li><a href="https://imagekit.io/" class="uri">https://imagekit.io/</a></li>
@@ -262,20 +299,20 @@
 </div>
 </div>
 <div id="lazy-loading" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Lazy-Loading</h3>
-<div id="the-problem-1" class="section level4">
-<h4><span class="header-section-number">3.3.2.1</span> The Problem</h4>
+<h3><span class="header-section-number">3.3.6</span> Lazy-Loading</h3>
+<div id="the-problem-2" class="section level4">
+<h4><span class="header-section-number">3.3.6.1</span> The Problem</h4>
 <p>When you code an HTML-page and you include a bunch of images, you will have to tell the browser, on which path the images can be loaded via the <code>src</code>-atribute of the <code>&lt;img&gt;</code>-tag.</p>
 <p><em>However - IF you have many <code>&lt;img src=....&gt;</code>-tags on your site - the browser will <strong>automatically load them all at once</strong>. And because loading image-entities is one of the most slow process when it comes to make everything visible on the user’s browser, having lot’s of images can take a long time to load. More specifically, <strong>IF a user directly follows a link to another page on our site</strong>, having downloaded all the pages is very inefficient, since the website-visitor will not have seen those images that are at the bottom of the site.</em></p>
 </div>
 <div id="the-theoretical-solution-1" class="section level4">
-<h4><span class="header-section-number">3.3.2.2</span> The theoretical Solution</h4>
+<h4><span class="header-section-number">3.3.6.2</span> The theoretical Solution</h4>
 <p>With JavaScript, we can change the behavior of how load <code>&lt;img src="..."&gt;</code>-tags.
 <strong>In lazy-loading</strong>, we can tell the browser - with the help of some JavaScript code - that it only needs to load the images, that are visible in the user’s viewport // browser-window (= visible portion of the screen).</p>
 <p><em>This way, all the images that are on the bottom of our pages, will NEVER be loaded, if the user clicks on a link at the TOP of our page</em>.</p>
 </div>
 <div id="the-practical-solution-1" class="section level4">
-<h4><span class="header-section-number">3.3.2.3</span> The practical Solution</h4>
+<h4><span class="header-section-number">3.3.6.3</span> The practical Solution</h4>
 <p>Use the code - which is <strong>written in vanilla JavaScript</strong> - from <a href="https://www.youtube.com/watch?v=aUjBvuUdkhg">this Fireship Youtube-Video</a> to make Lazy-Loading possible.</p>
 </div>
 </div>

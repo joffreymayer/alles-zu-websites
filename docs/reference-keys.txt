@@ -1,6 +1,7 @@
 set-up
 backend-git-github
 create-a-new-branch
+check-current-branch-you-are-currently-on
 merge-changes-in-new-branch-into-master-branch
 create-a-bookdown-website
 seo
@@ -11,12 +12,16 @@ webdevelopment
 synonyme
 definitionen
 image-management
-cache
+resolution-of-images
 the-problem
+the-solution
+useful-things-to-know-about-the-topic
+cache
+the-problem-1
 the-theoretical-solution
 the-practical-solution
 lazy-loading
-the-problem-1
+the-problem-2
 the-theoretical-solution-1
 the-practical-solution-1
 how-front-end-backend-work-together
