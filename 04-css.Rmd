@@ -305,7 +305,7 @@ Dabei veränderst du eigentlich nur die CSS-Property `grid-template-columns`, wi
 ```
 
 - <u>Beispiel</u>: Schaue dir auch noch [mein Youtube-Video](https://youtu.be/0WSkvuxtlOg) zum Thema an.
-- <u>Alternative **ohne** `@media`</>: Dieses [Youtube-Video von WebDev Simplified (ab 2:50-3:30)](https://www.youtube.com/watch?v=TlP5WIxVirU&t=2m50s) zeigt eine alternative Methode anhand von der `auto-fill`-property & `minmax()`-Funktion.
+- <u>Alternative **ohne** `@media`</u>: Dieses [Youtube-Video von WebDev Simplified (ab 2:50-3:30)](https://www.youtube.com/watch?v=TlP5WIxVirU&t=2m50s) zeigt eine alternative Methode anhand von der `auto-fill`-property & `minmax()`-Funktion.
 
 #### Asymmetric 2-Column-Grid
 
