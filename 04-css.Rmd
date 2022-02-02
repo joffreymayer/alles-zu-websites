@@ -203,7 +203,7 @@ In your Projects, you will oftentimes want to use a beautiful font rather than t
 - Step 2: Search for a font, for example `Raleway`.
 - Step 3: Follow the steps on the image below
 
-![These are the remaining steps on this Image. You need to insert the link into your CSS file via `@import`, like in this example: https://www.youtube.com/watch?v=Sv_NAxi_jNs&t=8m6s)](.bilder/css/google-fonts.png)
+![These are the remaining steps on this Image. You need to insert the link into your CSS file via `@import`, like in this example: https://www.youtube.com/watch?v=Sv_NAxi_jNs&t=8m6s)](./bilder/css/google-fonts.png)
 
 ### Write something on top of an Image
 
