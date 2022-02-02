@@ -317,6 +317,10 @@ Angenommen, ich möchte ein 2-Column-Grid Layout, aber die 1. Spalte sollte nich
 }
 ```
 
+- <u>Here is another example with 3 columns of unequal width</u>:
+
+![Grid-Layout with unequal Columns](./bilder/css/grid-layout-with-unequal-columns.png)
+
 ### `justify-content` VS. `justify-item` VS. `justify-self`
 
 Hier ist vor allem zu beachten, dass die `justify-content`- & `justify-item`-properties auf den grid-**container** angewendet werden, während - im Kontrast dazu - die `justify-self`-property auf den verschiedenen grid-**items** angewendet werden kann!
