@@ -126,6 +126,10 @@ The **most simplest <u>AND</u> memory-efficient** way to do this, is to import o
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 ```
 
+Note that - in the above example - I used the `Montserrat`-Font and its specific URL. 
+
+<mark>**If you need another font's URL**, you simply need to go to the [Google-Fonts Website](https://fonts.google.com/), search for a font with the search-bar and - finally - tap on the `+ select this style`-string. This will trigger a side-navbar, where you have the option of an `@import`-button --> click it and copy the URL <u>without</u> the `<style>`-Tags. Now, you can simply paste it into your `.css`-stylesheet and then use the `font-family: Montserrat (or whatever font...)` on the elements you want to apply the font to.</mark> =)
+
 - <u>Best Practice</u>: **Always import all the styles on the top of your `.css`-stylesheet**! 
 
 ### `Box-Sizing: Border-Box` Property
