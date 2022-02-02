@@ -335,6 +335,9 @@ _**As you might expect, all of this also applies to the `align-*` properties!**_
 
 - **`justify-content` VS. `justify-item` VS. `justify-self`**: https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs
 
+## Flexbox- & CSS-Grid Layout kombiniert
+
+- <u>Hier eine Illustration meiner Erkenntnisse</u>: https://youtu.be/yoTrOm8AjdM
 
 ## Adding Box-Shadows
 
