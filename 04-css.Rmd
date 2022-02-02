@@ -278,7 +278,7 @@ Es gibt eine Reihe von `CSS Grid` Properties, aber hier sind die 3 wichtigsten, 
 }
 ```
 
-### Responsiveness herbeiführen
+### Responsiveness
 
 Damit ein CSS-Grid "responsive" wird, musst du mit _Media-Queries_ arbeiten. Dabei definierst du zunächst, wie viele Spalten das Grid-System haben soll, wenn es auf einem _sehr grossen_ Screen (= Desktop) aussehen soll und - anschliessend mittels _Media-Queries_ - wie viele Spalten es auf dem Tablet & Phone haben soll. 
 
@@ -305,6 +305,7 @@ Dabei veränderst du eigentlich nur die CSS-Property `grid-template-columns`, wi
 ```
 
 - <u>Beispiel</u>: Schaue dir auch noch [mein Youtube-Video](https://youtu.be/0WSkvuxtlOg) zum Thema an.
+- <u>Alternative **ohne** `@media`</>: Dieses [Youtube-Video von WebDev Simplified (ab 2:50-3:30)](https://www.youtube.com/watch?v=TlP5WIxVirU&t=2m50s) zeigt eine alternative Methode anhand von der `auto-fill`-property & `minmax()`-Funktion.
 
 ### `justify-content` VS. `justify-item` VS. `justify-self`
 

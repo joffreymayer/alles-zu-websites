@@ -123,7 +123,7 @@
 <li class="chapter" data-level="4.5" data-path="css.html"><a href="css.html#css-grid-layout-modell"><i class="fa fa-check"></i><b>4.5</b> CSS-Grid Layout-Modell</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="css.html"><a href="css.html#grundstruktur-für-das-html"><i class="fa fa-check"></i><b>4.5.1</b> Grundstruktur für das HTML</a></li>
 <li class="chapter" data-level="4.5.2" data-path="css.html"><a href="css.html#css-for-grid-container"><i class="fa fa-check"></i><b>4.5.2</b> CSS for <code>Grid-Container</code></a></li>
-<li class="chapter" data-level="4.5.3" data-path="css.html"><a href="css.html#responsiveness-herbeiführen"><i class="fa fa-check"></i><b>4.5.3</b> Responsiveness herbeiführen</a></li>
+<li class="chapter" data-level="4.5.3" data-path="css.html"><a href="css.html#responsiveness"><i class="fa fa-check"></i><b>4.5.3</b> Responsiveness</a></li>
 <li class="chapter" data-level="4.5.4" data-path="css.html"><a href="css.html#justify-content-vs.-justify-item-vs.-justify-self"><i class="fa fa-check"></i><b>4.5.4</b> <code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></a></li>
 <li class="chapter" data-level="4.5.5" data-path="css.html"><a href="css.html#nützliche-quellen"><i class="fa fa-check"></i><b>4.5.5</b> Nützliche Quellen</a></li>
 </ul></li>
@@ -416,8 +416,8 @@ img { /* In order to display the image properly, we need this styling... */
     grid-gap: 40px;
 }</code></pre>
 </div>
-<div id="responsiveness-herbeiführen" class="section level3">
-<h3><span class="header-section-number">4.5.3</span> Responsiveness herbeiführen</h3>
+<div id="responsiveness" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Responsiveness</h3>
 <p>Damit ein CSS-Grid “responsive” wird, musst du mit <em>Media-Queries</em> arbeiten. Dabei definierst du zunächst, wie viele Spalten das Grid-System haben soll, wenn es auf einem <em>sehr grossen</em> Screen (= Desktop) aussehen soll und - anschliessend mittels <em>Media-Queries</em> - wie viele Spalten es auf dem Tablet &amp; Phone haben soll.</p>
 <p>Dabei veränderst du eigentlich nur die CSS-Property <code>grid-template-columns</code>, wie das folgende Beispiel zeigt, bei dem ich jeweils für 3 Bildschirme die Anzahl an Spalten <strong>verringere</strong> (3 Spalten auf Desktop, dann 2 Spalten auf Ipad, dann 1 Spalte auf Phones):</p>
 <pre><code>.grid-container {
@@ -439,6 +439,7 @@ img { /* In order to display the image properly, we need this styling... */
 }</code></pre>
 <ul>
 <li><u>Beispiel</u>: Schaue dir auch noch <a href="https://youtu.be/0WSkvuxtlOg">mein Youtube-Video</a> zum Thema an.</li>
+<li><u>Alternative <strong>ohne</strong> <code>@media</code>&lt;/&gt;: Dieses <a href="https://www.youtube.com/watch?v=TlP5WIxVirU&amp;t=2m50s">Youtube-Video von WebDev Simplified (ab 2:50-3:30)</a> zeigt eine alternative Methode anhand von der <code>auto-fill</code>-property &amp; <code>minmax()</code>-Funktion.</li>
 </ul>
 </div>
 <div id="justify-content-vs.-justify-item-vs.-justify-self" class="section level3">
