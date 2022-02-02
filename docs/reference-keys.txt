@@ -36,6 +36,7 @@ fall-2-margin-padding-has-3-values
 fall-3-margin-padding-has-2-values
 fall-4-margin-padding-has-1-value
 necessary-css-in-all-projects
+import-font-styles-via-google-fonts-api
 box-sizing-border-box-property
 css-for-images
 center-a-div-and-make-it-responsive

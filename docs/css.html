@@ -113,11 +113,12 @@
 <li class="chapter" data-level="4.3.4" data-path="css.html"><a href="css.html#fall-4-margin-padding-has-1-value"><i class="fa fa-check"></i><b>4.3.4</b> Fall 4: Margin / Padding has 1 Value</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="css.html"><a href="css.html#necessary-css-in-all-projects"><i class="fa fa-check"></i><b>4.4</b> Necessary CSS in all Projects</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="css.html"><a href="css.html#box-sizing-border-box-property"><i class="fa fa-check"></i><b>4.4.1</b> <code>Box-Sizing: Border-Box</code> Property</a></li>
-<li class="chapter" data-level="4.4.2" data-path="css.html"><a href="css.html#css-for-images"><i class="fa fa-check"></i><b>4.4.2</b> CSS for Images</a></li>
-<li class="chapter" data-level="4.4.3" data-path="css.html"><a href="css.html#center-a-div-and-make-it-responsive"><i class="fa fa-check"></i><b>4.4.3</b> Center a <code>&lt;div&gt;</code> AND make it Responsive</a></li>
-<li class="chapter" data-level="4.4.4" data-path="css.html"><a href="css.html#use-google-fonts"><i class="fa fa-check"></i><b>4.4.4</b> Use <code>Google-Fonts</code></a></li>
-<li class="chapter" data-level="4.4.5" data-path="css.html"><a href="css.html#write-something-on-top-of-an-image"><i class="fa fa-check"></i><b>4.4.5</b> Write something on top of an Image</a></li>
+<li class="chapter" data-level="4.4.1" data-path="css.html"><a href="css.html#import-font-styles-via-google-fonts-api"><i class="fa fa-check"></i><b>4.4.1</b> Import Font-Styles via <code>Google-Fonts API</code></a></li>
+<li class="chapter" data-level="4.4.2" data-path="css.html"><a href="css.html#box-sizing-border-box-property"><i class="fa fa-check"></i><b>4.4.2</b> <code>Box-Sizing: Border-Box</code> Property</a></li>
+<li class="chapter" data-level="4.4.3" data-path="css.html"><a href="css.html#css-for-images"><i class="fa fa-check"></i><b>4.4.3</b> CSS for Images</a></li>
+<li class="chapter" data-level="4.4.4" data-path="css.html"><a href="css.html#center-a-div-and-make-it-responsive"><i class="fa fa-check"></i><b>4.4.4</b> Center a <code>&lt;div&gt;</code> AND make it Responsive</a></li>
+<li class="chapter" data-level="4.4.5" data-path="css.html"><a href="css.html#use-google-fonts"><i class="fa fa-check"></i><b>4.4.5</b> Use <code>Google-Fonts</code></a></li>
+<li class="chapter" data-level="4.4.6" data-path="css.html"><a href="css.html#write-something-on-top-of-an-image"><i class="fa fa-check"></i><b>4.4.6</b> Write something on top of an Image</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="css.html"><a href="css.html#css-grid-layout-modell"><i class="fa fa-check"></i><b>4.5</b> CSS-Grid Layout-Modell</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="css.html"><a href="css.html#grundstruktur-für-das-html"><i class="fa fa-check"></i><b>4.5.1</b> Grundstruktur für das HTML</a></li>
@@ -283,8 +284,17 @@
 </div>
 <div id="necessary-css-in-all-projects" class="section level2">
 <h2><span class="header-section-number">4.4</span> Necessary CSS in all Projects</h2>
+<div id="import-font-styles-via-google-fonts-api" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Import Font-Styles via <code>Google-Fonts API</code></h3>
+<p>In order to use different fonts, you will use <code>Google Fonts</code>, on which literally almost all Design-Platform use.</p>
+<p>The <strong>most simplest <u>AND</u> memory-efficient</strong> way to do this, is to import only the specific styles that you need. For this, simply paste in the following code into your <code>.css</code>-stylesheet:</p>
+<pre><code>@import url(&#39;https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap&#39;);</code></pre>
+<ul>
+<li><u>Best Practice</u>: <strong>Always import all the styles on the top of your <code>.css</code>-stylesheet</strong>!</li>
+</ul>
+</div>
 <div id="box-sizing-border-box-property" class="section level3">
-<h3><span class="header-section-number">4.4.1</span> <code>Box-Sizing: Border-Box</code> Property</h3>
+<h3><span class="header-section-number">4.4.2</span> <code>Box-Sizing: Border-Box</code> Property</h3>
 <p>Wenn wir beginnen unsere Webseite zu stylen, dann werden wir diese Property als aller erstes Element einfügen und zwar so:</p>
 <pre><code>* {
   boxsizing: border-box;
@@ -304,7 +314,7 @@
 </ul>
 </div>
 <div id="css-for-images" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> CSS for Images</h3>
+<h3><span class="header-section-number">4.4.3</span> CSS for Images</h3>
 <p>In order to have images that <strong>behave “normally”</strong> on the website, we will need to implement the following for ALL images:</p>
 <pre><code>img {
   width: 100%;
@@ -315,7 +325,7 @@
 <p>This will make the image to take 100% of the width of the parent-element, which - oftentimes - are <code>&lt;div&gt;</code>’s.</p>
 </div>
 <div id="center-a-div-and-make-it-responsive" class="section level3">
-<h3><span class="header-section-number">4.4.3</span> Center a <code>&lt;div&gt;</code> AND make it Responsive</h3>
+<h3><span class="header-section-number">4.4.4</span> Center a <code>&lt;div&gt;</code> AND make it Responsive</h3>
 <p>Moderne Webseiten heutzutage verwenden <code>&lt;section&gt;</code>, um die einzelnen Bereiche einer Webseite nach “Thema” zu ordnen. Beispielsweise besteht eine Webseite aus einer Navigation, einem Hauptteil und einem Footer (= 3 Sections).</p>
 <p>In der Code-Struktur werden diese HTML <code>&lt;section&gt;</code>-Elemente häufig als “Main Container” // “Wrapper” verwendet, die viele weitere HTML-Elemente enthalten (“nested HTML”).</p>
 <p><em>Es ist zum Standard geworden, dass man bei diesen äusseren Wrappern jeweils das (responsive) <code>padding</code> &amp; <code>margin</code> festlegt. Ausserdem werden diese jeweils zentriert, damit es schöner aussieht</em>:</p>
@@ -333,7 +343,7 @@
 </ul>
 </div>
 <div id="use-google-fonts" class="section level3">
-<h3><span class="header-section-number">4.4.4</span> Use <code>Google-Fonts</code></h3>
+<h3><span class="header-section-number">4.4.5</span> Use <code>Google-Fonts</code></h3>
 <p>In your Projects, you will oftentimes want to use a beautiful font rather than the default ones.</p>
 <ul>
 <li>Step 1: Go to the <a href="https://fonts.google.com/">Google-Fonts Website</a></li>
@@ -346,7 +356,7 @@
 </div>
 </div>
 <div id="write-something-on-top-of-an-image" class="section level3">
-<h3><span class="header-section-number">4.4.5</span> Write something on top of an Image</h3>
+<h3><span class="header-section-number">4.4.6</span> Write something on top of an Image</h3>
 <p>In order to write some text over an image, you can use the a trick that uses <code>relative</code>-position on a <strong>parent</strong> HTML-element and <code>absolute</code>-position on a <strong>child</strong> HTML-element.</p>
 <p>In order to use this, make sure to have the following <strong>HTML-structure</strong>:</p>
 <pre><code>&lt;div class=&quot;container&quot;&gt;

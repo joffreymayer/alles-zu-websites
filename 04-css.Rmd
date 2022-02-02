@@ -116,6 +116,18 @@ div {
   
 ## Necessary CSS in all Projects
 
+### Import Font-Styles via `Google-Fonts API`
+
+In order to use different fonts, you will use `Google Fonts`, on which literally almost all Design-Platform use. 
+
+The **most simplest <u>AND</u> memory-efficient** way to do this, is to import only the specific styles that you need. For this, simply paste in the following code into your `.css`-stylesheet:
+
+```
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+```
+
+- <u>Best Practice</u>: **Always import all the styles on the top of your `.css`-stylesheet**! 
+
 ### `Box-Sizing: Border-Box` Property
 
 Wenn wir beginnen unsere Webseite zu stylen, dann werden wir diese Property als aller erstes Element einfügen und zwar so:
