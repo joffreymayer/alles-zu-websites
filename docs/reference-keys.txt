@@ -44,6 +44,7 @@ write-something-on-top-of-an-image
 css-grid-layout-modell
 grundstruktur-für-das-html
 css-for-grid-container
+responsiveness-herbeiführen
 justify-content-vs.-justify-item-vs.-justify-self
 nützliche-quellen
 adding-box-shadows

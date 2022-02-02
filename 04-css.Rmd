@@ -262,6 +262,34 @@ Es gibt eine Reihe von `CSS Grid` Properties, aber hier sind die 3 wichtigsten, 
 }
 ```
 
+### Responsiveness herbeiführen
+
+Damit ein CSS-Grid "responsive" wird, musst du mit _Media-Queries_ arbeiten. Dabei definierst du zunächst, wie viele Spalten das Grid-System haben soll, wenn es auf einem _sehr grossen_ Screen (= Desktop) aussehen soll und - anschliessend mittels _Media-Queries_ - wie viele Spalten es auf dem Tablet & Phone haben soll. 
+
+Dabei veränderst du eigentlich nur die CSS-Property `grid-template-columns`, wie das folgende Beispiel zeigt, bei dem ich jeweils für 3 Bildschirme die Anzahl an Spalten **verringere** (3 Spalten auf Desktop, dann 2 Spalten auf Ipad, dann 1 Spalte auf Phones):
+
+```
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Spalten für Desktops */
+    grid-gap: 40px;
+}
+
+@media screen and (max-width: 980px){ 
+    .einzel-vorstellung {
+        grid-template-columns: repeat(2, 1fr); /* Nur noch 2 Spalten für Tablets */
+    }
+}
+
+@media screen and (max-width: 540px){ 
+    .einzel-vorstellung {
+        grid-template-columns: repeat(1, 1fr); /* Kleine telefone haben bloss noch 1 Spalte */
+    }
+}
+```
+
+- <u>Beispiel</u>: Schaue dir auch noch [mein Youtube-Video](https://youtu.be/0WSkvuxtlOg) zum Thema an.
+
 ### `justify-content` VS. `justify-item` VS. `justify-self`
 
 Hier ist vor allem zu beachten, dass die `justify-content`- & `justify-item`-properties auf den grid-**container** angewendet werden, während - im Kontrast dazu - die `justify-self`-property auf den verschiedenen grid-**items** angewendet werden kann!

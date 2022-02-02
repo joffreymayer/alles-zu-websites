@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -122,8 +122,9 @@
 <li class="chapter" data-level="4.5" data-path="css.html"><a href="css.html#css-grid-layout-modell"><i class="fa fa-check"></i><b>4.5</b> CSS-Grid Layout-Modell</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="css.html"><a href="css.html#grundstruktur-für-das-html"><i class="fa fa-check"></i><b>4.5.1</b> Grundstruktur für das HTML</a></li>
 <li class="chapter" data-level="4.5.2" data-path="css.html"><a href="css.html#css-for-grid-container"><i class="fa fa-check"></i><b>4.5.2</b> CSS for <code>Grid-Container</code></a></li>
-<li class="chapter" data-level="4.5.3" data-path="css.html"><a href="css.html#justify-content-vs.-justify-item-vs.-justify-self"><i class="fa fa-check"></i><b>4.5.3</b> <code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></a></li>
-<li class="chapter" data-level="4.5.4" data-path="css.html"><a href="css.html#nützliche-quellen"><i class="fa fa-check"></i><b>4.5.4</b> Nützliche Quellen</a></li>
+<li class="chapter" data-level="4.5.3" data-path="css.html"><a href="css.html#responsiveness-herbeiführen"><i class="fa fa-check"></i><b>4.5.3</b> Responsiveness herbeiführen</a></li>
+<li class="chapter" data-level="4.5.4" data-path="css.html"><a href="css.html#justify-content-vs.-justify-item-vs.-justify-self"><i class="fa fa-check"></i><b>4.5.4</b> <code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></a></li>
+<li class="chapter" data-level="4.5.5" data-path="css.html"><a href="css.html#nützliche-quellen"><i class="fa fa-check"></i><b>4.5.5</b> Nützliche Quellen</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="css.html"><a href="css.html#adding-box-shadows"><i class="fa fa-check"></i><b>4.6</b> Adding Box-Shadows</a></li>
 <li class="chapter" data-level="4.7" data-path="css.html"><a href="css.html#optional-line-break"><i class="fa fa-check"></i><b>4.7</b> Optional Line-Break</a></li>
@@ -403,8 +404,33 @@ img { /* In order to display the image properly, we need this styling... */
     grid-gap: 40px;
 }</code></pre>
 </div>
+<div id="responsiveness-herbeiführen" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Responsiveness herbeiführen</h3>
+<p>Damit ein CSS-Grid “responsive” wird, musst du mit <em>Media-Queries</em> arbeiten. Dabei definierst du zunächst, wie viele Spalten das Grid-System haben soll, wenn es auf einem <em>sehr grossen</em> Screen (= Desktop) aussehen soll und - anschliessend mittels <em>Media-Queries</em> - wie viele Spalten es auf dem Tablet &amp; Phone haben soll.</p>
+<p>Dabei veränderst du eigentlich nur die CSS-Property <code>grid-template-columns</code>, wie das folgende Beispiel zeigt, bei dem ich jeweils für 3 Bildschirme die Anzahl an Spalten <strong>verringere</strong> (3 Spalten auf Desktop, dann 2 Spalten auf Ipad, dann 1 Spalte auf Phones):</p>
+<pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Spalten für Desktops */
+    grid-gap: 40px;
+}
+
+@media screen and (max-width: 980px){ 
+    .einzel-vorstellung {
+        grid-template-columns: repeat(2, 1fr); /* Nur noch 2 Spalten für Tablets */
+    }
+}
+
+@media screen and (max-width: 540px){ 
+    .einzel-vorstellung {
+        grid-template-columns: repeat(1, 1fr); /* Kleine telefone haben bloss noch 1 Spalte */
+    }
+}</code></pre>
+<ul>
+<li><u>Beispiel</u>: Schaue dir auch noch <a href="https://youtu.be/0WSkvuxtlOg">mein Youtube-Video</a> zum Thema an.</li>
+</ul>
+</div>
 <div id="justify-content-vs.-justify-item-vs.-justify-self" class="section level3">
-<h3><span class="header-section-number">4.5.3</span> <code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></h3>
+<h3><span class="header-section-number">4.5.4</span> <code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></h3>
 <p>Hier ist vor allem zu beachten, dass die <code>justify-content</code>- &amp; <code>justify-item</code>-properties auf den grid-<strong>container</strong> angewendet werden, während - im Kontrast dazu - die <code>justify-self</code>-property auf den verschiedenen grid-<strong>items</strong> angewendet werden kann!</p>
 <ul>
 <li><strong>justify-content</strong> allows you to position the grid within it’s grid container. This is why the justify-content property will have no effect if the grid-container is the same size as the grid. (Which is always the case if you use fr units). This is also why it can have the values: space-around, space-between and space-evenly (In addition to start, end, centre and stretch), which will break up the grid and place the grid items within the grid container. This is a property of the <strong>grid-container</strong>.</li>
@@ -414,7 +440,7 @@ img { /* In order to display the image properly, we need this styling... */
 <p><em><strong>As you might expect, all of this also applies to the <code>align-*</code> properties!</strong></em></p>
 </div>
 <div id="nützliche-quellen" class="section level3">
-<h3><span class="header-section-number">4.5.4</span> Nützliche Quellen</h3>
+<h3><span class="header-section-number">4.5.5</span> Nützliche Quellen</h3>
 <ul>
 <li><strong><code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></strong>: <a href="https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs" class="uri">https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs</a></li>
 </ul>
