@@ -441,6 +441,13 @@ img { /* In order to display the image properly, we need this styling... */
 <li><u>Beispiel</u>: Schaue dir auch noch <a href="https://youtu.be/0WSkvuxtlOg">mein Youtube-Video</a> zum Thema an.</li>
 <li><u>Alternative <strong>ohne</strong> <code>@media</code>&lt;/&gt;: Dieses <a href="https://www.youtube.com/watch?v=TlP5WIxVirU&amp;t=2m50s">Youtube-Video von WebDev Simplified (ab 2:50-3:30)</a> zeigt eine alternative Methode anhand von der <code>auto-fill</code>-property &amp; <code>minmax()</code>-Funktion.</li>
 </ul>
+<div id="asymmetric-2-column-grid" class="section level4">
+<h4><span class="header-section-number">4.5.3.1</span> Asymmetric 2-Column-Grid</h4>
+<p>Angenommen, ich möchte ein 2-Column-Grid Layout, aber die 1. Spalte sollte nicht 50% // die Hälfte des Screens an Platz einnehmen, sondern “nur” 30%.:</p>
+<pre><code>.grid-container {
+  grid-template-columns: 30% 1fr; /* Hier habe ich ein Grid erstellt mit 2 Spalten, wobei die 1. Spalte nur 1/3 des viewport-widths ausmacht, während die 2. Spalte den &quot;Rest&quot; (= 1fr) ausmacht, was grundsätzlich 2/3 entspricht. */
+}</code></pre>
+</div>
 </div>
 <div id="justify-content-vs.-justify-item-vs.-justify-self" class="section level3">
 <h3><span class="header-section-number">4.5.4</span> <code>justify-content</code> VS. <code>justify-item</code> VS. <code>justify-self</code></h3>

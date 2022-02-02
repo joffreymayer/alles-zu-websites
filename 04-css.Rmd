@@ -307,6 +307,16 @@ Dabei veränderst du eigentlich nur die CSS-Property `grid-template-columns`, wi
 - <u>Beispiel</u>: Schaue dir auch noch [mein Youtube-Video](https://youtu.be/0WSkvuxtlOg) zum Thema an.
 - <u>Alternative **ohne** `@media`</>: Dieses [Youtube-Video von WebDev Simplified (ab 2:50-3:30)](https://www.youtube.com/watch?v=TlP5WIxVirU&t=2m50s) zeigt eine alternative Methode anhand von der `auto-fill`-property & `minmax()`-Funktion.
 
+#### Asymmetric 2-Column-Grid
+
+Angenommen, ich möchte ein 2-Column-Grid Layout, aber die 1. Spalte sollte nicht 50% // die Hälfte des Screens an Platz einnehmen, sondern "nur" 30%.:
+
+```
+.grid-container {
+  grid-template-columns: 30% 1fr; /* Hier habe ich ein Grid erstellt mit 2 Spalten, wobei die 1. Spalte nur 1/3 des viewport-widths ausmacht, während die 2. Spalte den "Rest" (= 1fr) ausmacht, was grundsätzlich 2/3 entspricht. */
+}
+```
+
 ### `justify-content` VS. `justify-item` VS. `justify-self`
 
 Hier ist vor allem zu beachten, dass die `justify-content`- & `justify-item`-properties auf den grid-**container** angewendet werden, während - im Kontrast dazu - die `justify-self`-property auf den verschiedenen grid-**items** angewendet werden kann!
