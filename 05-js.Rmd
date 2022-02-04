@@ -1,5 +1,19 @@
 # JavaScript
 
+JavaScript is the last of the 3 languages that you need to know in order to create websites.
+
+In my opinion, JavaScript is not even really necessary in order to create a very beautiful site nowadays. However, if you want to add features, such as **lazy-loading** for example, then you will need to know some basic JavaScript and - very importantly - **how it interacts with `html`** in order to be able to have fun with the language =)
+
+## Konzept
+
+JavaScript ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich, wie `Python`, wird jedoch insbesondere bei Webseiten benötigt. 
+
+<mark>Grundsätzlich ist die Beherrschung von JavaScript - **alleine** - nicht besonders wertvoll, denn JavaScript kann _ohne_ das DOM - also das **Document Object Model** - <u>überhaupt nicht</u> mit dem HTML-Code interagieren. Das DOM agiert als wichtige **Schnittstelle // API** (= Application Programming INterface // aka eine Art Kellner, der zwischen der Küche & dem Kunden am Tisch interagiert), mit welchem es möglich wird, das "Verhalten" (zum Beispiel beim Klick eines Users auf einen Knopf) einer Webseite zu definieren (mittels JavaScript Code) und z.B. eine E-Mail an eine Adresse zu versenden.</mark>
+
+- <u>Hier eine Illustration, wie das DOM als API zwischen JavaScript & HTML interagiert</u>:
+
+![DOM-API, der als Schnittstelle zwischen HTML & JavaScript agiert](./bilder/js/dom-schnittstelle.jpg)
+
 ## Definitionen
 
 - **Callback Function**: [A 25 seconds Video](https://www.youtube.com/watch?v=587qclhguQg&t=10s) that explains this concept. 
@@ -25,4 +39,56 @@
 - `.html()` = This allows you to change the content of an HTML-element. For example, if you want to change something you have written in a Paragraph.
 - `.position()` = This allows you to change the position of an HTML-element on the page.
 - `.value()` = This allows you to access the value of an HTML-element. For example, if you have a slider (= that goes from a maximum to a minimum value), you can retrieve its value by using this `.value()`-method).
+
+## Useful Codes
+
+### Scroll back up to the Top of the Page via a Link
+
+This is useful when a user scrolled down to the very bottom of the page and would need to scroll up a very long time. 
+
+_With this code, you help the user getting much faster to the top of the page via a `<a>`-Tag_ :)
+
+```
+<script type="text/javascript">
+  function goUp() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+</script> <!-- This code needs to be placed just above the link, otherwise it does NOT work (because we need to initialize the function 'goUp()' first)! --> 
+
+<div class="arrow"><a href="javascript:goUp()" class="scrollTo">&#709;</a></div>
+```
+
+- <u>Alternative via `<button>`</u>: 
+
+**On the `html`-page**, the HTML-Code for the `<button>` looks like this:
+
+```
+<button id="goUp">&#709;</button> <!-- Notice how the button has an ID and NOT a class!!! This is because, when we write the JS-Code, we cannot use an event-listener on the method "getElementsByClassName()", since this method returns an array and NOT a single value (see the following link for more infos: https://stackoverflow.com/questions/32151704/addeventlistener-is-not-a-function) --> 
+```
+
+For the CSS, we need to add the followings styles on the `css`-stylesheet:
+
+```
+#goUp{ /* This is a button, that's why we have alot of default-values to overwrite... */
+	margin: 0;
+    appearance: none;
+    align-items: flex-end;
+    margin-left: 87%;
+    background-color: transparent;
+    color: #F00;
+    border: none;
+    transform: rotate(180deg);
+    font-size: 3em;
+	cursor: pointer;
+}
+```
+
+Finally, for the Javascript-Part, we need to add the following code into the `.js`-file:
+
+```
+document.getElementById("goUp").addEventListener("click", function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+```
+
 

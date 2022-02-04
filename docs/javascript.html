@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-02-03" />
+<meta name="date" content="2022-02-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -142,9 +142,13 @@
 <li class="chapter" data-level="4.13" data-path="css.html"><a href="css.html#sonstiges"><i class="fa fa-check"></i><b>4.13</b> Sonstiges</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="javascript.html"><a href="javascript.html"><i class="fa fa-check"></i><b>5</b> JavaScript</a><ul>
-<li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#definitionen-1"><i class="fa fa-check"></i><b>5.1</b> Definitionen</a></li>
-<li class="chapter" data-level="5.2" data-path="javascript.html"><a href="javascript.html#important-questions-to-know-about"><i class="fa fa-check"></i><b>5.2</b> Important Questions to know about</a></li>
-<li class="chapter" data-level="5.3" data-path="javascript.html"><a href="javascript.html#important-javascript-methods"><i class="fa fa-check"></i><b>5.3</b> Important <code>JavaScript</code>-Methods</a></li>
+<li class="chapter" data-level="5.1" data-path="javascript.html"><a href="javascript.html#konzept"><i class="fa fa-check"></i><b>5.1</b> Konzept</a></li>
+<li class="chapter" data-level="5.2" data-path="javascript.html"><a href="javascript.html#definitionen-1"><i class="fa fa-check"></i><b>5.2</b> Definitionen</a></li>
+<li class="chapter" data-level="5.3" data-path="javascript.html"><a href="javascript.html#important-questions-to-know-about"><i class="fa fa-check"></i><b>5.3</b> Important Questions to know about</a></li>
+<li class="chapter" data-level="5.4" data-path="javascript.html"><a href="javascript.html#important-javascript-methods"><i class="fa fa-check"></i><b>5.4</b> Important <code>JavaScript</code>-Methods</a></li>
+<li class="chapter" data-level="5.5" data-path="javascript.html"><a href="javascript.html#useful-codes"><i class="fa fa-check"></i><b>5.5</b> Useful Codes</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="javascript.html"><a href="javascript.html#scroll-back-up-to-the-top-of-the-page-via-a-link"><i class="fa fa-check"></i><b>5.5.1</b> Scroll back up to the Top of the Page via a Link</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="gsap.html"><a href="gsap.html"><i class="fa fa-check"></i><b>6</b> GSAP</a><ul>
 <li class="chapter" data-level="6.1" data-path="gsap.html"><a href="gsap.html#advantages-of-using-gsap"><i class="fa fa-check"></i><b>6.1</b> Advantages of using GSAP</a></li>
@@ -174,8 +178,22 @@
             <section class="normal" id="section-">
 <div id="javascript" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> JavaScript</h1>
+<p>JavaScript is the last of the 3 languages that you need to know in order to create websites.</p>
+<p>In my opinion, JavaScript is not even really necessary in order to create a very beautiful site nowadays. However, if you want to add features, such as <strong>lazy-loading</strong> for example, then you will need to know some basic JavaScript and - very importantly - <strong>how it interacts with <code>html</code></strong> in order to be able to have fun with the language =)</p>
+<div id="konzept" class="section level2">
+<h2><span class="header-section-number">5.1</span> Konzept</h2>
+<p>JavaScript ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich, wie <code>Python</code>, wird jedoch insbesondere bei Webseiten benötigt.</p>
+<p><mark>Grundsätzlich ist die Beherrschung von JavaScript - <strong>alleine</strong> - nicht besonders wertvoll, denn JavaScript kann <em>ohne</em> das DOM - also das <strong>Document Object Model</strong> - <u>überhaupt nicht</u> mit dem HTML-Code interagieren. Das DOM agiert als wichtige <strong>Schnittstelle // API</strong> (= Application Programming INterface // aka eine Art Kellner, der zwischen der Küche &amp; dem Kunden am Tisch interagiert), mit welchem es möglich wird, das “Verhalten” (zum Beispiel beim Klick eines Users auf einen Knopf) einer Webseite zu definieren (mittels JavaScript Code) und z.B. eine E-Mail an eine Adresse zu versenden.</mark></p>
+<ul>
+<li><u>Hier eine Illustration, wie das DOM als API zwischen JavaScript &amp; HTML interagiert</u>:</li>
+</ul>
+<div class="figure">
+<img src="./bilder/js/dom-schnittstelle.jpg" alt="" />
+<p class="caption">DOM-API, der als Schnittstelle zwischen HTML &amp; JavaScript agiert</p>
+</div>
+</div>
 <div id="definitionen-1" class="section level2">
-<h2><span class="header-section-number">5.1</span> Definitionen</h2>
+<h2><span class="header-section-number">5.2</span> Definitionen</h2>
 <ul>
 <li><strong>Callback Function</strong>: <a href="https://www.youtube.com/watch?v=587qclhguQg&amp;t=10s">A 25 seconds Video</a> that explains this concept.
 <ul>
@@ -187,7 +205,7 @@
 </ul>
 </div>
 <div id="important-questions-to-know-about" class="section level2">
-<h2><span class="header-section-number">5.2</span> Important Questions to know about</h2>
+<h2><span class="header-section-number">5.3</span> Important Questions to know about</h2>
 <blockquote>
 <p>Putting <code>&lt;script&gt;</code>-Tags on the very bottom of the page, just before the ending <code>&lt;/body&gt;</code>-Tag VS. <code>&lt;script&gt;</code>-Tags in the <code>&lt;head&gt;</code>-Bereich, on the very top of the page, when using <code>JavaScript</code>?</p>
 </blockquote>
@@ -202,13 +220,50 @@
 </ul>
 </div>
 <div id="important-javascript-methods" class="section level2">
-<h2><span class="header-section-number">5.3</span> Important <code>JavaScript</code>-Methods</h2>
+<h2><span class="header-section-number">5.4</span> Important <code>JavaScript</code>-Methods</h2>
 <ul>
 <li><code>.html()</code> = This allows you to change the content of an HTML-element. For example, if you want to change something you have written in a Paragraph.</li>
 <li><code>.position()</code> = This allows you to change the position of an HTML-element on the page.</li>
 <li><code>.value()</code> = This allows you to access the value of an HTML-element. For example, if you have a slider (= that goes from a maximum to a minimum value), you can retrieve its value by using this <code>.value()</code>-method).</li>
 </ul>
+</div>
+<div id="useful-codes" class="section level2">
+<h2><span class="header-section-number">5.5</span> Useful Codes</h2>
+<div id="scroll-back-up-to-the-top-of-the-page-via-a-link" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> Scroll back up to the Top of the Page via a Link</h3>
+<p>This is useful when a user scrolled down to the very bottom of the page and would need to scroll up a very long time.</p>
+<p><em>With this code, you help the user getting much faster to the top of the page via a <code>&lt;a&gt;</code>-Tag</em> :)</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  function goUp() {
+    window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+    }
+&lt;/script&gt; &lt;!-- This code needs to be placed just above the link, otherwise it does NOT work (because we need to initialize the function &#39;goUp()&#39; first)! --&gt; 
 
+&lt;div class=&quot;arrow&quot;&gt;&lt;a href=&quot;javascript:goUp()&quot; class=&quot;scrollTo&quot;&gt;&amp;#709;&lt;/a&gt;&lt;/div&gt;</code></pre>
+<ul>
+<li><u>Alternative via <code>&lt;button&gt;</code></u>:</li>
+</ul>
+<p><strong>On the <code>html</code>-page</strong>, the HTML-Code for the <code>&lt;button&gt;</code> looks like this:</p>
+<pre><code>&lt;button id=&quot;goUp&quot;&gt;&amp;#709;&lt;/button&gt; &lt;!-- Notice how the button has an ID and NOT a class!!! This is because, when we write the JS-Code, we cannot use an event-listener on the method &quot;getElementsByClassName()&quot;, since this method returns an array and NOT a single value (see the following link for more infos: https://stackoverflow.com/questions/32151704/addeventlistener-is-not-a-function) --&gt; </code></pre>
+<p>For the CSS, we need to add the followings styles on the <code>css</code>-stylesheet:</p>
+<pre><code>#goUp{ /* This is a button, that&#39;s why we have alot of default-values to overwrite... */
+    margin: 0;
+    appearance: none;
+    align-items: flex-end;
+    margin-left: 87%;
+    background-color: transparent;
+    color: #F00;
+    border: none;
+    transform: rotate(180deg);
+    font-size: 3em;
+    cursor: pointer;
+}</code></pre>
+<p>Finally, for the Javascript-Part, we need to add the following code into the <code>.js</code>-file:</p>
+<pre><code>document.getElementById(&quot;goUp&quot;).addEventListener(&quot;click&quot;, function(){
+    window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+});</code></pre>
+
+</div>
 </div>
 </div>
             </section>
