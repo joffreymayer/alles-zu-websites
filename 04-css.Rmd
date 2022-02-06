@@ -334,7 +334,8 @@ _**As you might expect, all of this also applies to the `align-*` properties!**_
 ### Nützliche Quellen
 
 - **`justify-content` VS. `justify-item` VS. `justify-self`**: https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs
-- <u>Ultimate Grid-Tutorial</u>: `https://css-tricks.com/snippets/css/complete-guide-grid/`
+- <u>Ultimate Grid-Tutorial (from CSS-Tricks)</u>: `https://css-tricks.com/snippets/css/complete-guide-grid/`
+- <u>Practical Examples from Firebase's Youtube-Channel</u>: https://www.youtube.com/watch?v=705XCEruZFs
 
 ## Flexbox- & CSS-Grid Layout kombiniert
 
