@@ -118,10 +118,14 @@ beispiel-delete-all-files-in-a-folder-that-start-with-the-letter-a
 beispiel-how-to-return-to-your-home-directory
 how-to-activate-use-python
 git
-backend-git-github
-create-a-new-branch
-check-current-branch-you-are-currently-on
+wörterbuch
+first-time-using-git-github
+key-concepts-in-git
+start-project-via-github-remote-possibility
+start-project-via-local-computer-local-possibility
+working-with-branches
 merge-changes-in-new-branch-into-master-branch
+set-up-an-ssh-key-for-github
 gsap
 advantages-of-using-gsap
 api

@@ -268,10 +268,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="terminal.html"><a href="terminal.html#how-to-activate-use-python"><i class="fa fa-check"></i><b>6.3</b> How to activate &amp; use Python?</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>7</b> Git</a><ul>
-<li class="chapter" data-level="7.1" data-path="git.html"><a href="git.html#backend-git-github"><i class="fa fa-check"></i><b>7.1</b> Backend: Git &amp; Github</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="git.html"><a href="git.html#create-a-new-branch"><i class="fa fa-check"></i><b>7.1.1</b> Create a new Branch</a></li>
-<li class="chapter" data-level="7.1.2" data-path="git.html"><a href="git.html#check-current-branch-you-are-currently-on"><i class="fa fa-check"></i><b>7.1.2</b> Check current Branch you are currently on</a></li>
-<li class="chapter" data-level="7.1.3" data-path="git.html"><a href="git.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>7.1.3</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
+<li class="chapter" data-level="7.1" data-path="git.html"><a href="git.html#wörterbuch"><i class="fa fa-check"></i><b>7.1</b> Wörterbuch</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="git.html"><a href="git.html#first-time-using-git-github"><i class="fa fa-check"></i><b>7.1.1</b> First time using Git &amp; Github</a></li>
+<li class="chapter" data-level="7.1.2" data-path="git.html"><a href="git.html#key-concepts-in-git"><i class="fa fa-check"></i><b>7.1.2</b> 2 Key concepts in Git</a></li>
+<li class="chapter" data-level="7.1.3" data-path="git.html"><a href="git.html#working-with-branches"><i class="fa fa-check"></i><b>7.1.3</b> Working with Branches</a></li>
+<li class="chapter" data-level="7.1.4" data-path="git.html"><a href="git.html#set-up-an-ssh-key-for-github"><i class="fa fa-check"></i><b>7.1.4</b> Set-Up an SSH-Key for Github</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="gsap.html"><a href="gsap.html"><i class="fa fa-check"></i><b>8</b> GSAP</a><ul>
@@ -302,8 +303,152 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="git" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Git</h1>
-<div id="backend-git-github" class="section level2">
-<h2><span class="header-section-number">7.1</span> Backend: Git &amp; Github</h2>
+<div id="wörterbuch" class="section level2">
+<h2><span class="header-section-number">7.1</span> Wörterbuch</h2>
+<ul>
+<li><code>pull request</code> = “Take some changes from a particular branch and bring it into another branch.”
+<ul>
+<li><u>Achtung</u>: es ist eine <em>Request</em>, es wurde noch nichts gemerged! Für das brauch es noch <code>merge</code> als zusätzlichen Befehl.<br />
+</li>
+</ul></li>
+<li><code>fork a repo</code> = “Take someone else’s repo - because you love it 😊 - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner.”</li>
+<li><code>commit</code> = save</li>
+<li><code>hash</code> = unique identifier in the history of files. A <code>has</code> is a huge string composed of characters (= Buchstaben) &amp; numbers and is used when using a version-control software, such as <code>Git</code>.</li>
+<li><code>git add</code> = Der Befehl <code>git add</code> wird zu vielen verschiedenen Zwecken eingesetzt. Man verwendet ihn, um:
+<ol style="list-style-type: decimal">
+<li>neue Dateien zur Version-Control hinzuzufügen,</li>
+<li>Dateien für einen Commit vorzumerken, UND</li>
+<li>verschiedene andere Dinge – beispielsweise einen Konflikt aus einem Merge als aufgelöst zu kennzeichnen.
+Leider wird der Befehl <code>git add</code> oft missverstanden. Viele assoziieren damit, dass damit Dateien zum Projekt hinzugefügt werden. Wie Sie aber gerade gelernt haben, wird der Befehl auch noch für viele andere Dinge eingesetzt. Wenn Sie den Befehl git add einsetzen, sollten Sie das eher so sehen, dass Sie damit einen bestimmten Inhalt für den nächsten Commit vormerken (= also Punkt (2) ist vor allem relevant in der obigen Liste.</li>
+</ol></li>
+</ul>
+<blockquote>
+<p>How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?</p>
+</blockquote>
+<p>Look at <a href="https://www.youtube.com/watch?v=_NrSWLQsDL4&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=3">the youtube video from Coding Train ab 9:35-11:50</a></p>
+<ul>
+<li>To see how to <strong>refer</strong> to issues &amp; bugs in your code <u>directly</u> via your commit-command, <a href="https://www.youtube.com/watch?v=WMykv2ZMyEQ&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=4">look at the youtube video ab 6:35-7:40</a> and to <u>diretly</u> <strong>close</strong> issues, because you resolved it, look <a href="https://www.youtube.com/watch?v=WMykv2ZMyEQ&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=4">look at the youtube video ab 7:40-8:55</a>.</li>
+</ul>
+<blockquote>
+<p>What is a remote?
+A remote is a <strong>duplicate instance of your repository (on your local computer)</strong> that lives somewhere else on a remote server (like Github).</p>
+</blockquote>
+<div id="first-time-using-git-github" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> First time using Git &amp; Github</h3>
+<p>There are specific <code>Git</code>-commands that you need to know, when you begin to start to work with <code>Git</code> and Gibthun for the first time. Note that all these <code>Git</code>-commands need to be typed <u>within the Terminal</u> on your local computer.</p>
+<ul>
+<li><code>git config --list</code> = Sehr wichtig, <strong>wenn du <code>Git</code> zum ersten Mal via einem neuen Computer runst</strong>! Dieser Befehl zeigt dir, welchen Username &amp; Email du aktuell verwendest (schaue bei <code>user.name</code> &amp; <code>user.email</code>, ob es deine Github Anmelde-Daten sind). Es ist key - <strong>insbesondere, wenn du neu mit Git beginnst</strong> - dass diese Parameter mit deinen Github Anmelde-Daten übereinstimmen! Ansonsten musst du immer <code>git clone</code> machen und die ältere Version in einen “alt”-Ordner tun, was extrem mühsam ist.
+<ul>
+<li>Wenn du noch keinen <code>user.name</code> hast, dann gebe folgenden Code in die Command-Line ein: <code>git config --global user.name 'Dein_Github_UserName'</code>.
+<ul>
+<li><u>Beachte</u>: Schreibe den Namen <u><strong>mit</strong></u> die Anführungszeichen!</li>
+</ul></li>
+<li>Wenn du noch keinen <code>user.name</code> hast, dann gebe folgenden Code in die Command-Line ein: <code>git config --global user.name 'deineEmail@email.ch'</code>.
+<ul>
+<li><u>Beachte</u>: Schreibe die Email <u><strong>ohne</strong></u> die Anführungszeichen!</li>
+</ul></li>
+<li><u>Check if it worked</u>?: Gebe wieder den Befehl <code>git config --list</code> und schaue bei <code>user.name</code> &amp; <code>user.email</code>, ob dort deine Github Anmelde-Daten übernommen wurden.</li>
+</ul></li>
+<li><code>git push</code> = this is the act of sending to <code>Github</code>.</li>
+<li><code>git pull</code> = this is the act of receiving from <code>Github</code>.</li>
+</ul>
+</div>
+<div id="key-concepts-in-git" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> 2 Key concepts in Git</h3>
+<p>Before starting to work with <code>Git</code>, you need to understand that there are 2 ways of starting a project:</p>
+<pre><code>1) Create a `remote` repository on Github and then `cloning` it - via Git - on your local computer to work from there.
+2) Creating a repository `locally` on your computer and then - aftre a few months working on this repository - adding it to Github.</code></pre>
+<p><em>Depending on which of those 2 different ways you choose to start a project (create a repo right from the get-go on <code>Github</code> VS. work locally and then - after some time - push everything to <code>Github</code>), the Git-Commands will slightly differ.</em></p>
+<div id="start-project-via-github-remote-possibility" class="section level4">
+<h4><span class="header-section-number">7.1.2.1</span> Start Project via Github (remote-possibility)</h4>
+<blockquote>
+<p>What are the Git-Commands, if you start your project directly by creating a Repo on Github (= <em>possibility 1</em>) above)?</p>
+</blockquote>
+<ul>
+<li><code>git clone https://github.com/joffreymayer/tageb.git</code> == Will clone your <u>remote</u> directory <code>tageb</code> - which is currently on Github on your <u>local</u> computer, which is simpler // more comfy when working on projects =)</li>
+<li><code>git status</code> = Assume that you worked on &amp; modified a file on your local computer that you previously had on Github (you cloned the directory with the file in it on your local computer). With the command <code>git status</code>, <code>Git</code> will check whether there is any changes between your local files VS. the files in the remote directory on the Github-Server // -Website.</li>
+<li><a name="anchor-1"><code>git commit -a -m "Test comment for a commit"</code></a> = If you changed a file locally and you are happy with your results, you will need to make a <code>commit</code> (= save) <u>and</u> <code>add</code> all files (= this is why we have an input // argument <code>-a</code>; the concept of <code>adding</code> will be explored in the chapter below, where you want to put a local repo into Github after a few months) and you also want to document, what exactly you modified, if you need to go back to a previous version of your file (= this is why we have an input // argument <code>-m "comment is here..."</code>).</li>
+<li><code>git push origin master</code> = If you have done some changes locally on your file, you can now <code>push</code> everything on the Github-Website.</li>
+<li><code>git log</code> = see, locally, the history of your <code>git commit</code>s.
+<ul>
+<li><u>Achtung</u>: When running this command, you might - accidentally - run into a dangerous environment called <code>VIM</code>, which is a terminal-based text-editor. The problem when you are in <code>VIM</code>, is that you might not be able to get out of it.
+-<u>Solution</u>: To get out of <code>VIM</code>, just type in <code>:q</code> and you will get out of it.</li>
+</ul></li>
+<li><code>git remote -v</code> = This will tell you which URL is the <code>remote</code> on which your repository is hosted.
+<ul>
+<li><u>Merke</u>: The URL of your repo is <em>assigned</em> to the variable <code>origin</code> in <code>Git</code>.</li>
+</ul></li>
+</ul>
+</div>
+<div id="start-project-via-local-computer-local-possibility" class="section level4">
+<h4><span class="header-section-number">7.1.2.2</span> Start Project via local computer (local-possibility)</h4>
+<blockquote>
+<p>What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= <em>possibility 2</em>)?</p>
+</blockquote>
+<ul>
+<li><code>git init</code> == To get started, you need to go to your repository with your terminal - e.g. set the working directory with <code>cd Joffrey\dokumente\my_project</code>) first - and, then, transform your repository to a <em>Git-Repository</em> by just typing <code>git init</code> into your terminal.</li>
+<li><code>git add single_file.txt</code> == <em>After</em> you initialized your repository, you will have an <strong>empty git-repository</strong>. <code>Git</code> will <u>not</u> <code>track</code> the files in your repository (= <code>untracked files</code>), unless you explicitly point them out via the <code>git add</code> command.
+<ul>
+<li><u>If you want to add all files quickly // simultanoeusly</u>: <code>git add .</code></li>
+<li><u>Für genauere Theorie // Erklärung dahinter</u>: Siehe Youtube-Video Coding Train ab <a href="https://www.youtube.com/watch?v=9p2d-CuVlgc&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=7">2:10-6:03</a></li>
+</ul></li>
+<li><code>git commit -m "Adding a new comment for my commit"</code>: <em>After</em> having pointed out to <code>Git</code>, which files he needs to track, you can do a <code>commit</code> of the changes of the files you modified, like in <em>possibility 1)</em>.
+<ul>
+<li><u>Achtung, es gibt einen kleinen Unterschied zu <em>possibility 1)</em></u>: das <code>-a</code> (<a href="#anchor-1">siehe oben</a>) ist verschwunden, weil wir hier <code>add</code> und <code>commit</code> als zwei separate Schritte betrachten.</li>
+</ul></li>
+<li><code>git remote add origin https://github.com/joffreymayer/new-repo</code> = Because our repository is still currently not on <code>Github</code>, we <u>first</u> need to <a href="https://github.com/joffreymayer?tab=repositories">go on the Github Website</a> and create an <u>empty</u> repository. <em>After</em> having done this, you need to tell <code>Git</code> - with the command <code>git remote add origin</code> + <strong>copy-pasting the URL</strong> “<a href="https://github.com/joffreymayer/new-repo" class="uri">https://github.com/joffreymayer/new-repo</a>” - that this is our local
+<ul>
+<li><u>Check if it worked</u>: Type the following into the Terminal <code>git remote -v</code>. It should output the variable name - usually called <code>origin</code> -
+<ul>
+<li><u>Note if you want to be fancy</u>: Within <code>git remote add origin</code>, the name <code>origin</code> can be changed to any word you like. This is just the variable name in which your Github-URL will be stored.</li>
+</ul></li>
+<li>If there is already a remote with the default name <code>origin</code> but you don’t like the name, you can change the name by:
+<ol style="list-style-type: decimal">
+<li><code>git remote remove origin</code> –&gt; this will delete the remote</li>
+<li><code>git remote -v</code> –&gt; just to check if step 1) worked –&gt; should not output anything</li>
+<li><code>git remote add noob https:\\github.com\project-1</code> –&gt; now, re-name the remote and call it <code>noob</code></li>
+</ol></li>
+</ul></li>
+<li><code>git push origin master</code> == <em>Finally</em>, you will be able to put all your files into the freshly made remote-repository on <code>Github</code>.</li>
+<li><code>git pull origin master</code> == Assume that you did changes <code>remotly</code> on Github but not yet locally on your computer. This does not matter, since you can just enter the command <code>git pull origin master</code> to be able to retrieve the changes that you did <code>remotly</code> on Github onto your local computer =)</li>
+</ul>
+</div>
+</div>
+<div id="working-with-branches" class="section level3">
+<h3><span class="header-section-number">7.1.3</span> Working with Branches</h3>
+<blockquote>
+<p>Basics: Tutorial for branches?</p>
+</blockquote>
+<p>Look at <a href="https://youtu.be/oPpnCh7InLY">youtube-videos from Coding Train</a>.</p>
+<ul>
+<li><code>git branch new_branch</code> == this will create a branch locally on your computer</li>
+<li><code>git checkout new_branch</code> == this will tell <code>Git</code>: “ah, he wants to go into the branch called ‘new_branch’”.</li>
+<li><code>git branch</code> == this will give you a list of all the branches you ave created locally. Furthermore, it will tell you on which branch you currently work on.</li>
+<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you create a new branch, make sure to have committed every change, because <code>git</code> will be very confused otherwise!</li>
+</ul>
+<p><strong>Alternatively</strong>, <em>to create a new branch AND switch to it at the same time</em>, you can use the <em>short-hand</em> command in the terminal:</p>
+<pre><code>git checkout -b NEW_BRANCH_NAME</code></pre>
+<div id="merge-changes-in-new-branch-into-master-branch" class="section level4">
+<h4><span class="header-section-number">7.1.3.1</span> Merge Changes in “new branch” into “Master”-Branch</h4>
+<blockquote>
+<p>How to merge the changes you made on a separate branch to the <code>master-branch</code> (= main branch)?</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li><code>git branch new_branch</code> == this will <strong>create a branch</strong> called <code>new_branch</code> locally on your computer.</li>
+<li><code>git checkout new_branch</code> == You will tell <code>Git</code>: “I now want to <strong>work on this newly created branch</strong> called ‘new_branch’”.</li>
+<li><code>git checkout master</code> == <em>After</em> you are happy with the changes you did in <code>new_branch</code> you will need to prepare for the merging by <strong>switching to your main-branch</strong>, which is the <code>master</code>-branch.</li>
+<li><code>git merge new_branch</code> == Since you currently are in the <code>master-branch</code>, Git will know that you want to <strong>merge</strong> <code>new_branch</code> <u>into</u> the <code>master-branch</code>.</li>
+</ol>
+<ul>
+<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you merge back your changes that are on your branch, make sure to commit every change, because <code>git</code> will NOT allow you to switch to your master-branch otherwise!</li>
+</ul>
+</div>
+</div>
+<div id="set-up-an-ssh-key-for-github" class="section level3">
+<h3><span class="header-section-number">7.1.4</span> Set-Up an SSH-Key for Github</h3>
+<p>Whenever you will work with <code>Git</code> and <code>Github</code>, you will always need to type in your password, whenever you push something to the <code>Github</code>-Cloud.</p>
+<p><em>That’s why you should start using an SSH-Key, giving <code>Github</code> your public-key and your computer the private-key</em>.</p>
+<p><u>I recommend you the following procedure</u>:</p>
 <ol style="list-style-type: decimal">
 <li>Create a <strong><a href="https://github.com">Github-Account</a></strong>.</li>
 <li>We also need to <strong><a href="https://git-scm.com/download">download Git</a></strong>, a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.</li>
@@ -312,41 +457,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>3.1) <code>git config --global user.name "YOUR GIBHUB USERNAME HERE"</code>
 3.2) <code>git config --global user.email "your_github_email@example.com"</code></p>
 <ol start="4" style="list-style-type: decimal">
-<li><strong>Create a Public &amp; Private SSH-Key</strong> in order to not always type in your password. Follow the instruction of <a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=2m40s">this Youtube-Tutorial (ab 2:40-4:03)</a>.</li>
-<li>In order <strong>to be able to use the SSH-Key</strong>, you need to follow my instruction in the Video on my local computer, situated on the following path: <code>/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov</code>. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: <code>git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git</code></li>
+<li>Follow the instruction of <a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=2m40s">this Youtube-Tutorial (ab 2:40-4:03)</a>.</li>
+<li>In order <strong>to be able to use the SSH-Key</strong>, you need to follow my instruction in the Video on my local computer, situated on the following path: <code>/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov</code>. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: <code>git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git</code> =)</li>
 </ol>
-<div id="create-a-new-branch" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Create a new Branch</h3>
-<p>To create a new branch AND switch to it at the same time, you can use the <em>short-hand</em> command in the terminal:</p>
-<pre><code>git checkout -b NEW_BRANCH_NAME</code></pre>
-<ul>
-<li><u>The above is the same as the following (longer) code</u>:</li>
-</ul>
-<pre><code>$ git branch  NEW_BRANCH_NAME
-$ git checkout  NEW_BRANCH_NAME</code></pre>
-<ul>
-<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you create a new branch, make sure to have committed every change, because <code>git</code> will be very confused otherwise!</li>
-</ul>
-</div>
-<div id="check-current-branch-you-are-currently-on" class="section level3">
-<h3><span class="header-section-number">7.1.2</span> Check current Branch you are currently on</h3>
-<p>The following code should show you <em>all</em> the local branches of your repo. The <strong>starred branch is your current branch</strong>:</p>
-<pre><code>git branch</code></pre>
-</div>
-<div id="merge-changes-in-new-branch-into-master-branch" class="section level3">
-<h3><span class="header-section-number">7.1.3</span> Merge Changes in “new branch” into “Master”-Branch</h3>
-<p>This can be achieved via a <strong>pull-request</strong>. All you have to do is:</p>
-<ol style="list-style-type: decimal">
-<li>check out // switch to the branch you wish to merge into (= this is usually the master-branch)</li>
-<li>and then run the git merge command:</li>
-</ol>
-<pre><code>$ git checkout master
-Switched to branch &#39;master&#39;
-$ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
-Merge made by the &#39;recursive&#39; strategy.</code></pre>
-<ul>
-<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you merge back your changes that are on your branc, make sure to commit every change, because <code>git</code> will NOT allow you to switch to your master-branch otherwise!</li>
-</ul>
+<p>That was it 😎</p>
 
 </div>
 </div>
