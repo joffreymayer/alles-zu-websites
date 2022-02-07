@@ -40,6 +40,7 @@ rmarkdown--vs.-markdown-files
 nützliche-hexadecimals
 create-a-bookdown-website
 show-hidden-files
+for-the-future
 seo
 outline
 wenn-dein-outline-falsch-ist

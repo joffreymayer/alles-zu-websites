@@ -267,4 +267,6 @@ Because - **if you ever need to change to change to a new computer** - you will 
 
 There is a [Youtube-Tutorial on how to configure your _new_ computer exactly like your _old_ computer](https://www.youtube.com/watch?v=r_MpUP6aKiQ).
 
+## For the Future
 
+- <u>Check out this Github-Repo with many free Open-Source Softwares to use</u>: https://github.com/RunaCapital/awesome-oss-alternatives
