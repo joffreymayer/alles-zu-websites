@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My Knowledge Database for Websites</title>
-  <meta name="description" content="My Knowledge Database for Websites" />
+  <title>Chapter 6 Images for Websites | My Knowledge Database for Websites</title>
+  <meta name="description" content="Chapter 6 Images for Websites | My Knowledge Database for Websites" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My Knowledge Database for Websites" />
+  <meta property="og:title" content="Chapter 6 Images for Websites | My Knowledge Database for Websites" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My Knowledge Database for Websites" />
+  <meta name="twitter:title" content="Chapter 6 Images for Websites | My Knowledge Database for Websites" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="seo.html"/>
+<link rel="prev" href="javascript.html"/>
+<link rel="next" href="terminal.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -321,273 +321,213 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">My Knowledge Database for Websites</h1>
-<p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-02-07</em></p>
+<div id="images-for-websites" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Images for Websites</h1>
+<p>Wenn du Bilder für eine Webseite verwendest, dann sollten diverse Dinge beachtet werden.</p>
+<div id="css-für-bilder" class="section level2">
+<h2><span class="header-section-number">6.1</span> CSS für Bilder</h2>
+<div id="allgemeines-set-up" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Allgemeines Set-Up</h3>
+<p>Damit sich die Bilder im Browser korrekt verhalten, brauchst du folgende CSS-Befehle auf dem <code>&lt;img&gt;</code>-Tag:</p>
+<pre><code>img { /* For a correct image-behavior, we need these two properties. */
+    width: 100%;
+    height: auto;
+}</code></pre>
 </div>
-<div id="computer-set-up" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
-<p>When building projects <em>efficiently</em>, you will need different set-ups in order to have everything in your code work properly, <em>not only on your own machine, but also on other machines, for example of another team-member</em>.</p>
-<div id="mac-tricks" class="section level2">
-<h2><span class="header-section-number">1.1</span> Mac Tricks</h2>
-<p><em>Before</em> we start with the whole set-up, you will also need to know how to <strong>work more efficiently with your Macbook-Computer</strong>.</p>
-<p><em>Those “tricks” will be useful for many other programs you will need when working in the field of datascience.</em></p>
-<div id="öffne-die-developer-tools-von-google-chrome" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Öffne die Developer-Tools von Google-Chrome</h3>
+<div id="resize-all-images-the-same-and-maintain-aspect-ratios" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Resize ALL Images the Same AND Maintain Aspect-Ratios</h3>
+<p>Angenommen, du verwendest verschieden grosse Bilder, möchtest diese jedoch alle gleich gross machen und dabei die :</p>
+<div class="figure">
+<img src="./bilder/bild-optimierung/wrong-ar.png" alt="" />
+<p class="caption">Das Problem: Nicht gleich grosse Bilder</p>
+</div>
+<p>Der Trick hier ist, dass - <em>wenn du den Bildern nun eine Custom-CSS-Klasse mit der <code>height</code> des <strong>kleinsten</strong> Bilds gibst (hier der CH-Precision)</em> - sich dann die Aspect-Ratio aller Bilder automatisch anpasst:</p>
+<pre><code>.product-item-image {
+    height: 250px; /*VERY IMPORTANT for Aspect-Ratios of &lt;img&gt;-Tag: If you set a height for your image, the browser will automatically adapt the width of the image, in order to keep the correct aspect-ratio. Set this according to how you like it!*/
+    object-fit: cover; /*Specifies how an object (image or video) should fit inside its box (= parent-element). When you use Object-fit: &quot;cover&quot; --&gt; overflows box but maintains ratio, which is a very important property to have for images!*/
+    width: 100%;
+}</code></pre>
+<p>Der obige Code wird <a href="https://caniuse.com/?search=object-fit%3A%20cover">von 98% der Browser unterstützt</a>.</p>
+<p>Das Resultat sieht dann so aus:</p>
+<div class="figure">
+<img src="./bilder/bild-optimierung/correct-ar.png" alt="" />
+<p class="caption">Die Lösung: Kreiere eine neue CSS-Klasse und definiere dann entweder eine neue <code>height</code> oder <code>width</code>. Dadurch passt sich die <code>width</code> respektive die <code>height</code> automatisch an.</p>
+</div>
 <ul>
-<li><code>command + shift + i</code></li>
-</ul>
-</div>
-<div id="speichern" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Speichern</h3>
+<li><u>Nachteil dieser Methode</u>: Es Cropt die Bilder, die sich anpassen müssen!
 <ul>
-<li><code>command + s</code></li>
-</ul>
-</div>
-<div id="speichern-unter" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Speichern Unter</h3>
-<ul>
-<li><code>shift + option + command + s</code></li>
-</ul>
-</div>
-<div id="finder" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Finder</h3>
-<ul>
-<li><code>command + leerschlag</code></li>
-</ul>
-</div>
-<div id="programm-schliessen" class="section level3">
-<h3><span class="header-section-number">1.1.5</span> Programm schliessen</h3>
-<ul>
-<li><code>command + q</code></li>
-</ul>
-</div>
-<div id="neuer-ordner" class="section level3">
-<h3><span class="header-section-number">1.1.6</span> Neuer Ordner</h3>
-<ul>
-<li><code>shift + command + n</code></li>
-</ul>
-</div>
-<div id="tilde-zeichen" class="section level3">
-<h3><span class="header-section-number">1.1.7</span> Tilde Zeichen</h3>
-<p>Das ist nützlich für shortcuts im Terminal, wenn man das Working Directory festlegt:</p>
-<ul>
-<li><code>option + n</code></li>
-</ul>
-</div>
-<div id="backslash" class="section level3">
-<h3><span class="header-section-number">1.1.8</span> Backslash</h3>
-<p>Useful for paths within the Directory:</p>
-<ul>
-<li><code>option + shift + 7</code></li>
-</ul>
-</div>
-<div id="screenshot-vom-bildschirm" class="section level3">
-<h3><span class="header-section-number">1.1.9</span> Screenshot vom Bildschirm</h3>
-<ul>
-<li><code>command + shift + 3</code></li>
-</ul>
-</div>
-<div id="teil-des-bildschirms-screen-schoten" class="section level3">
-<h3><span class="header-section-number">1.1.10</span> Teil des Bildschirms Screen-Schoten</h3>
-<ul>
-<li><code>shift + command + 4</code></li>
-</ul>
-</div>
-<div id="verlauf-löschen-in-chrome-browser" class="section level3">
-<h3><span class="header-section-number">1.1.11</span> Verlauf löschen in Chrome Browser</h3>
-<ul>
-<li><code>shift + command + entfernen</code></li>
-</ul>
-</div>
-<div id="verlauf-löschen-safari" class="section level3">
-<h3><span class="header-section-number">1.1.12</span> Verlauf löschen Safari</h3>
-<ul>
-<li><code>command + alt + e</code></li>
-</ul>
-</div>
-<div id="bildschirm-aufnahme" class="section level3">
-<h3><span class="header-section-number">1.1.13</span> Bildschirm Aufnahme</h3>
-<p>Funktioniert nur, wenn QuickTime Player aktiv ist:</p>
-<ul>
-<li><code>option + command + n</code></li>
-</ul>
-</div>
-<div id="lesezeichen-in-google-chrome" class="section level3">
-<h3><span class="header-section-number">1.1.14</span> Lesezeichen in Google Chrome</h3>
-<ul>
-<li><code>command + d</code></li>
-</ul>
-</div>
-<div id="search-console-pop-up" class="section level3">
-<h3><span class="header-section-number">1.1.15</span> Search Console Pop Up</h3>
-<ul>
-<li><code>option + command + j</code></li>
-</ul>
-</div>
-<div id="format-kopieren-einer-zelle-in-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.16</span> Format Kopieren einer Zelle (in Numbers)</h3>
-<ul>
-<li><code>option + command + c</code></li>
-</ul>
-</div>
-<div id="format-übertragen-einer-zelle-in-numbers" class="section level3">
-<h3><span class="header-section-number">1.1.17</span> Format übertragen einer Zelle (in Numbers)</h3>
-<ul>
-<li><code>option + command + v</code></li>
-</ul>
-</div>
-<div id="switch-between-applications-on-your-computer" class="section level3">
-<h3><span class="header-section-number">1.1.18</span> Switch between Applications on your computer</h3>
-<ul>
-<li><code>command + tab</code></li>
-</ul>
-</div>
-<div id="move-forward-through-tabs" class="section level3">
-<h3><span class="header-section-number">1.1.19</span> Move Forward through Tabs</h3>
-<ul>
-<li><code>control + tab</code></li>
-</ul>
-</div>
-<div id="zahl-als-exponent" class="section level3">
-<h3><span class="header-section-number">1.1.20</span> Zahl als Exponent</h3>
-<p>Geht nur in Pages oder Tablett!:</p>
-<ul>
-<li><code>shift + control + command + „+“-Zeichen WÄHREND man die Zahl mit der Maus markiert</code></li>
-</ul>
-<p>Dann ist sie noch „normal“ und nicht tiefgestellt —&gt; also so: zum Beispiel: 2.</p>
-</div>
-<div id="source-code-einer-webseite-aufschalten" class="section level3">
-<h3><span class="header-section-number">1.1.21</span> Source-Code einer Webseite aufschalten</h3>
-<ul>
-<li><code>Option + CMD + u im Browser drücken</code></li>
-</ul>
-</div>
-<div id="interaktive-code-ansicht-für-das-abchecken-von-webseiten" class="section level3">
-<h3><span class="header-section-number">1.1.22</span> Interaktive Code-Ansicht für das Abchecken von Webseiten</h3>
-<p><code>fn + F12-Taste auf Touch Bar drücken</code></p>
-</div>
-<div id="approximate-symbol" class="section level3">
-<h3><span class="header-section-number">1.1.23</span> Approximate Symbol <code>≈</code></h3>
-<ul>
-<li><code>option + x</code></li>
-</ul>
-</div>
-</div>
-<div id="virtual-environment" class="section level2">
-<h2><span class="header-section-number">1.2</span> Virtual Environment</h2>
-<p>Because the libraries you work with in your projects will be updated over time (this is generally <em>bad news</em>, since this will cause all sorts of dependency problems across your libaries you use), it is crucial to understand that you will need a virtual environment (<code>venv</code>). There, you will install all the libraries you need. The <strong>major advantage here, is that you can control the version you install the library</strong>. Furthermore, you can send the <code>venv</code> to another computer and the people will download exactly the versions of each library.</p>
-<p><mark>This allows that <strong>your code will <u>always</u> work, independently of the machine you will use</strong>! There will be no dependency problems anymore, which is a huge win.</mark>. :)</p>
-<div id="create-a-venv" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Create a <code>venv</code></h3>
-<p>Go to your terminal and plug in the following code:</p>
-<pre><code>conda create -n YOUR-VENVIRONMENT-NAME-HERE python=3.6</code></pre>
-</div>
-<div id="activate-your-newly-created-venv" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Activate your newly created <code>venv</code></h3>
-<p>Weirdly though, you also need to activate the environment you created above. Plug in the following code:</p>
-<pre><code>source activate YOUR-ENVIRONMENT-NAME</code></pre>
-<p><mark><strong>Note that the code above can also be used to activate virtual environments you created in the past</strong>!</mark> =)</p>
-</div>
-<div id="install-packages" class="section level3">
-<h3><span class="header-section-number">1.2.3</span> Install packages</h3>
-<p>Now that you are in your new <code>venv</code>, you can start downloading some packages:</p>
-<pre><code>python -m pip install SOME-PACKAGES</code></pre>
-</div>
-<div id="overview-of-packages" class="section level3">
-<h3><span class="header-section-number">1.2.4</span> Overview of packages</h3>
-<p>To check your packages within your <code>venv</code>, simply type:</p>
-<pre><code>conda list</code></pre>
-</div>
-<div id="overview-of-every-venv" class="section level3">
-<h3><span class="header-section-number">1.2.5</span> Overview of every <code>venv</code></h3>
-<p>To check all the <code>venv</code> I created, simply type:</p>
-<pre><code>conda env list</code></pre>
-</div>
-<div id="execute-any-python-skript" class="section level3">
-<h3><span class="header-section-number">1.2.6</span> Execute any python skript</h3>
-<p>In order to execute a <code>Python</code>-script, you will need to head towards the directory that the <code>.py</code>-file is and - then - type in:</p>
-<pre><code>cd go-to-the-dir-where-your-file-is
-python my-script.py</code></pre>
-</div>
-<div id="deactivate-the-venv" class="section level3">
-<h3><span class="header-section-number">1.2.7</span> Deactivate the <code>venv</code></h3>
-<p>After you have completed what you wanted, you will need to shut-down the <code>venv</code>. Simply type:</p>
-<pre><code>conda deactivate</code></pre>
-</div>
-<div id="delete-a-venv" class="section level3">
-<h3><span class="header-section-number">1.2.8</span> Delete a <code>venv</code></h3>
-<p>Simply type:</p>
-<pre><code>conda env remove -n my-new-env</code></pre>
-</div>
-</div>
-<div id="r-markdown" class="section level2">
-<h2><span class="header-section-number">1.3</span> R Markdown</h2>
-<p>When writing Code, I recommend you to use <code>.Rmd</code>-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).</p>
-<p>Actually, this document is written in <code>.Rmd</code>-Files, where I combine the text, with so-called “code-snippets”, like the follwing:</p>
-<pre><code>This is a Code-Snippet</code></pre>
-<p>When writing Code in <code>R-Markdown</code>, it will be useful for you to know when:</p>
-<ol style="list-style-type: decimal">
-<li>to execute code wihtin a code-snippet</li>
-<li>and where not.</li>
-</ol>
-<div id="hide-source-code" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Hide Source Code</h3>
-<p>This will be done with <code>echo = FALSE</code>:</p>
-<pre><code>## [1] 2</code></pre>
-<p>With figures, you need <code>fig.show = 'hide'</code> in R:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="index.html#cb11-1"></a><span class="kw">plot</span>(cars)</span></code></pre></div>
-<p>To hide warning-messages, just use <code>message = FALSE</code>:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="index.html#cb12-1"></a><span class="kw">message</span>(<span class="st">&quot;You will not see the message.&quot;</span>)</span></code></pre></div>
-</div>
-<div id="execute-a-code-chunk-without-showing-any-output" class="section level3">
-<h3><span class="header-section-number">1.3.2</span> Execute a Code-Chunk without showing any Output</h3>
-<p>You will get an output, e.g. the code will execute, but you will not show the code.</p>
-</div>
-<div id="do-not-execute-a-code-chunk" class="section level3">
-<h3><span class="header-section-number">1.3.3</span> Do NOT execute a Code-Chunk</h3>
-<p>If you want to show code for demonstration purposes - like on this Website -
-you will probably want to only show the code, but not execute it. This is also possible with <code>eval=FALSE</code>:</p>
-</div>
-<div id="rmarkdown--vs.-markdown-files" class="section level3">
-<h3><span class="header-section-number">1.3.4</span> RMarkdown- VS. Markdown-Files</h3>
-<ul>
-<li>Verwende <code>&lt;ins&gt;&lt;/ins&gt;</code> als HTML, um Texte zu Unterstreichen.
-<ul>
-<li><ins>
-Achtung
-</ins>
-: Der HTML-Tag <code>&lt;u&gt;&lt;/u&gt;</code> geht nicht in <code>.rm</code>-files. Lustigerweise funktioniert <code>&lt;u&gt;&lt;/u&gt;</code> jedoch in <code>.Rmd</code> (= R Markdown) 😂</li>
+<li><u>Lösung, um dieses Problem zu umgehen</u>: Du musst mitels GIMP die Apsect-Ratios gleich machen. Dabei wirst du allerdings auch Croppen müssen…</li>
 </ul></li>
 </ul>
 </div>
-<div id="nützliche-hexadecimals" class="section level3">
-<h3><span class="header-section-number">1.3.5</span> Nützliche Hexadecimals</h3>
+<div id="strange-small-white-space-below-image-used-as-a-produkt-karte" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Strange small white-space below Image used as a Produkt-Karte</h3>
 <ul>
-<li>Hexadecimal code for the left square-bracket = <code>&amp;#91;</code> –&gt; Ich muss das so machen mit den eckigen Klammern, weil <code>[]</code> wird für Links &amp; Bilder verwendet in <code>Markdown</code> 🤪</li>
-<li>Hexadecimal code for the right square-bracket = <code>&amp;#93;</code> –&gt; Ich muss das so machen mit den eckigen Klammern, weil <code>[]</code> wird für Links &amp; Bilder verwendet in <code>Markdown</code> 🤪</li>
+<li>The issue I had was exactly described in this Stack-Overflow-Post: <a href="https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image/5804278" class="uri">https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image/5804278</a></li>
+</ul>
+<p>The solution to this is to simply display the image in the Produkt-Karte with a <code>block</code>-value:</p>
+<pre><code>.product-item-image {
+    display: block; /* Debuging: I had a strange white-space between the image and my Card-Description. This issue can be resolved when using the property &quot;block&quot; on the image.
+        - Example of the exact issue I had, is on Stack-Overflow: https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image/5804278
+    */
+}</code></pre>
+</div>
+</div>
+<div id="kompression" class="section level2">
+<h2><span class="header-section-number">6.2</span> Kompression</h2>
+<p>Bilder sollten niemals in ihrer Original-Grösse auf das Web geladen werden, weil diese oftmals viel zu gross sind.</p>
+<div id="das-problem" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Das Problem?</h3>
+<p>Denke beispielsweise daran, wenn du mit deinem Smartphone nur eine <code>3G</code>- oder <code>4G</code>-Internetverbindung hast, dann werden die Ladezeiten langsamer. Wenn du nun nur riesige Bilder von mehreren <code>MB</code> an Grösse hast, dann wird die Seite ewigs laden und die Nutzer werden diese Seite nach kurzer Zeit verlassen, weil es sie aufregt, mit so <strong>langen Ladezeiten</strong> konfrontiert zu sein.</p>
+</div>
+<div id="die-lösung" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Die Lösung?</h3>
+<p>Die beste Technik um <strong>mehrere Bilder</strong> gleichzeitig zu komprimieren // resizen, dann empfehle ich dir <a href="https://youtu.be/_gLduuz2ucs">dieses Youtube-Video</a> von mir.</p>
+<ul>
+<li><strong>Wenn du nur 1 Bild sehr genau bearbeiten // komprimieren willst</strong>, dann verwende <a href="https://www.befunky.com/">BeFunky.com</a>.</li>
+<li>Alternative, die auch andere - modernere(!) - Formate &amp; Kompressionen erreichen kann, ist die Webapp <a href="https://squoosh.app/">Squoosh.app</a>.</li>
 </ul>
 </div>
 </div>
-<div id="create-a-bookdown-website" class="section level2">
-<h2><span class="header-section-number">1.4</span> Create a Bookdown-Website</h2>
-<ol style="list-style-type: decimal">
-<li>Use <a href="https://github.com/jtr13/bookdown-template">this Bookdown-Template</a> to create an awesome website like this one, you are currently at right now.</li>
-<li>Follow all <a href="https://www.youtube.com/watch?v=m5D-yoH416Y">the instruction of this 5 Minutes Youtube-Video</a>.</li>
-</ol>
-</div>
-<div id="show-hidden-files" class="section level2">
-<h2><span class="header-section-number">1.5</span> Show Hidden Files?</h2>
-<ul>
-<li><code>shift + command + "."-Taste</code> = Use this shortcut when you are in your <code>Finder</code> on your mac, where you can see all your directories. You will see that your Mac hides many files from you that end in <code>.</code>, for example a <code>.gitignore</code>-file (there are many more other files like this one…).</li>
-</ul>
+<div id="das-neue-webp-format" class="section level2">
+<h2><span class="header-section-number">6.3</span> Das neue <code>WebP</code>-Format</h2>
+<p>Gemäss <code>Google Lighthouse</code>, gibt es nun ein neues Format, welches besser als <code>.jpeg</code> oder <code>.png</code> ist: das <code>WebP</code>-Format.</p>
+<p><strong>Dieses erlaubt eine noch bessere Kompression der Bilder und kann somit noch schnellere Seitenladezeiten garantieren!</strong></p>
 <blockquote>
-<p>Why is this useful?</p>
+<p>Implementation in Webseite?
+- Folgender HTML-Code sollte implementiert werden:</p>
 </blockquote>
-<p>Because - <strong>if you ever need to change to change to a new computer</strong> - you will need to setup this new computer. Using hidden <code>.</code>-Files on your <em>old</em> computer will help you to automate this process.</p>
-<p>There is a <a href="https://www.youtube.com/watch?v=r_MpUP6aKiQ">Youtube-Tutorial on how to configure your <em>new</em> computer exactly like your <em>old</em> computer</a>.</p>
+<div class="figure">
+<img src="./bilder/bild-optimierung/html-code-webp.png" alt="" />
+<p class="caption">Dieser Code sollte das <code>WebP</code>-Format für moderne Browser garantieren und ansonsten auf das <code>.jpeg</code>-Format zugreifen, wenn es nicht geht.</p>
+</div>
+</div>
+<div id="hero-image" class="section level2">
+<h2><span class="header-section-number">6.4</span> Hero-Image</h2>
+<p>Eines der effektivsten Mitteln, um einen User auf der Webseite zu behalten, sind der Einsatz von Bildern. Für meine Webseiten verwende ich sehr oft aogenannte <em>Hero-Images</em>, damit die User sofort mit schönen Fotos in den Bann gezogen werden.</p>
+<blockquote>
+<p>Das Problem mit Responive-Webseiten?
+Wenn du Hero-Images verwendest, dann kann es sein, dass die Bilder für Tablets &amp; Smartphones falsch “ge-cropt” werden. Deshalb ist der Einsatz vom <code>picture</code>-Tag sehr empfehlenswert.</p>
+</blockquote>
+<blockquote>
+<p>Die Lösung mit Responive-Webseiten?
+- <u>Hier wäre ein Beispiel eines HTML-Codes</u>:</p>
+</blockquote>
+<pre><code>&lt;div class=&quot;grande-image&quot;&gt;
+            &lt;div class=&quot;grande-image-item&quot;&gt;
+                &lt;picture&gt;
+                    &lt;source media=&quot;(max-width: 480px)&quot; srcset=&quot;bilder/produkte/abschlusswiderstand/abschlusswiderstand-75-ohm-innenleben.jpg&quot; /&gt;
+                    &lt;source media=&quot;(max-width: 640px)&quot; srcset=&quot;bilder/produkte/abschlusswiderstand/abschlusswiderstand-75-ohm-innenleben.jpg&quot; /&gt;
+                    &lt;source media=&quot;(max-width: 1024px)&quot; srcset=&quot;bilder/produkte/abschlusswiderstand/abschlusswiderstand-75-ohm.jpg&quot; /&gt;
+                    &lt;img src=&quot;bilder/produkte/abschlusswiderstand/abschlusswiderstand-75-ohm.jpg&quot; width=&quot;1800&quot; height=&quot;824&quot;
+                        alt=&quot;OptimizeAudio Abschlusswiderstand 75 Ohm&quot; /&gt;
+                    &lt;!--421 kB--&gt;
+                &lt;/picture&gt;
+                &lt;img src=&quot;bilder/produkte/abschlusswiderstand/abschlusswiderstand-75-ohm.jpg&quot; width=&quot;2000&quot; height=&quot;1333&quot;
+                    alt=&quot;OptimizeAudio Abschlusswiderstand 75 Ohm&quot; /&gt;
+                &lt;div class=&quot;centered&quot;&gt;
+                    &lt;h2 class=&quot;hero-title&quot;&gt;Abschlusswiderstand 75 oder 110 Ohm&lt;/h1&gt;
+                    &lt;h3 class=&quot;hero-sub-title&quot;&gt;Vermeidet das Eindringen von elektromagnetischen hochfrequenten Feldern.
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+<ul>
+<li><strong><u>ACHTUNG</u></strong>: Reihenfolge spielt hier eine Rolle bei den <code>&lt;source&gt;</code>-Elementen –&gt; Liste zuerst die Elemente auf, mit dem kleinsten Bildschirm, dann 2. kleinster Bildschirm etc…</li>
+</ul>
+</div>
+<div id="das-lcp-problem-bei-seo-smartphone-optimierung" class="section level2">
+<h2><span class="header-section-number">6.5</span> Das <code>LCP</code>-Problem bei SEO-Smartphone-Optimierung</h2>
+<blockquote>
+<p>Das Problem?
+Da meine Webseiten häufig auf “Hero”-Images (= grosse, Full-Screen Bilder) basieren, um die Neugier des Besuchers sofort zu packen, habe ich jedoch ein <code>LCP</code>-Problem (= “largest contentful page”): Google meint, dass die Ladezeit für Smartphone-User hier zu lange geht.</p>
+</blockquote>
+<p>Es gibt hier viele “pro”-Methoden, um das Problem zu lösen (insbesondere mit sog. Caching-Strategien), allerdings sind diese sehr kompliziert zu implementieren.</p>
+<div class="figure">
+<img src="/bilder/bild-optimierung/lighthouse-report-ohne-hero-hack.png" alt="" />
+<p class="caption">Hier das Problem illustriert: man sieht, dass bei der “Performance” die Werte gering sind. Dies ist der hohen Ladezeit des Hero-Images zuzuschreiben…</p>
+</div>
+<blockquote>
+<p>Die Lösung?
+Ich habe eine provisorische Lösung gefunden, die sich extrem schnell implementieren lässt und sofort Resultate bringt.</p>
+</blockquote>
+<ul>
+<li><u>Folgender Code sollte hierbei verwendet werden</u>:</li>
+</ul>
+<pre><code>&lt;div class=&quot;showcase-wrapper&quot;&gt;
+        &lt;div class=&quot;showcase-content&quot;&gt;
+  
+            &lt;div class=&quot;showcase&quot; style=&quot;background-image: url(bilder/monatlicher-klang-workshop/optimize-audio-netzleiste-6x.jpg);
+            background-size: cover;
+            background-position: center;&quot;&gt;
+              &lt;img src=&quot;bilder/monatlicher-klang-workshop/optimize-audio-netzleiste-6x.jpg&quot; alt=&quot;&quot; style=&quot;display: none;&quot;&gt; &lt;!-- This is the hack! --&gt;
+              &lt;h1&gt;Monatlicher &lt;br&gt; Workshop&lt;/h1&gt;
+              &lt;button type=&quot;button&quot;&gt;Tipps für eine bessere High-End Anlage.&lt;/button&gt;
+            &lt;/div&gt;
+        
+        &lt;/div&gt;
+    &lt;/div&gt; </code></pre>
+<p><mark>Hierbei verwende ich ein Background-Image via CSS UND gleichzeitig ein <strong><code>&lt;img</code>-Tag mit <code>display: none</code> Attribut ür den Hack</strong>. Dadurch wird nämlich das Bild mit höchster Priorität geladen - AKA <em>preloading the image</em> - ist jedoch wegen <code>display: none</code> unsichtbar.</mark></p>
+<p>-<u><strong>Achtung</strong></u>: Damit der Trick funktioniert, <strong>muss der Pfad des <code>background-image</code> == <code>scr</code> des <code>&lt;img&gt;</code>-Tags entsprechen</strong>!!!</p>
+<div class="figure">
+<img src="/bilder/bild-optimierung/lighthouse-report-mit-hero-hack.png" alt="" />
+<p class="caption">Resultat, wenn du den Hack richtig implementierst. Schau, wie nun der Score der Performance von “81” auf “94” gestiegen ist! xD</p>
+</div>
+</div>
+<div id="responsive-background-images-as-hero-image" class="section level2">
+<h2><span class="header-section-number">6.6</span> Responsive Background Images as Hero-Image</h2>
+<blockquote>
+<p>Das Problem?
+Bisher konnte ich nur unterschiedliche Bilder für ein Hero-Image, indem ich <code>&lt;picture&gt;</code> in Kombination mit <code>&lt;img&gt;</code>-(Fallback-)Tag &amp; <code>&lt;source&gt;</code>-(Media-Queries)-Tag verwendet habe.</p>
+</blockquote>
+<p>Ich habe jedoch eine neue Lösung gefunden, um DASSELBE Resultat zu erreichen, allerdings mit der CSS-Propert <code>background-image: url(...)</code>, damit die Background-Images RESPONSIVE werden (sehr nice!).</p>
+<p>Das Beste daran? <strong>Es funktioniert sogar mit IE Browsern</strong>!</p>
+<blockquote>
+<p>Die Lösung?
+Obwohl Media-Queries <u>nicht</u> als Inline-CSS im HTML-Dokument verwendet werden können (das war ursprünglich meine Lösung, um Background-Images responsive zu machen), kann es nun mittels einer sogenannten “CSS-Variablen” erreicht werden (= <code>var()</code>).</p>
+</blockquote>
+<ul>
+<li>Lese die Antwort mit den meisten upvotes in <a href="https://stackoverflow.com/questions/9808233/is-it-possible-to-put-css-media-rules-inline">diesem Stack-Overflow</a> thread, damit due verstehen kannst, wie ich das geschafft habe.</li>
+</ul>
+</div>
+<div id="caching-when-dealing-with-phones" class="section level2">
+<h2><span class="header-section-number">6.7</span> Caching when dealing with Phones</h2>
+<p>Smartphones werden zunehmend der Standard der Webseiten-Branche. In 2020 hat Google sogar bei Webseiten eine sehr wichtige neue Richtlinie eingeführt, welche mit dem Slogan <code>Smartphones first</code> betitelt wurde. Somit muss ich nun vor allem die Optimierungs-Kriterien vor allem für Smartphones ausrichten.</p>
+<p>Und eine der wichtigsten Tools - wie es scheint - ist die Einrichtung (auf der Server-Seite) der richtigen <strong>Caching-Strategie</strong>. Hierzu habe ich einen <a href="https://imagekit.io/blog/ultimate-guide-to-http-caching-for-static-assets/">ultimativen Guide</a> gefunden, welcher alles erklärt. Insbesondere die Erklärungen ganz am Anfang helfen sehr für das allgemeine Verständnis.</p>
+<ul>
+<li>Hier ein Beispiel, wie es in der <code>.htaccess</code>-Datei aufzusetzen wäre, gemäss <a href="https://www.df.eu/blog/http-cache-control-browser-caching-steuern-mit-htaccess/">dieser Webseite</a>:</li>
+</ul>
+<div class="figure">
+<img src="./bilder/bild-optimierung/example-htaccess-caching.png" alt="" />
+<p class="caption">Beispiels-Code für die <code>.htaccess</code>-Datei</p>
+</div>
+<p>Auf dem obigen Beispiel gibt es keinen Hinweis darauf, wie ein <code>Expires</code>-Attribut (= Datum, ab welchem der Browser seinen Cash löschen darf) verwendet werden soll:</p>
+<div class="figure">
+<img src="./bilder/bild-optimierung/example-caching.png" alt="" />
+<p class="caption">Beispiel mit <code>Expires</code>-Attribut</p>
+</div>
+</div>
+<div id="svg-bilder" class="section level2">
+<h2><span class="header-section-number">6.8</span> SVG-Bilder</h2>
+<p>Diese Art von Bilder ist speziell, denn - egal ob du ein Bild schrumpfst oder erhöhst - die Auflösung bleibt diesselbe!</p>
+<p>Du kannst sowohl <strong>GIMP</strong> aber auch <strong>Figma</strong> verwenden, um SVG-Bilder zu produkzieren.</p>
+<div id="implementierung-mit-figma" class="section level3">
+<h3><span class="header-section-number">6.8.1</span> Implementierung mit <code>Figma</code></h3>
+<p><em>Ich empfehle dir die Figma-Implementierung, denn diese ist einfacher zu bedinene, als GIMP und du kannst ausserdem andere Designs verwenden, von anderen Personen</em>!</p>
+<p><mark><code>Figma</code> eignet sich insbesondere für 2 Fälle, insbesondere für das erstellen von (komplexen) Logos UND für die Erstellung von SVGs, welche dann weiterverwendet werden können für - beispielsweise - Webseiten-Animationen.</mark></p>
+<p><em>Zwar kann <code>Figma</code> einem CSS-Code für den Aufbau eines (App- // Logo-) Prototypen verwenden, allerdings wird nicht mit HTML angegeben und ist nicht responsive! Somit kann <code>Figma</code> als ein Substitut für <code>Adobe InDesign</code> angesehen werden.</em></p>
+<ul>
+<li><u>Figma-Tutorial</u>: <a href="https://www.youtube.com/watch?v=UTHgr6NLeEw&amp;t=3m12s" class="uri">https://www.youtube.com/watch?v=UTHgr6NLeEw&amp;t=3m12s</a></li>
+<li><u>Figma-Webseite</u>: <a href="https://www.figma.com/" class="uri">https://www.figma.com/</a></li>
+</ul>
+</div>
+<div id="implementierung-mit-gimp" class="section level3">
+<h3><span class="header-section-number">6.8.2</span> Implementierung mit <code>GIMP</code></h3>
+<ul>
+<li><u>GIMP-Tutorial</u>: <a href="https://praxistipps.chip.de/gimp-vektorgrafik-erstellen_30229" class="uri">https://praxistipps.chip.de/gimp-vektorgrafik-erstellen_30229</a></li>
+</ul>
 
+</div>
 </div>
 </div>
             </section>
@@ -595,8 +535,8 @@ Achtung
           </div>
         </div>
       </div>
-
-<a href="seo.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="javascript.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="terminal.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -628,7 +568,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/alles-zu-websites/edit/master/index.Rmd",
+"link": "https://github.com/joffreymayer/alles-zu-websites/edit/master/06-images.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -636,7 +576,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/alles-zu-websites/blob/master/index.Rmd",
+"link": "https://github.com/joffreymayer/alles-zu-websites/blob/master/06-images.Rmd",
 "text": null
 },
 "download": null,
