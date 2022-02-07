@@ -5,64 +5,266 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Set-Up 
+# Computer Set-Up
 
-## Backend: Git & Github
+When building projects *efficiently*, you will need different set-ups in order to have everything in your code work properly, *not only on your own machine, but also on other machines, for example of another team-member*.
 
-1) Create a **[Github-Account](https://github.com)**.
-2) We also need to **[download Git](https://git-scm.com/download)**, a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.
-3) Next, we need to **link our Github-Account to Git**. To do this, use the Terminal and type in the following two commands:
+## Mac Tricks
 
-  3.1) `git config --global user.name "YOUR GIBHUB USERNAME HERE"`
-  3.2) `git config --global user.email "your_github_email@example.com"`
+_Before_ we start with the whole set-up, you will also need to know how to **work more efficiently with your Macbook-Computer**.
+
+_Those "tricks" will be useful for many other programs you will need when working in the field of datascience._ 
+
+### Öffne die Developer-Tools von Google-Chrome
+
+- `command + shift + i`
+
+### Speichern 
+
+- `command + s`
+
+### Speichern Unter
+
+- `shift + option + command + s`
+
+### Finder 
+
+- `command + leerschlag`
+
+### Programm schliessen
+
+- `command + q`
+
+### Neuer Ordner 
+
+- `shift + command + n`
+
+### Tilde Zeichen
+
+Das ist nützlich für shortcuts im Terminal, wenn man das Working Directory festlegt: 
+
+- `option + n`
+
+### Backslash 
+
+Useful for paths within the Directory:
+
+- `option + shift + 7` 
+
+### Screenshot vom Bildschirm
+
+- `command + shift + 3`
+
+### Teil des Bildschirms Screen-Schoten 
+
+- `shift + command + 4`
+
+### Verlauf löschen in Chrome Browser 
+
+- `shift + command + entfernen`
+
+### Verlauf löschen Safari 
+
+- `command + alt + e`
+
+### Bildschirm Aufnahme 
+
+Funktioniert nur, wenn QuickTime Player aktiv ist:  
+
+- `option + command + n`
+
+### Lesezeichen in Google Chrome 
+
+- `command + d`
+
+### Search Console Pop Up 
+
+- `option + command + j`
+
+### Format Kopieren einer Zelle (in Numbers)
+
+- `option + command + c`
+
+### Format übertragen einer Zelle (in Numbers) 
+
+- `option + command + v`
+
+### Switch between Applications on your computer 
+
+- `command + tab`
+
+### Move Forward through Tabs 
+
+- `control + tab`
+
+### Zahl als Exponent 
+
+Geht nur in Pages oder Tablett!: 
+
+- `shift + control + command + „+“-Zeichen WÄHREND man die Zahl mit der Maus markiert` 
+
+Dann ist sie noch „normal“ und nicht tiefgestellt —> also so: zum Beispiel: 2.
+
+### Source-Code einer Webseite aufschalten 
+
+- `Option + CMD + u im Browser drücken`
+
+### Interaktive Code-Ansicht für das Abchecken von Webseiten 
+
+`fn + F12-Taste auf Touch Bar drücken`
+
+### Approximate Symbol `≈` 
+
+- `option + x`
+
+## Virtual Environment 
+
+Because the libraries you work with in your projects will be updated over time (this is generally *bad news*, since this will cause all sorts of dependency problems across your libaries you use), it is crucial to understand that you will need a virtual environment (`venv`). There, you will install all the libraries you need. The **major advantage here, is that you can control the version you install the library**. Furthermore, you can send the `venv` to another computer and the people will download exactly the versions of each library. 
+
+<mark>This allows that **your code will <u>always</u> work, independently of the machine you will use**! There will be no dependency problems anymore, which is a huge win.</mark>. :)
+
+### Create a `venv`
+
+Go to your terminal and plug in the following code:
+
+```
+conda create -n YOUR-VENVIRONMENT-NAME-HERE python=3.6
+```
+
+### Activate your newly created `venv`
+
+Weirdly though, you also need to activate the environment you created above. Plug in the following code:
+
+```
+source activate YOUR-ENVIRONMENT-NAME
+```
+
+<mark>**Note that the code above can also be used to activate virtual environments you created in the past**!</mark> =) 
+
+### Install packages
+
+Now that you are in your new `venv`, you can start downloading some packages:
+
+```
+python -m pip install SOME-PACKAGES
+```
+
+### Overview of packages
+
+To check your packages within your `venv`, simply type:
+
+```
+conda list
+```
+
+### Overview of every `venv` 
+
+To check all the `venv` I created, simply type:
+
+```
+conda env list
+```
+
+### Execute any python skript
+
+In order to execute a `Python`-script, you will need to head towards the directory that the `.py`-file is and - then - type in:
+
+```
+cd go-to-the-dir-where-your-file-is
+python my-script.py
+```
+
+### Deactivate the `venv`
+
+After you have completed what you wanted, you will need to shut-down the `venv`. Simply type:
+
+```
+conda deactivate
+```
+
+### Delete a `venv`
+
+Simply type:
+
+```
+conda env remove -n my-new-env
+```
+
+## R Markdown
+
+When writing Code, I recommend you to use `.Rmd`-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).
+
+Actually, this document is written in `.Rmd`-Files, where I combine the text, with so-called "code-snippets", like the follwing:
+
+```
+This is a Code-Snippet
+```
+
+When writing Code in `R-Markdown`, it will be useful for you to know when: 
+
+1) to execute code wihtin a code-snippet
+2) and where not.
+
+### Hide Source Code
+
+This will be done with `echo = FALSE`:
+
+```{r, echo=FALSE}
+1 + 1
+```
+
+With figures, you need `fig.show = 'hide'` in R:
+
+```{r, fig.show='hide'}
+plot(cars)
+```
+
+To hide warning-messages, just use `message = FALSE`:
+
+```{r, message=FALSE}
+message("You will not see the message.")
+```
+
+### Execute a Code-Chunk without showing any Output
+
+You will get an output, e.g. the code will execute, but you will not show the code.
+
+```{r, include=FALSE}
+# any R code here
+```
+
+### Do NOT execute a Code-Chunk
+
+If you want to show code for demonstration purposes - like on this Website - 
+you will probably want to only show the code, but not execute it. This is also possible with `eval=FALSE`:
+
+```{r, include=FALSE}
+# any R code here
+```
+
+### RMarkdown- VS. Markdown-Files
+
+- Verwende `<ins></ins>` als HTML, um Texte zu Unterstreichen. 
+  - <ins>Achtung</ins>: Der HTML-Tag `<u></u>` geht nicht in `.rm`-files. Lustigerweise funktioniert `<u></u>` jedoch in `.Rmd` (= R Markdown) 😂
   
-4) **Create a Public & Private SSH-Key** in order to not always type in your password. Follow the instruction of [this Youtube-Tutorial (ab 2:40-4:03)](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=2m40s).
-5) In order **to be able to use the SSH-Key**, you need to follow my instruction in the Video on my local computer, situated on the following path: `/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov`. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: `git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git`
+### Nützliche Hexadecimals
 
-### Create a new Branch
+- Hexadecimal code for the left square-bracket = `&#91;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
+- Hexadecimal code for the right square-bracket = `&#93;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
 
-To create a new branch AND switch to it at the same time, you can use the _short-hand_ command in the terminal:
-
-```
-git checkout -b NEW_BRANCH_NAME
-```
-
-- <u>The above is the same as the following (longer) code</u>:
-
-```
-$ git branch  NEW_BRANCH_NAME
-$ git checkout  NEW_BRANCH_NAME
-```
-
-- <u>**Achtung**</u>: _BEFORE_ you create a new branch, make sure to have committed every change, because `git` will be very confused otherwise!
-
-### Check current Branch you are currently on
-
-The following code should show you _all_ the local branches of your repo. The **starred branch is your current branch**:
-
-```
-git branch
-```
-
-### Merge Changes in "new branch" into "Master"-Branch
-
-This can be achieved via a **pull-request**. All you have to do is:
-
-1) check out // switch to the branch you wish to merge into (= this is usually the master-branch) 
-2) and then run the git merge command:
-
-```
-$ git checkout master
-Switched to branch 'master'
-$ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
-Merge made by the 'recursive' strategy.
-```
-- <u>**Achtung**</u>: _BEFORE_ you merge back your changes that are on your branc, make sure to commit every change, because `git` will NOT allow you to switch to your master-branch otherwise!
-
-
-### Create a Bookdown-Website
+## Create a Bookdown-Website
 
 1) Use [this Bookdown-Template](https://github.com/jtr13/bookdown-template) to create an awesome website like this one, you are currently at right now.
 2) Follow all [the instruction of this 5 Minutes Youtube-Video](https://www.youtube.com/watch?v=m5D-yoH416Y).
+
+## Show Hidden Files?
+
+- `shift + command + "."-Taste` = Use this shortcut when you are in your `Finder` on your mac, where you can see all your directories. You will see that your Mac hides many files from you that end in `.`, for example a `.gitignore`-file (there are many more other files like this one...).
+
+> Why is this useful?
+
+Because - **if you ever need to change to change to a new computer** - you will need to setup this new computer. Using hidden `.`-Files on your _old_ computer will help you to automate this process.
+
+There is a [Youtube-Tutorial on how to configure your _new_ computer exactly like your _old_ computer](https://www.youtube.com/watch?v=r_MpUP6aKiQ).
 
 

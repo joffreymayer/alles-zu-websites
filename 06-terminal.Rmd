@@ -1,0 +1,86 @@
+# Terminal
+
+The **Terminal // Command Line** is a place that helps you:
+
+- to install packages
+- setup your computer
+- setup your virtual environment (`npm` or `venv`)
+- setup a `git`-repo 
+- etc...
+
+## Terminal-Commands:
+
+A terminal will be essential for your projects, since you will - oftentimes - install packages or move files around your repositories with it. Here, you will find the most useful things you should know when using the `Terminal`.
+
+### Aktuelle Position // Directory?
+
+- <u>For Mac</u>: `pwd` = print working directory
+
+- <u>For Windows</u>: `dir` = this is the same command as `pwd`, but `dir` is for `Windows`
+
+### Showing the child-directories inside the directory you are currently in?
+
+- `ls` = prints all the `child-directories` (= one layer deeper of the path) from the `parent-directory` (= current directory you are in with your terminal) you are currently in.
+
+### Delete everything you wrote in your `Terminal` up until now?
+
+- `clear` = clears the terminal
+
+### Change directory?
+
+- `cd` = change directory
+  - `cd ..` = go back one directory.
+  
+### Creating a new directory?
+
+`mkdir new-folder-1 new-folder-2 new-folder-3` = This creates 3 new folder within the current (working-) directory you are currently in.
+
+### Create a new file?
+
+`touch index.html app.css` == This will create an `index.html`, as well as a `app.css`-file within the current (working-) directory you are currently in.
+
+### Remove files?
+
+`rm index.html app.css capture.png` = This will delete the `index.html`-, the `app.css` and the `capture.png`-files from the current (working-) directory you are currently in.
+
+## Terminal Magic-Commands for being faster?
+
+- <u>Trick #1</u>: hit the "Tab-Taste" == will automatically auto-fill the name of the file / directories etc.
+  - <u>Example</u>: Type `cd Dok` + "Tab"-Taste --> *auto-fill activates* --> im Terminal steht dann der automatisch ausgefüllte Name des Files / Directories, zum Beispiel `cd Dokumente` bzw. `cd Name_Of_Child_Directory` 
+- <u>Trick #2</u>: How to find a path of a directory that is situated very deeply in your local computer?
+  - <u>Example</u>: Type `cd ` + drag-&-drop the **folder** that is deep in your computer with the file in it.
+  
+### Syntax im Terminal
+
+- `*`-Zeichen == Represents "all files".
+
+#### <u>Beispiel</u>: Delete all Files in a folder that start with the letter `a`?
+
+To delete all files in a folder that start with the letter `a`, then you should write:
+
+```
+/folder/a*
+```
+
+- `.`-Zeichen == use the `.` character to represent the **current folder**.
+- `~`-Zeichen == represents the "home directory".
+
+#### <u>Beispiel</u>: how to return to your home directory?
+
+You should use:
+
+```
+cd ~
+```
+
+## How to activate &amp; use Python?
+
+`Python` can be executed on your local computer via a `Jupyter Notebook`, which can be accessed through an IDE. `R`, `Visual Studio Code` or `PyCharm` are examples of IDEs. 
+
+Let's assume, that we took `PyCharm` as our IDE. We do the following steps:
+
+1) Use the `Terminal` <u>within</u> PyCharm.
+2) Once you opened the PyCharm-`Terminal`, go to the directory that will be used for the Jupyter Notebook, by typing something as `cd /some_folder_name`.
+3) Finally, type in `jupyter notebook` in the `Terminal` to launch the Jupyter Notebook App. The notebook interface will appear in a new browser window or tab.
+
+

@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-02-06" />
+<meta name="date" content="2022-02-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,70 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -73,13 +137,51 @@
 <li><a href="./">Alles zu Websites</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Set-Up</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#backend-git-github"><i class="fa fa-check"></i><b>1.1</b> Backend: Git &amp; Github</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-new-branch"><i class="fa fa-check"></i><b>1.1.1</b> Create a new Branch</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#check-current-branch-you-are-currently-on"><i class="fa fa-check"></i><b>1.1.2</b> Check current Branch you are currently on</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>1.1.3</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
-<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.1.4</b> Create a Bookdown-Website</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Computer Set-Up</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#mac-tricks"><i class="fa fa-check"></i><b>1.1</b> Mac Tricks</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#öffne-die-developer-tools-von-google-chrome"><i class="fa fa-check"></i><b>1.1.1</b> Öffne die Developer-Tools von Google-Chrome</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#speichern"><i class="fa fa-check"></i><b>1.1.2</b> Speichern</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#speichern-unter"><i class="fa fa-check"></i><b>1.1.3</b> Speichern Unter</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#finder"><i class="fa fa-check"></i><b>1.1.4</b> Finder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="index.html"><a href="index.html#programm-schliessen"><i class="fa fa-check"></i><b>1.1.5</b> Programm schliessen</a></li>
+<li class="chapter" data-level="1.1.6" data-path="index.html"><a href="index.html#neuer-ordner"><i class="fa fa-check"></i><b>1.1.6</b> Neuer Ordner</a></li>
+<li class="chapter" data-level="1.1.7" data-path="index.html"><a href="index.html#tilde-zeichen"><i class="fa fa-check"></i><b>1.1.7</b> Tilde Zeichen</a></li>
+<li class="chapter" data-level="1.1.8" data-path="index.html"><a href="index.html#backslash"><i class="fa fa-check"></i><b>1.1.8</b> Backslash</a></li>
+<li class="chapter" data-level="1.1.9" data-path="index.html"><a href="index.html#screenshot-vom-bildschirm"><i class="fa fa-check"></i><b>1.1.9</b> Screenshot vom Bildschirm</a></li>
+<li class="chapter" data-level="1.1.10" data-path="index.html"><a href="index.html#teil-des-bildschirms-screen-schoten"><i class="fa fa-check"></i><b>1.1.10</b> Teil des Bildschirms Screen-Schoten</a></li>
+<li class="chapter" data-level="1.1.11" data-path="index.html"><a href="index.html#verlauf-löschen-in-chrome-browser"><i class="fa fa-check"></i><b>1.1.11</b> Verlauf löschen in Chrome Browser</a></li>
+<li class="chapter" data-level="1.1.12" data-path="index.html"><a href="index.html#verlauf-löschen-safari"><i class="fa fa-check"></i><b>1.1.12</b> Verlauf löschen Safari</a></li>
+<li class="chapter" data-level="1.1.13" data-path="index.html"><a href="index.html#bildschirm-aufnahme"><i class="fa fa-check"></i><b>1.1.13</b> Bildschirm Aufnahme</a></li>
+<li class="chapter" data-level="1.1.14" data-path="index.html"><a href="index.html#lesezeichen-in-google-chrome"><i class="fa fa-check"></i><b>1.1.14</b> Lesezeichen in Google Chrome</a></li>
+<li class="chapter" data-level="1.1.15" data-path="index.html"><a href="index.html#search-console-pop-up"><i class="fa fa-check"></i><b>1.1.15</b> Search Console Pop Up</a></li>
+<li class="chapter" data-level="1.1.16" data-path="index.html"><a href="index.html#format-kopieren-einer-zelle-in-numbers"><i class="fa fa-check"></i><b>1.1.16</b> Format Kopieren einer Zelle (in Numbers)</a></li>
+<li class="chapter" data-level="1.1.17" data-path="index.html"><a href="index.html#format-übertragen-einer-zelle-in-numbers"><i class="fa fa-check"></i><b>1.1.17</b> Format übertragen einer Zelle (in Numbers)</a></li>
+<li class="chapter" data-level="1.1.18" data-path="index.html"><a href="index.html#switch-between-applications-on-your-computer"><i class="fa fa-check"></i><b>1.1.18</b> Switch between Applications on your computer</a></li>
+<li class="chapter" data-level="1.1.19" data-path="index.html"><a href="index.html#move-forward-through-tabs"><i class="fa fa-check"></i><b>1.1.19</b> Move Forward through Tabs</a></li>
+<li class="chapter" data-level="1.1.20" data-path="index.html"><a href="index.html#zahl-als-exponent"><i class="fa fa-check"></i><b>1.1.20</b> Zahl als Exponent</a></li>
+<li class="chapter" data-level="1.1.21" data-path="index.html"><a href="index.html#source-code-einer-webseite-aufschalten"><i class="fa fa-check"></i><b>1.1.21</b> Source-Code einer Webseite aufschalten</a></li>
+<li class="chapter" data-level="1.1.22" data-path="index.html"><a href="index.html#interaktive-code-ansicht-für-das-abchecken-von-webseiten"><i class="fa fa-check"></i><b>1.1.22</b> Interaktive Code-Ansicht für das Abchecken von Webseiten</a></li>
+<li class="chapter" data-level="1.1.23" data-path="index.html"><a href="index.html#approximate-symbol"><i class="fa fa-check"></i><b>1.1.23</b> Approximate Symbol <code>≈</code></a></li>
 </ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#virtual-environment"><i class="fa fa-check"></i><b>1.2</b> Virtual Environment</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#create-a-venv"><i class="fa fa-check"></i><b>1.2.1</b> Create a <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#activate-your-newly-created-venv"><i class="fa fa-check"></i><b>1.2.2</b> Activate your newly created <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#install-packages"><i class="fa fa-check"></i><b>1.2.3</b> Install packages</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#overview-of-packages"><i class="fa fa-check"></i><b>1.2.4</b> Overview of packages</a></li>
+<li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#overview-of-every-venv"><i class="fa fa-check"></i><b>1.2.5</b> Overview of every <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.2.6</b> Execute any python skript</a></li>
+<li class="chapter" data-level="1.2.7" data-path="index.html"><a href="index.html#deactivate-the-venv"><i class="fa fa-check"></i><b>1.2.7</b> Deactivate the <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.8" data-path="index.html"><a href="index.html#delete-a-venv"><i class="fa fa-check"></i><b>1.2.8</b> Delete a <code>venv</code></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#r-markdown"><i class="fa fa-check"></i><b>1.3</b> R Markdown</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#hide-source-code"><i class="fa fa-check"></i><b>1.3.1</b> Hide Source Code</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#execute-a-code-chunk-without-showing-any-output"><i class="fa fa-check"></i><b>1.3.2</b> Execute a Code-Chunk without showing any Output</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#do-not-execute-a-code-chunk"><i class="fa fa-check"></i><b>1.3.3</b> Do NOT execute a Code-Chunk</a></li>
+<li class="chapter" data-level="1.3.4" data-path="index.html"><a href="index.html#rmarkdown--vs.-markdown-files"><i class="fa fa-check"></i><b>1.3.4</b> RMarkdown- VS. Markdown-Files</a></li>
+<li class="chapter" data-level="1.3.5" data-path="index.html"><a href="index.html#nützliche-hexadecimals"><i class="fa fa-check"></i><b>1.3.5</b> Nützliche Hexadecimals</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.4</b> Create a Bookdown-Website</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#show-hidden-files"><i class="fa fa-check"></i><b>1.5</b> Show Hidden Files?</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
 <li class="chapter" data-level="2.1" data-path="seo.html"><a href="seo.html#outline"><i class="fa fa-check"></i><b>2.1</b> Outline</a><ul>
@@ -150,12 +252,34 @@
 <li class="chapter" data-level="5.5.1" data-path="javascript.html"><a href="javascript.html#scroll-back-up-to-the-top-of-the-page-via-a-link"><i class="fa fa-check"></i><b>5.5.1</b> Scroll back up to the Top of the Page via a Link</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="gsap.html"><a href="gsap.html"><i class="fa fa-check"></i><b>6</b> GSAP</a><ul>
-<li class="chapter" data-level="6.1" data-path="gsap.html"><a href="gsap.html#advantages-of-using-gsap"><i class="fa fa-check"></i><b>6.1</b> Advantages of using GSAP</a></li>
-<li class="chapter" data-level="6.2" data-path="gsap.html"><a href="gsap.html#api"><i class="fa fa-check"></i><b>6.2</b> API</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="gsap.html"><a href="gsap.html#most-frequent-methods-when-using-tweens-classes"><i class="fa fa-check"></i><b>6.2.1</b> Most frequent Methods when using <code>Tweens</code>-Classes</a></li>
+<li class="chapter" data-level="6" data-path="terminal.html"><a href="terminal.html"><i class="fa fa-check"></i><b>6</b> Terminal</a><ul>
+<li class="chapter" data-level="6.1" data-path="terminal.html"><a href="terminal.html#terminal-commands"><i class="fa fa-check"></i><b>6.1</b> Terminal-Commands:</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="terminal.html"><a href="terminal.html#aktuelle-position-directory"><i class="fa fa-check"></i><b>6.1.1</b> Aktuelle Position // Directory?</a></li>
+<li class="chapter" data-level="6.1.2" data-path="terminal.html"><a href="terminal.html#showing-the-child-directories-inside-the-directory-you-are-currently-in"><i class="fa fa-check"></i><b>6.1.2</b> Showing the child-directories inside the directory you are currently in?</a></li>
+<li class="chapter" data-level="6.1.3" data-path="terminal.html"><a href="terminal.html#delete-everything-you-wrote-in-your-terminal-up-until-now"><i class="fa fa-check"></i><b>6.1.3</b> Delete everything you wrote in your <code>Terminal</code> up until now?</a></li>
+<li class="chapter" data-level="6.1.4" data-path="terminal.html"><a href="terminal.html#change-directory"><i class="fa fa-check"></i><b>6.1.4</b> Change directory?</a></li>
+<li class="chapter" data-level="6.1.5" data-path="terminal.html"><a href="terminal.html#creating-a-new-directory"><i class="fa fa-check"></i><b>6.1.5</b> Creating a new directory?</a></li>
+<li class="chapter" data-level="6.1.6" data-path="terminal.html"><a href="terminal.html#create-a-new-file"><i class="fa fa-check"></i><b>6.1.6</b> Create a new file?</a></li>
+<li class="chapter" data-level="6.1.7" data-path="terminal.html"><a href="terminal.html#remove-files"><i class="fa fa-check"></i><b>6.1.7</b> Remove files?</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="gsap.html"><a href="gsap.html#synonyme-1"><i class="fa fa-check"></i><b>6.3</b> Synonyme</a></li>
+<li class="chapter" data-level="6.2" data-path="terminal.html"><a href="terminal.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>6.2</b> Terminal Magic-Commands for being faster?</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="terminal.html"><a href="terminal.html#syntax-im-terminal"><i class="fa fa-check"></i><b>6.2.1</b> Syntax im Terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="terminal.html"><a href="terminal.html#how-to-activate-use-python"><i class="fa fa-check"></i><b>6.3</b> How to activate &amp; use Python?</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>7</b> Git</a><ul>
+<li class="chapter" data-level="7.1" data-path="git.html"><a href="git.html#backend-git-github"><i class="fa fa-check"></i><b>7.1</b> Backend: Git &amp; Github</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="git.html"><a href="git.html#create-a-new-branch"><i class="fa fa-check"></i><b>7.1.1</b> Create a new Branch</a></li>
+<li class="chapter" data-level="7.1.2" data-path="git.html"><a href="git.html#check-current-branch-you-are-currently-on"><i class="fa fa-check"></i><b>7.1.2</b> Check current Branch you are currently on</a></li>
+<li class="chapter" data-level="7.1.3" data-path="git.html"><a href="git.html#merge-changes-in-new-branch-into-master-branch"><i class="fa fa-check"></i><b>7.1.3</b> Merge Changes in “new branch” into “Master”-Branch</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="gsap.html"><a href="gsap.html"><i class="fa fa-check"></i><b>8</b> GSAP</a><ul>
+<li class="chapter" data-level="8.1" data-path="gsap.html"><a href="gsap.html#advantages-of-using-gsap"><i class="fa fa-check"></i><b>8.1</b> Advantages of using GSAP</a></li>
+<li class="chapter" data-level="8.2" data-path="gsap.html"><a href="gsap.html#api"><i class="fa fa-check"></i><b>8.2</b> API</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="gsap.html"><a href="gsap.html#most-frequent-methods-when-using-tweens-classes"><i class="fa fa-check"></i><b>8.2.1</b> Most frequent Methods when using <code>Tweens</code>-Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="gsap.html"><a href="gsap.html#synonyme-1"><i class="fa fa-check"></i><b>8.3</b> Synonyme</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -179,64 +303,270 @@
 <div id="header">
 <h1 class="title">My Knowledge Database for Websites</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-02-06</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2022-02-07</em></p>
 </div>
-<div id="set-up" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Set-Up</h1>
-<div id="backend-git-github" class="section level2">
-<h2><span class="header-section-number">1.1</span> Backend: Git &amp; Github</h2>
+<div id="computer-set-up" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
+<p>When building projects <em>efficiently</em>, you will need different set-ups in order to have everything in your code work properly, <em>not only on your own machine, but also on other machines, for example of another team-member</em>.</p>
+<div id="mac-tricks" class="section level2">
+<h2><span class="header-section-number">1.1</span> Mac Tricks</h2>
+<p><em>Before</em> we start with the whole set-up, you will also need to know how to <strong>work more efficiently with your Macbook-Computer</strong>.</p>
+<p><em>Those “tricks” will be useful for many other programs you will need when working in the field of datascience.</em></p>
+<div id="öffne-die-developer-tools-von-google-chrome" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Öffne die Developer-Tools von Google-Chrome</h3>
+<ul>
+<li><code>command + shift + i</code></li>
+</ul>
+</div>
+<div id="speichern" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Speichern</h3>
+<ul>
+<li><code>command + s</code></li>
+</ul>
+</div>
+<div id="speichern-unter" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Speichern Unter</h3>
+<ul>
+<li><code>shift + option + command + s</code></li>
+</ul>
+</div>
+<div id="finder" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Finder</h3>
+<ul>
+<li><code>command + leerschlag</code></li>
+</ul>
+</div>
+<div id="programm-schliessen" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> Programm schliessen</h3>
+<ul>
+<li><code>command + q</code></li>
+</ul>
+</div>
+<div id="neuer-ordner" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> Neuer Ordner</h3>
+<ul>
+<li><code>shift + command + n</code></li>
+</ul>
+</div>
+<div id="tilde-zeichen" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> Tilde Zeichen</h3>
+<p>Das ist nützlich für shortcuts im Terminal, wenn man das Working Directory festlegt:</p>
+<ul>
+<li><code>option + n</code></li>
+</ul>
+</div>
+<div id="backslash" class="section level3">
+<h3><span class="header-section-number">1.1.8</span> Backslash</h3>
+<p>Useful for paths within the Directory:</p>
+<ul>
+<li><code>option + shift + 7</code></li>
+</ul>
+</div>
+<div id="screenshot-vom-bildschirm" class="section level3">
+<h3><span class="header-section-number">1.1.9</span> Screenshot vom Bildschirm</h3>
+<ul>
+<li><code>command + shift + 3</code></li>
+</ul>
+</div>
+<div id="teil-des-bildschirms-screen-schoten" class="section level3">
+<h3><span class="header-section-number">1.1.10</span> Teil des Bildschirms Screen-Schoten</h3>
+<ul>
+<li><code>shift + command + 4</code></li>
+</ul>
+</div>
+<div id="verlauf-löschen-in-chrome-browser" class="section level3">
+<h3><span class="header-section-number">1.1.11</span> Verlauf löschen in Chrome Browser</h3>
+<ul>
+<li><code>shift + command + entfernen</code></li>
+</ul>
+</div>
+<div id="verlauf-löschen-safari" class="section level3">
+<h3><span class="header-section-number">1.1.12</span> Verlauf löschen Safari</h3>
+<ul>
+<li><code>command + alt + e</code></li>
+</ul>
+</div>
+<div id="bildschirm-aufnahme" class="section level3">
+<h3><span class="header-section-number">1.1.13</span> Bildschirm Aufnahme</h3>
+<p>Funktioniert nur, wenn QuickTime Player aktiv ist:</p>
+<ul>
+<li><code>option + command + n</code></li>
+</ul>
+</div>
+<div id="lesezeichen-in-google-chrome" class="section level3">
+<h3><span class="header-section-number">1.1.14</span> Lesezeichen in Google Chrome</h3>
+<ul>
+<li><code>command + d</code></li>
+</ul>
+</div>
+<div id="search-console-pop-up" class="section level3">
+<h3><span class="header-section-number">1.1.15</span> Search Console Pop Up</h3>
+<ul>
+<li><code>option + command + j</code></li>
+</ul>
+</div>
+<div id="format-kopieren-einer-zelle-in-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.16</span> Format Kopieren einer Zelle (in Numbers)</h3>
+<ul>
+<li><code>option + command + c</code></li>
+</ul>
+</div>
+<div id="format-übertragen-einer-zelle-in-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.17</span> Format übertragen einer Zelle (in Numbers)</h3>
+<ul>
+<li><code>option + command + v</code></li>
+</ul>
+</div>
+<div id="switch-between-applications-on-your-computer" class="section level3">
+<h3><span class="header-section-number">1.1.18</span> Switch between Applications on your computer</h3>
+<ul>
+<li><code>command + tab</code></li>
+</ul>
+</div>
+<div id="move-forward-through-tabs" class="section level3">
+<h3><span class="header-section-number">1.1.19</span> Move Forward through Tabs</h3>
+<ul>
+<li><code>control + tab</code></li>
+</ul>
+</div>
+<div id="zahl-als-exponent" class="section level3">
+<h3><span class="header-section-number">1.1.20</span> Zahl als Exponent</h3>
+<p>Geht nur in Pages oder Tablett!:</p>
+<ul>
+<li><code>shift + control + command + „+“-Zeichen WÄHREND man die Zahl mit der Maus markiert</code></li>
+</ul>
+<p>Dann ist sie noch „normal“ und nicht tiefgestellt —&gt; also so: zum Beispiel: 2.</p>
+</div>
+<div id="source-code-einer-webseite-aufschalten" class="section level3">
+<h3><span class="header-section-number">1.1.21</span> Source-Code einer Webseite aufschalten</h3>
+<ul>
+<li><code>Option + CMD + u im Browser drücken</code></li>
+</ul>
+</div>
+<div id="interaktive-code-ansicht-für-das-abchecken-von-webseiten" class="section level3">
+<h3><span class="header-section-number">1.1.22</span> Interaktive Code-Ansicht für das Abchecken von Webseiten</h3>
+<p><code>fn + F12-Taste auf Touch Bar drücken</code></p>
+</div>
+<div id="approximate-symbol" class="section level3">
+<h3><span class="header-section-number">1.1.23</span> Approximate Symbol <code>≈</code></h3>
+<ul>
+<li><code>option + x</code></li>
+</ul>
+</div>
+</div>
+<div id="virtual-environment" class="section level2">
+<h2><span class="header-section-number">1.2</span> Virtual Environment</h2>
+<p>Because the libraries you work with in your projects will be updated over time (this is generally <em>bad news</em>, since this will cause all sorts of dependency problems across your libaries you use), it is crucial to understand that you will need a virtual environment (<code>venv</code>). There, you will install all the libraries you need. The <strong>major advantage here, is that you can control the version you install the library</strong>. Furthermore, you can send the <code>venv</code> to another computer and the people will download exactly the versions of each library.</p>
+<p><mark>This allows that <strong>your code will <u>always</u> work, independently of the machine you will use</strong>! There will be no dependency problems anymore, which is a huge win.</mark>. :)</p>
+<div id="create-a-venv" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Create a <code>venv</code></h3>
+<p>Go to your terminal and plug in the following code:</p>
+<pre><code>conda create -n YOUR-VENVIRONMENT-NAME-HERE python=3.6</code></pre>
+</div>
+<div id="activate-your-newly-created-venv" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Activate your newly created <code>venv</code></h3>
+<p>Weirdly though, you also need to activate the environment you created above. Plug in the following code:</p>
+<pre><code>source activate YOUR-ENVIRONMENT-NAME</code></pre>
+<p><mark><strong>Note that the code above can also be used to activate virtual environments you created in the past</strong>!</mark> =)</p>
+</div>
+<div id="install-packages" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Install packages</h3>
+<p>Now that you are in your new <code>venv</code>, you can start downloading some packages:</p>
+<pre><code>python -m pip install SOME-PACKAGES</code></pre>
+</div>
+<div id="overview-of-packages" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> Overview of packages</h3>
+<p>To check your packages within your <code>venv</code>, simply type:</p>
+<pre><code>conda list</code></pre>
+</div>
+<div id="overview-of-every-venv" class="section level3">
+<h3><span class="header-section-number">1.2.5</span> Overview of every <code>venv</code></h3>
+<p>To check all the <code>venv</code> I created, simply type:</p>
+<pre><code>conda env list</code></pre>
+</div>
+<div id="execute-any-python-skript" class="section level3">
+<h3><span class="header-section-number">1.2.6</span> Execute any python skript</h3>
+<p>In order to execute a <code>Python</code>-script, you will need to head towards the directory that the <code>.py</code>-file is and - then - type in:</p>
+<pre><code>cd go-to-the-dir-where-your-file-is
+python my-script.py</code></pre>
+</div>
+<div id="deactivate-the-venv" class="section level3">
+<h3><span class="header-section-number">1.2.7</span> Deactivate the <code>venv</code></h3>
+<p>After you have completed what you wanted, you will need to shut-down the <code>venv</code>. Simply type:</p>
+<pre><code>conda deactivate</code></pre>
+</div>
+<div id="delete-a-venv" class="section level3">
+<h3><span class="header-section-number">1.2.8</span> Delete a <code>venv</code></h3>
+<p>Simply type:</p>
+<pre><code>conda env remove -n my-new-env</code></pre>
+</div>
+</div>
+<div id="r-markdown" class="section level2">
+<h2><span class="header-section-number">1.3</span> R Markdown</h2>
+<p>When writing Code, I recommend you to use <code>.Rmd</code>-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).</p>
+<p>Actually, this document is written in <code>.Rmd</code>-Files, where I combine the text, with so-called “code-snippets”, like the follwing:</p>
+<pre><code>This is a Code-Snippet</code></pre>
+<p>When writing Code in <code>R-Markdown</code>, it will be useful for you to know when:</p>
 <ol style="list-style-type: decimal">
-<li>Create a <strong><a href="https://github.com">Github-Account</a></strong>.</li>
-<li>We also need to <strong><a href="https://git-scm.com/download">download Git</a></strong>, a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.</li>
-<li>Next, we need to <strong>link our Github-Account to Git</strong>. To do this, use the Terminal and type in the following two commands:</li>
+<li>to execute code wihtin a code-snippet</li>
+<li>and where not.</li>
 </ol>
-<p>3.1) <code>git config --global user.name "YOUR GIBHUB USERNAME HERE"</code>
-3.2) <code>git config --global user.email "your_github_email@example.com"</code></p>
-<ol start="4" style="list-style-type: decimal">
-<li><strong>Create a Public &amp; Private SSH-Key</strong> in order to not always type in your password. Follow the instruction of <a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=2m40s">this Youtube-Tutorial (ab 2:40-4:03)</a>.</li>
-<li>In order <strong>to be able to use the SSH-Key</strong>, you need to follow my instruction in the Video on my local computer, situated on the following path: <code>/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov</code>. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: <code>git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git</code></li>
-</ol>
-<div id="create-a-new-branch" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Create a new Branch</h3>
-<p>To create a new branch AND switch to it at the same time, you can use the <em>short-hand</em> command in the terminal:</p>
-<pre><code>git checkout -b NEW_BRANCH_NAME</code></pre>
-<ul>
-<li><u>The above is the same as the following (longer) code</u>:</li>
-</ul>
-<pre><code>$ git branch  NEW_BRANCH_NAME
-$ git checkout  NEW_BRANCH_NAME</code></pre>
-<ul>
-<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you create a new branch, make sure to have committed every change, because <code>git</code> will be very confused otherwise!</li>
-</ul>
+<div id="hide-source-code" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Hide Source Code</h3>
+<p>This will be done with <code>echo = FALSE</code>:</p>
+<pre><code>## [1] 2</code></pre>
+<p>With figures, you need <code>fig.show = 'hide'</code> in R:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="index.html#cb11-1"></a><span class="kw">plot</span>(cars)</span></code></pre></div>
+<p>To hide warning-messages, just use <code>message = FALSE</code>:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="index.html#cb12-1"></a><span class="kw">message</span>(<span class="st">&quot;You will not see the message.&quot;</span>)</span></code></pre></div>
 </div>
-<div id="check-current-branch-you-are-currently-on" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Check current Branch you are currently on</h3>
-<p>The following code should show you <em>all</em> the local branches of your repo. The <strong>starred branch is your current branch</strong>:</p>
-<pre><code>git branch</code></pre>
+<div id="execute-a-code-chunk-without-showing-any-output" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Execute a Code-Chunk without showing any Output</h3>
+<p>You will get an output, e.g. the code will execute, but you will not show the code.</p>
 </div>
-<div id="merge-changes-in-new-branch-into-master-branch" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Merge Changes in “new branch” into “Master”-Branch</h3>
-<p>This can be achieved via a <strong>pull-request</strong>. All you have to do is:</p>
-<ol style="list-style-type: decimal">
-<li>check out // switch to the branch you wish to merge into (= this is usually the master-branch)</li>
-<li>and then run the git merge command:</li>
-</ol>
-<pre><code>$ git checkout master
-Switched to branch &#39;master&#39;
-$ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
-Merge made by the &#39;recursive&#39; strategy.</code></pre>
+<div id="do-not-execute-a-code-chunk" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Do NOT execute a Code-Chunk</h3>
+<p>If you want to show code for demonstration purposes - like on this Website -
+you will probably want to only show the code, but not execute it. This is also possible with <code>eval=FALSE</code>:</p>
+</div>
+<div id="rmarkdown--vs.-markdown-files" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> RMarkdown- VS. Markdown-Files</h3>
 <ul>
-<li><u><strong>Achtung</strong></u>: <em>BEFORE</em> you merge back your changes that are on your branc, make sure to commit every change, because <code>git</code> will NOT allow you to switch to your master-branch otherwise!</li>
+<li>Verwende <code>&lt;ins&gt;&lt;/ins&gt;</code> als HTML, um Texte zu Unterstreichen.
+<ul>
+<li><ins>
+Achtung
+</ins>
+: Der HTML-Tag <code>&lt;u&gt;&lt;/u&gt;</code> geht nicht in <code>.rm</code>-files. Lustigerweise funktioniert <code>&lt;u&gt;&lt;/u&gt;</code> jedoch in <code>.Rmd</code> (= R Markdown) 😂</li>
+</ul></li>
 </ul>
 </div>
-<div id="create-a-bookdown-website" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Create a Bookdown-Website</h3>
+<div id="nützliche-hexadecimals" class="section level3">
+<h3><span class="header-section-number">1.3.5</span> Nützliche Hexadecimals</h3>
+<ul>
+<li>Hexadecimal code for the left square-bracket = <code>&amp;#91;</code> –&gt; Ich muss das so machen mit den eckigen Klammern, weil <code>[]</code> wird für Links &amp; Bilder verwendet in <code>Markdown</code> 🤪</li>
+<li>Hexadecimal code for the right square-bracket = <code>&amp;#93;</code> –&gt; Ich muss das so machen mit den eckigen Klammern, weil <code>[]</code> wird für Links &amp; Bilder verwendet in <code>Markdown</code> 🤪</li>
+</ul>
+</div>
+</div>
+<div id="create-a-bookdown-website" class="section level2">
+<h2><span class="header-section-number">1.4</span> Create a Bookdown-Website</h2>
 <ol style="list-style-type: decimal">
 <li>Use <a href="https://github.com/jtr13/bookdown-template">this Bookdown-Template</a> to create an awesome website like this one, you are currently at right now.</li>
 <li>Follow all <a href="https://www.youtube.com/watch?v=m5D-yoH416Y">the instruction of this 5 Minutes Youtube-Video</a>.</li>
 </ol>
-
 </div>
+<div id="show-hidden-files" class="section level2">
+<h2><span class="header-section-number">1.5</span> Show Hidden Files?</h2>
+<ul>
+<li><code>shift + command + "."-Taste</code> = Use this shortcut when you are in your <code>Finder</code> on your mac, where you can see all your directories. You will see that your Mac hides many files from you that end in <code>.</code>, for example a <code>.gitignore</code>-file (there are many more other files like this one…).</li>
+</ul>
+<blockquote>
+<p>Why is this useful?</p>
+</blockquote>
+<p>Because - <strong>if you ever need to change to change to a new computer</strong> - you will need to setup this new computer. Using hidden <code>.</code>-Files on your <em>old</em> computer will help you to automate this process.</p>
+<p>There is a <a href="https://www.youtube.com/watch?v=r_MpUP6aKiQ">Youtube-Tutorial on how to configure your <em>new</em> computer exactly like your <em>old</em> computer</a>.</p>
+
 </div>
 </div>
             </section>

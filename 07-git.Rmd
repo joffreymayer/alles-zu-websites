@@ -1,0 +1,53 @@
+# Git
+
+## Backend: Git & Github
+
+1) Create a **[Github-Account](https://github.com)**.
+2) We also need to **[download Git](https://git-scm.com/download)**, a Version-Control System, because you can track all your changes and it is easier to collaborate on Code-Projects.
+3) Next, we need to **link our Github-Account to Git**. To do this, use the Terminal and type in the following two commands:
+
+  3.1) `git config --global user.name "YOUR GIBHUB USERNAME HERE"`
+  3.2) `git config --global user.email "your_github_email@example.com"`
+  
+4) **Create a Public & Private SSH-Key** in order to not always type in your password. Follow the instruction of [this Youtube-Tutorial (ab 2:40-4:03)](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=2m40s).
+5) In order **to be able to use the SSH-Key**, you need to follow my instruction in the Video on my local computer, situated on the following path: `/Users/jomaye/Nextcloud/Dokumente/Life/Video Tutorials/Github/ssh-key-zum-laufen-bringen.mov`. If the Git code that I provided in the video does not work, then I recommend you to also try this code out: `git remote set-url --add --push origin git@github.com:yourGithubUsername/yourRepo.git`
+
+### Create a new Branch
+
+To create a new branch AND switch to it at the same time, you can use the _short-hand_ command in the terminal:
+
+```
+git checkout -b NEW_BRANCH_NAME
+```
+
+- <u>The above is the same as the following (longer) code</u>:
+
+```
+$ git branch  NEW_BRANCH_NAME
+$ git checkout  NEW_BRANCH_NAME
+```
+
+- <u>**Achtung**</u>: _BEFORE_ you create a new branch, make sure to have committed every change, because `git` will be very confused otherwise!
+
+### Check current Branch you are currently on
+
+The following code should show you _all_ the local branches of your repo. The **starred branch is your current branch**:
+
+```
+git branch
+```
+
+### Merge Changes in "new branch" into "Master"-Branch
+
+This can be achieved via a **pull-request**. All you have to do is:
+
+1) check out // switch to the branch you wish to merge into (= this is usually the master-branch) 
+2) and then run the git merge command:
+
+```
+$ git checkout master
+Switched to branch 'master'
+$ git merge BRANCH_NAME_THAT_YOU_WANT_TO_MERGE_INTO_MASTER_BRANCH
+Merge made by the 'recursive' strategy.
+```
+- <u>**Achtung**</u>: _BEFORE_ you merge back your changes that are on your branc, make sure to commit every change, because `git` will NOT allow you to switch to your master-branch otherwise!
