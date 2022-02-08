@@ -65,7 +65,7 @@ Denke beispielsweise daran, wenn du mit deinem Smartphone nur eine `3G`- oder `4
 
 ### Die Lösung?
 
-Die beste Technik um **mehrere Bilder** gleichzeitig zu komprimieren // resizen, dann empfehle ich dir [dieses Youtube-Video](https://youtu.be/_gLduuz2ucs) von mir. 
+Die beste Technik um **mehrere Bilder** gleichzeitig zu komprimieren // resizen, dann empfehle ich dir [dieses Youtube-Video](https://youtu.be/_gLduuz2ucs) von mir. Dort zeige ich dir, wie ich sogenanntes _Batch Processing_ betreibe.
 
 <mark>**Die verschiedenen Sizes // Image-Qualitäten, die du dem Browser zur Verfügung stellen solltest, sind**</mark>:
 
@@ -97,10 +97,12 @@ Gemäss `Google Lighthouse`, gibt es nun ein neues Format, welches besser als `.
 
 Eines der effektivsten Mitteln, um einen User auf der Webseite zu behalten, sind der Einsatz von Bildern. Für meine Webseiten verwende ich sehr oft aogenannte _Hero-Images_, damit die User sofort mit schönen Fotos in den Bann gezogen werden.
 
-> Das Problem mit Responive-Webseiten?
+### Das Problem mit Responive-Webseiten?
+
 Wenn du Hero-Images verwendest, dann kann es sein, dass die Bilder für Tablets & Smartphones falsch "ge-cropt" werden. Deshalb ist der Einsatz vom `picture`-Tag sehr empfehlenswert.
 
-> Die Lösung mit Responive-Webseiten?
+### Die Lösung mit Responive-Webseiten?
+
 - <u>Hier wäre ein Beispiel eines HTML-Codes</u>:
 
 ```
@@ -126,17 +128,20 @@ Wenn du Hero-Images verwendest, dann kann es sein, dass die Bilder für Tablets 
 ```
 
 - **<u>ACHTUNG</u>**: Reihenfolge spielt hier eine Rolle bei den `<source>`-Elementen --> Liste zuerst die Elemente auf, mit dem kleinsten Bildschirm, dann 2. kleinster Bildschirm etc...
+- **<u>Ein Beispiel, wie mit dem `sizes`-Attribut umzugehen ist</u>: https://css-tricks.com/sometimes-sizes-is-quite-important/
 
 ## Das `LCP`-Problem bei SEO-Smartphone-Optimierung
 
-> Das Problem?
+### Das Problem?
+
 Da meine Webseiten häufig auf "Hero"-Images (= grosse, Full-Screen Bilder) basieren, um die Neugier des Besuchers sofort zu packen, habe ich jedoch ein `LCP`-Problem (= "largest contentful page"): Google meint, dass die Ladezeit für Smartphone-User hier zu lange geht.
 
 Es gibt hier viele "pro"-Methoden, um das Problem zu lösen (insbesondere mit sog. Caching-Strategien), allerdings sind diese sehr kompliziert zu implementieren.
 
 ![Hier das Problem illustriert: man sieht, dass bei der "Performance" die Werte gering sind. Dies ist der hohen Ladezeit des Hero-Images zuzuschreiben...](/bilder/bild-optimierung/lighthouse-report-ohne-hero-hack.png)
 
-> Die Lösung?
+### Die Lösung?
+
 Ich habe eine provisorische Lösung gefunden, die sich extrem schnell implementieren lässt und sofort Resultate bringt.
 
 - <u>Folgender Code sollte hierbei verwendet werden</u>:
@@ -165,17 +170,19 @@ Ich habe eine provisorische Lösung gefunden, die sich extrem schnell implementi
 
 ## Responsive Background Images as Hero-Image
 
-> Das Problem? 
+### Das Problem?
+
 Bisher konnte ich nur unterschiedliche Bilder für ein Hero-Image, indem ich `<picture>` in Kombination mit `<img>`-(Fallback-)Tag & `<source>`-(Media-Queries)-Tag verwendet habe.
 
 Ich habe jedoch eine neue Lösung gefunden, um DASSELBE Resultat zu erreichen, allerdings mit der CSS-Propert `background-image: url(...)`, damit die Background-Images RESPONSIVE werden (sehr nice!).
 
 Das Beste daran? **Es funktioniert sogar mit IE Browsern**! 
 
-> Die Lösung?
+### Die Lösung?
+
 Obwohl Media-Queries <u>nicht</u> als Inline-CSS im HTML-Dokument verwendet werden können (das war ursprünglich meine Lösung, um Background-Images responsive zu machen), kann es nun mittels einer sogenannten "CSS-Variablen" erreicht werden (= `var()`).
 
-- Lese die Antwort mit den meisten upvotes in [diesem Stack-Overflow](https://stackoverflow.com/questions/9808233/is-it-possible-to-put-css-media-rules-inline) thread, damit due verstehen kannst, wie ich das geschafft habe.
+- Lese die Antwort mit den meisten upvotes in [diesem Stack-Overflow](https://stackoverflow.com/questions/9808233/is-it-possible-to-put-css-media-rules-inline) thread, damit du verstehen kannst, wie ich das geschafft habe.
 
 ## Caching when dealing with Phones
 

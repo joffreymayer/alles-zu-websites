@@ -114,8 +114,14 @@ das-problem
 die-lösung
 das-neue-webp-format
 hero-image
+das-problem-mit-responive-webseiten
+die-lösung-mit-responive-webseiten
 das-lcp-problem-bei-seo-smartphone-optimierung
+das-problem-1
+die-lösung-1
 responsive-background-images-as-hero-image
+das-problem-2
+die-lösung-2
 caching-when-dealing-with-phones
 svg-bilder
 implementierung-mit-figma

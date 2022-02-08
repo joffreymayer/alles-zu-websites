@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-02-07" />
+<meta name="date" content="2022-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -264,9 +264,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2.2" data-path="images-for-websites.html"><a href="images-for-websites.html#die-lösung"><i class="fa fa-check"></i><b>6.2.2</b> Die Lösung?</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="images-for-websites.html"><a href="images-for-websites.html#das-neue-webp-format"><i class="fa fa-check"></i><b>6.3</b> Das neue <code>WebP</code>-Format</a></li>
-<li class="chapter" data-level="6.4" data-path="images-for-websites.html"><a href="images-for-websites.html#hero-image"><i class="fa fa-check"></i><b>6.4</b> Hero-Image</a></li>
-<li class="chapter" data-level="6.5" data-path="images-for-websites.html"><a href="images-for-websites.html#das-lcp-problem-bei-seo-smartphone-optimierung"><i class="fa fa-check"></i><b>6.5</b> Das <code>LCP</code>-Problem bei SEO-Smartphone-Optimierung</a></li>
-<li class="chapter" data-level="6.6" data-path="images-for-websites.html"><a href="images-for-websites.html#responsive-background-images-as-hero-image"><i class="fa fa-check"></i><b>6.6</b> Responsive Background Images as Hero-Image</a></li>
+<li class="chapter" data-level="6.4" data-path="images-for-websites.html"><a href="images-for-websites.html#hero-image"><i class="fa fa-check"></i><b>6.4</b> Hero-Image</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="images-for-websites.html"><a href="images-for-websites.html#das-problem-mit-responive-webseiten"><i class="fa fa-check"></i><b>6.4.1</b> Das Problem mit Responive-Webseiten?</a></li>
+<li class="chapter" data-level="6.4.2" data-path="images-for-websites.html"><a href="images-for-websites.html#die-lösung-mit-responive-webseiten"><i class="fa fa-check"></i><b>6.4.2</b> Die Lösung mit Responive-Webseiten?</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="images-for-websites.html"><a href="images-for-websites.html#das-lcp-problem-bei-seo-smartphone-optimierung"><i class="fa fa-check"></i><b>6.5</b> Das <code>LCP</code>-Problem bei SEO-Smartphone-Optimierung</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="images-for-websites.html"><a href="images-for-websites.html#das-problem-1"><i class="fa fa-check"></i><b>6.5.1</b> Das Problem?</a></li>
+<li class="chapter" data-level="6.5.2" data-path="images-for-websites.html"><a href="images-for-websites.html#die-lösung-1"><i class="fa fa-check"></i><b>6.5.2</b> Die Lösung?</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="images-for-websites.html"><a href="images-for-websites.html#responsive-background-images-as-hero-image"><i class="fa fa-check"></i><b>6.6</b> Responsive Background Images as Hero-Image</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="images-for-websites.html"><a href="images-for-websites.html#das-problem-2"><i class="fa fa-check"></i><b>6.6.1</b> Das Problem?</a></li>
+<li class="chapter" data-level="6.6.2" data-path="images-for-websites.html"><a href="images-for-websites.html#die-lösung-2"><i class="fa fa-check"></i><b>6.6.2</b> Die Lösung?</a></li>
+</ul></li>
 <li class="chapter" data-level="6.7" data-path="images-for-websites.html"><a href="images-for-websites.html#caching-when-dealing-with-phones"><i class="fa fa-check"></i><b>6.7</b> Caching when dealing with Phones</a></li>
 <li class="chapter" data-level="6.8" data-path="images-for-websites.html"><a href="images-for-websites.html#svg-bilder"><i class="fa fa-check"></i><b>6.8</b> SVG-Bilder</a><ul>
 <li class="chapter" data-level="6.8.1" data-path="images-for-websites.html"><a href="images-for-websites.html#implementierung-mit-figma"><i class="fa fa-check"></i><b>6.8.1</b> Implementierung mit <code>Figma</code></a></li>
@@ -383,7 +392,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="die-lösung" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> Die Lösung?</h3>
-<p>Die beste Technik um <strong>mehrere Bilder</strong> gleichzeitig zu komprimieren // resizen, dann empfehle ich dir <a href="https://youtu.be/_gLduuz2ucs">dieses Youtube-Video</a> von mir.</p>
+<p>Die beste Technik um <strong>mehrere Bilder</strong> gleichzeitig zu komprimieren // resizen, dann empfehle ich dir <a href="https://youtu.be/_gLduuz2ucs">dieses Youtube-Video</a> von mir. Dort zeige ich dir, wie ich sogenanntes <em>Batch Processing</em> betreibe.</p>
 <p><mark><strong>Die verschiedenen Sizes // Image-Qualitäten, die du dem Browser zur Verfügung stellen solltest, sind</strong></mark>:</p>
 <pre><code>375px,
 600px,
@@ -413,14 +422,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="hero-image" class="section level2">
 <h2><span class="header-section-number">6.4</span> Hero-Image</h2>
 <p>Eines der effektivsten Mitteln, um einen User auf der Webseite zu behalten, sind der Einsatz von Bildern. Für meine Webseiten verwende ich sehr oft aogenannte <em>Hero-Images</em>, damit die User sofort mit schönen Fotos in den Bann gezogen werden.</p>
-<blockquote>
-<p>Das Problem mit Responive-Webseiten?
-Wenn du Hero-Images verwendest, dann kann es sein, dass die Bilder für Tablets &amp; Smartphones falsch “ge-cropt” werden. Deshalb ist der Einsatz vom <code>picture</code>-Tag sehr empfehlenswert.</p>
-</blockquote>
-<blockquote>
-<p>Die Lösung mit Responive-Webseiten?
-- <u>Hier wäre ein Beispiel eines HTML-Codes</u>:</p>
-</blockquote>
+<div id="das-problem-mit-responive-webseiten" class="section level3">
+<h3><span class="header-section-number">6.4.1</span> Das Problem mit Responive-Webseiten?</h3>
+<p>Wenn du Hero-Images verwendest, dann kann es sein, dass die Bilder für Tablets &amp; Smartphones falsch “ge-cropt” werden. Deshalb ist der Einsatz vom <code>picture</code>-Tag sehr empfehlenswert.</p>
+</div>
+<div id="die-lösung-mit-responive-webseiten" class="section level3">
+<h3><span class="header-section-number">6.4.2</span> Die Lösung mit Responive-Webseiten?</h3>
+<ul>
+<li><u>Hier wäre ein Beispiel eines HTML-Codes</u>:</li>
+</ul>
 <pre><code>&lt;div class=&quot;grande-image&quot;&gt;
             &lt;div class=&quot;grande-image-item&quot;&gt;
                 &lt;picture&gt;
@@ -442,23 +452,24 @@ Wenn du Hero-Images verwendest, dann kann es sein, dass die Bilder für Tablets 
         &lt;/div&gt;</code></pre>
 <ul>
 <li><strong><u>ACHTUNG</u></strong>: Reihenfolge spielt hier eine Rolle bei den <code>&lt;source&gt;</code>-Elementen –&gt; Liste zuerst die Elemente auf, mit dem kleinsten Bildschirm, dann 2. kleinster Bildschirm etc…</li>
+<li>**<u>Ein Beispiel, wie mit dem <code>sizes</code>-Attribut umzugehen ist</u>: <a href="https://css-tricks.com/sometimes-sizes-is-quite-important/" class="uri">https://css-tricks.com/sometimes-sizes-is-quite-important/</a></li>
 </ul>
+</div>
 </div>
 <div id="das-lcp-problem-bei-seo-smartphone-optimierung" class="section level2">
 <h2><span class="header-section-number">6.5</span> Das <code>LCP</code>-Problem bei SEO-Smartphone-Optimierung</h2>
-<blockquote>
-<p>Das Problem?
-Da meine Webseiten häufig auf “Hero”-Images (= grosse, Full-Screen Bilder) basieren, um die Neugier des Besuchers sofort zu packen, habe ich jedoch ein <code>LCP</code>-Problem (= “largest contentful page”): Google meint, dass die Ladezeit für Smartphone-User hier zu lange geht.</p>
-</blockquote>
+<div id="das-problem-1" class="section level3">
+<h3><span class="header-section-number">6.5.1</span> Das Problem?</h3>
+<p>Da meine Webseiten häufig auf “Hero”-Images (= grosse, Full-Screen Bilder) basieren, um die Neugier des Besuchers sofort zu packen, habe ich jedoch ein <code>LCP</code>-Problem (= “largest contentful page”): Google meint, dass die Ladezeit für Smartphone-User hier zu lange geht.</p>
 <p>Es gibt hier viele “pro”-Methoden, um das Problem zu lösen (insbesondere mit sog. Caching-Strategien), allerdings sind diese sehr kompliziert zu implementieren.</p>
 <div class="figure">
 <img src="/bilder/bild-optimierung/lighthouse-report-ohne-hero-hack.png" alt="" />
 <p class="caption">Hier das Problem illustriert: man sieht, dass bei der “Performance” die Werte gering sind. Dies ist der hohen Ladezeit des Hero-Images zuzuschreiben…</p>
 </div>
-<blockquote>
-<p>Die Lösung?
-Ich habe eine provisorische Lösung gefunden, die sich extrem schnell implementieren lässt und sofort Resultate bringt.</p>
-</blockquote>
+</div>
+<div id="die-lösung-1" class="section level3">
+<h3><span class="header-section-number">6.5.2</span> Die Lösung?</h3>
+<p>Ich habe eine provisorische Lösung gefunden, die sich extrem schnell implementieren lässt und sofort Resultate bringt.</p>
 <ul>
 <li><u>Folgender Code sollte hierbei verwendet werden</u>:</li>
 </ul>
@@ -482,21 +493,22 @@ Ich habe eine provisorische Lösung gefunden, die sich extrem schnell implementi
 <p class="caption">Resultat, wenn du den Hack richtig implementierst. Schau, wie nun der Score der Performance von “81” auf “94” gestiegen ist! xD</p>
 </div>
 </div>
+</div>
 <div id="responsive-background-images-as-hero-image" class="section level2">
 <h2><span class="header-section-number">6.6</span> Responsive Background Images as Hero-Image</h2>
-<blockquote>
-<p>Das Problem?
-Bisher konnte ich nur unterschiedliche Bilder für ein Hero-Image, indem ich <code>&lt;picture&gt;</code> in Kombination mit <code>&lt;img&gt;</code>-(Fallback-)Tag &amp; <code>&lt;source&gt;</code>-(Media-Queries)-Tag verwendet habe.</p>
-</blockquote>
+<div id="das-problem-2" class="section level3">
+<h3><span class="header-section-number">6.6.1</span> Das Problem?</h3>
+<p>Bisher konnte ich nur unterschiedliche Bilder für ein Hero-Image, indem ich <code>&lt;picture&gt;</code> in Kombination mit <code>&lt;img&gt;</code>-(Fallback-)Tag &amp; <code>&lt;source&gt;</code>-(Media-Queries)-Tag verwendet habe.</p>
 <p>Ich habe jedoch eine neue Lösung gefunden, um DASSELBE Resultat zu erreichen, allerdings mit der CSS-Propert <code>background-image: url(...)</code>, damit die Background-Images RESPONSIVE werden (sehr nice!).</p>
 <p>Das Beste daran? <strong>Es funktioniert sogar mit IE Browsern</strong>!</p>
-<blockquote>
-<p>Die Lösung?
-Obwohl Media-Queries <u>nicht</u> als Inline-CSS im HTML-Dokument verwendet werden können (das war ursprünglich meine Lösung, um Background-Images responsive zu machen), kann es nun mittels einer sogenannten “CSS-Variablen” erreicht werden (= <code>var()</code>).</p>
-</blockquote>
+</div>
+<div id="die-lösung-2" class="section level3">
+<h3><span class="header-section-number">6.6.2</span> Die Lösung?</h3>
+<p>Obwohl Media-Queries <u>nicht</u> als Inline-CSS im HTML-Dokument verwendet werden können (das war ursprünglich meine Lösung, um Background-Images responsive zu machen), kann es nun mittels einer sogenannten “CSS-Variablen” erreicht werden (= <code>var()</code>).</p>
 <ul>
-<li>Lese die Antwort mit den meisten upvotes in <a href="https://stackoverflow.com/questions/9808233/is-it-possible-to-put-css-media-rules-inline">diesem Stack-Overflow</a> thread, damit due verstehen kannst, wie ich das geschafft habe.</li>
+<li>Lese die Antwort mit den meisten upvotes in <a href="https://stackoverflow.com/questions/9808233/is-it-possible-to-put-css-media-rules-inline">diesem Stack-Overflow</a> thread, damit du verstehen kannst, wie ich das geschafft habe.</li>
 </ul>
+</div>
 </div>
 <div id="caching-when-dealing-with-phones" class="section level2">
 <h2><span class="header-section-number">6.7</span> Caching when dealing with Phones</h2>
