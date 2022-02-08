@@ -415,6 +415,12 @@ Für eine Navigation mit weisser Farbe (= `#fff`) empfiehlt sich folgender Code 
 }
 ```
 
+## CSS Wave Code-Generator
+
+Usually, you have different sections on your website and you separate them by giving each section a different background-color. 
+
+**With [this website](https://wweb.dev/resources/css-separator-generator/), we have a way to get a section that creates different shapes for the background, in order for you to get very creative**.
+
 ## Sonstiges
 
 - `100 vh` = Full screen of the Browser-Fenster.
