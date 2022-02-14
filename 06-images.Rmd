@@ -26,7 +26,7 @@ Der Trick hier ist, dass - _wenn du den Bildern nun eine Custom-CSS-Klasse mit d
 ```
 .product-item-image {
     height: 250px; /*VERY IMPORTANT for Aspect-Ratios of <img>-Tag: If you set a height for your image, the browser will automatically adapt the width of the image, in order to keep the correct aspect-ratio. Set this according to how you like it!*/
-    object-fit: cover; /*Specifies how an object (image or video) should fit inside its box (= parent-element). When you use Object-fit: "cover" --> overflows box but maintains ratio, which is a very important property to have for images!*/
+    object-fit: cover; /* This specifies how an object (image or video) should fit inside its box (= parent-element). Basically, it "crops" the image in order to fit it to any possible device. When you use Object-fit: "cover", it overflows the (parent)-box // <div>-element but maintains its aspect-ratio (= Seitenverhältnis), which is a very important property to have for images! */
     width: 100%;
 }
 ```
@@ -38,7 +38,8 @@ Das Resultat sieht dann so aus:
 ![Die Lösung: Kreiere eine neue CSS-Klasse und definiere dann entweder eine neue `height` oder `width`. Dadurch passt sich die `width` respektive die `height` automatisch an.](./bilder/bild-optimierung/correct-ar.png)
 
 - <u>Nachteil dieser Methode</u>: Es Cropt die Bilder, die sich anpassen müssen! 
-  - <u>Lösung, um dieses Problem zu umgehen</u>: Du musst mitels GIMP die Apsect-Ratios gleich machen. Dabei wirst du allerdings auch Croppen müssen...
+  - <u>Lösung, um dieses Problem zu umgehen</u>: Verwende [mein Video-Tutorial](https://youtu.be/godpEe-UNuM), um ein Bild für jegliche Screens zu croppen!  
+  - <u>Alternative, aber weniger effiziente Lösung</u>: Du musst mitels GIMP die Apsect-Ratios gleich machen. Dabei wirst du allerdings auch Croppen müssen...
   
 ### Strange small white-space below Image used as a Produkt-Karte
 

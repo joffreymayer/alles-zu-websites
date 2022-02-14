@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-02-08" />
+<meta name="date" content="2022-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -355,7 +355,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Der Trick hier ist, dass - <em>wenn du den Bildern nun eine Custom-CSS-Klasse mit der <code>height</code> des <strong>kleinsten</strong> Bilds gibst (hier der CH-Precision)</em> - sich dann die Aspect-Ratio aller Bilder automatisch anpasst:</p>
 <pre><code>.product-item-image {
     height: 250px; /*VERY IMPORTANT for Aspect-Ratios of &lt;img&gt;-Tag: If you set a height for your image, the browser will automatically adapt the width of the image, in order to keep the correct aspect-ratio. Set this according to how you like it!*/
-    object-fit: cover; /*Specifies how an object (image or video) should fit inside its box (= parent-element). When you use Object-fit: &quot;cover&quot; --&gt; overflows box but maintains ratio, which is a very important property to have for images!*/
+    object-fit: cover; /* This specifies how an object (image or video) should fit inside its box (= parent-element). Basically, it &quot;crops&quot; the image in order to fit it to any possible device. When you use Object-fit: &quot;cover&quot;, it overflows the (parent)-box // &lt;div&gt;-element but maintains its aspect-ratio (= Seitenverhältnis), which is a very important property to have for images! */
     width: 100%;
 }</code></pre>
 <p>Der obige Code wird <a href="https://caniuse.com/?search=object-fit%3A%20cover">von 98% der Browser unterstützt</a>.</p>
@@ -367,7 +367,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><u>Nachteil dieser Methode</u>: Es Cropt die Bilder, die sich anpassen müssen!
 <ul>
-<li><u>Lösung, um dieses Problem zu umgehen</u>: Du musst mitels GIMP die Apsect-Ratios gleich machen. Dabei wirst du allerdings auch Croppen müssen…</li>
+<li><u>Lösung, um dieses Problem zu umgehen</u>: Verwende <a href="https://youtu.be/godpEe-UNuM">mein Video-Tutorial</a>, um ein Bild für jegliche Screens zu croppen!<br />
+</li>
+<li><u>Alternative, aber weniger effiziente Lösung</u>: Du musst mitels GIMP die Apsect-Ratios gleich machen. Dabei wirst du allerdings auch Croppen müssen…</li>
 </ul></li>
 </ul>
 </div>
