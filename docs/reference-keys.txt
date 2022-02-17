@@ -40,6 +40,8 @@ rmarkdown--vs.-markdown-files
 nützliche-hexadecimals
 create-a-bookdown-website
 show-hidden-files
+relative-vs.-absolute-paths-in-html
+example-what-is-a-href
 for-the-future
 wörterbuch
 seo

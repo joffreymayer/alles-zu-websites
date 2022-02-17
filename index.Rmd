@@ -165,7 +165,7 @@ To check all the `venv` I created, simply type:
 conda env list
 ```
 
-### Execute any python skript
+### Execute any Python skript
 
 In order to execute a `Python`-script, you will need to head towards the directory that the `.py`-file is and - then - type in:
 
@@ -266,6 +266,18 @@ you will probably want to only show the code, but not execute it. This is also p
 Because - **if you ever need to change to change to a new computer** - you will need to setup this new computer. Using hidden `.`-Files on your _old_ computer will help you to automate this process.
 
 There is a [Youtube-Tutorial on how to configure your _new_ computer exactly like your _old_ computer](https://www.youtube.com/watch?v=r_MpUP6aKiQ).
+
+## Relative VS. Absolute Paths in HTML
+
+When you build your website, you will need to create a navigation with the help of `<a href="YourPathHere">`.
+
+In order for you to master the structure &amp; internal linking of each of your HTML-pages you created, you will need to know how to use **absolute &amp; relative paths in <u>HTML</u>** (this is slightly different than - for example - paths in your terminal).
+
+### Example: what is `<a href="/">`?
+
+In HTML, the `/` stands for the **root of the website** (and <u>not</u> the root of the document // folder). That is also why - when you use the `Local-Host` in `VS Code` on your `ch-precision.html` - you will be able to see the HTML rendered, while on Tee's computer, you will not see anything, because Tee's computer does not have a `Local Host` when he uses `Dreamweaver`!
+
+- <u>Quelle</u>: A very good overview over absolute VS. relative Paths is on [this Stackoverflow Thread (first answer)](https://stackoverflow.com/questions/24028561/relative-path-in-html).
 
 ## For the Future
 

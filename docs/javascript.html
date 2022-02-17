@@ -169,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#install-packages"><i class="fa fa-check"></i><b>1.2.3</b> Install packages</a></li>
 <li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#overview-of-packages"><i class="fa fa-check"></i><b>1.2.4</b> Overview of packages</a></li>
 <li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#overview-of-every-venv"><i class="fa fa-check"></i><b>1.2.5</b> Overview of every <code>venv</code></a></li>
-<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.2.6</b> Execute any python skript</a></li>
+<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.2.6</b> Execute any Python skript</a></li>
 <li class="chapter" data-level="1.2.7" data-path="index.html"><a href="index.html#deactivate-the-venv"><i class="fa fa-check"></i><b>1.2.7</b> Deactivate the <code>venv</code></a></li>
 <li class="chapter" data-level="1.2.8" data-path="index.html"><a href="index.html#delete-a-venv"><i class="fa fa-check"></i><b>1.2.8</b> Delete a <code>venv</code></a></li>
 </ul></li>
@@ -182,8 +182,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.4</b> Create a Bookdown-Website</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#show-hidden-files"><i class="fa fa-check"></i><b>1.5</b> Show Hidden Files?</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#for-the-future"><i class="fa fa-check"></i><b>1.6</b> For the Future</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#wörterbuch"><i class="fa fa-check"></i><b>1.7</b> Wörterbuch</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#relative-vs.-absolute-paths-in-html"><i class="fa fa-check"></i><b>1.6</b> Relative VS. Absolute Paths in HTML</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#example-what-is-a-href"><i class="fa fa-check"></i><b>1.6.1</b> Example: what is <code>&lt;a href="/"&gt;</code>?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#for-the-future"><i class="fa fa-check"></i><b>1.7</b> For the Future</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#wörterbuch"><i class="fa fa-check"></i><b>1.8</b> Wörterbuch</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
 <li class="chapter" data-level="2.1" data-path="seo.html"><a href="seo.html#outline"><i class="fa fa-check"></i><b>2.1</b> Outline</a><ul>
@@ -347,8 +350,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In my opinion, JavaScript is not even really necessary in order to create a very beautiful site nowadays. However, if you want to add features, such as <strong>lazy-loading</strong> for example, then you will need to know some basic JavaScript and - very importantly - <strong>how it interacts with <code>html</code></strong> in order to be able to have fun with the language =)</p>
 <div id="konzept" class="section level2">
 <h2><span class="header-section-number">5.1</span> Konzept</h2>
-<p>JavaScript ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich, wie <code>Python</code>, wird jedoch insbesondere bei Webseiten benötigt.</p>
-<p><mark>Grundsätzlich ist die Beherrschung von JavaScript - <strong>alleine</strong> - nicht besonders wertvoll, denn JavaScript kann <em>ohne</em> das DOM - also das <strong>Document Object Model</strong> - <u>überhaupt nicht</u> mit dem HTML-Code interagieren. Das DOM agiert als wichtige <strong>Schnittstelle // API</strong> (= Application Programming INterface // aka eine Art Kellner, der zwischen der Küche &amp; dem Kunden am Tisch interagiert), mit welchem es möglich wird, das “Verhalten” (zum Beispiel beim Klick eines Users auf einen Knopf) einer Webseite zu definieren (mittels JavaScript Code) und z.B. eine E-Mail an eine Adresse zu versenden.</mark></p>
+<p>JavaScript (JS) ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich, wie <code>Python</code>, wird jedoch insbesondere bei Webseiten benötigt.</p>
+<p><mark>Grundsätzlich ist die Beherrschung von JavaScript - <strong>alleine, insbesondere für einen kompletten Laien in Programmierung</strong> - nicht besonders wertvoll (später schon, wenn du häufiger programmiert hast, kannst du mit z.B. dem <code>React</code>-Framework, eine gesamte Seite in “Pseudo”-JS bauen), denn JavaScript kann <em>ohne</em> das DOM - also das <strong>Document Object Model</strong> - <u>überhaupt nicht</u> mit dem HTML-Code interagieren. Das DOM agiert als wichtige <strong>Schnittstelle // API</strong> (= Application Programming Interface // aka eine Art Kellner, der zwischen der Küche &amp; dem Kunden am Tisch interagiert), mit welchem es möglich wird, das “Verhalten” (zum Beispiel beim Klick eines Users auf einen Knopf) einer Webseite zu definieren (mittels JavaScript Code) und z.B. eine E-Mail an eine Adresse zu versenden.</mark></p>
 <ul>
 <li><u>Hier eine Illustration, wie das DOM als API zwischen JavaScript &amp; HTML interagiert</u>:</li>
 </ul>
@@ -360,11 +363,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="definitionen-1" class="section level2">
 <h2><span class="header-section-number">5.2</span> Definitionen</h2>
 <ul>
-<li><strong>Callback Function</strong>: <a href="https://www.youtube.com/watch?v=587qclhguQg&amp;t=10s">A 25 seconds Video</a> that explains this concept.
+<li><strong>Callback Function</strong>: <a href="https://www.youtube.com/watch?v=587qclhguQg&amp;t=10s">A 15 seconds Video (ab 0:10-0:25)</a> that explains this concept.
 <ul>
-<li><u>In my words</u>: This is a function, which will be called // executed by another function - <code>onClick()</code> is an example of such a function, which is an <code>Event</code> that occurs, when a User clicks on a <code>button</code> - some time in the future // right <em>after</em> you executed the first function (<code>onClick()</code>). It is possible, that this function is called (by the other function) multiple times in the future.</li>
+<li><u>In my words</u>: This is a function, which will ONLY be called // executed by another function - <code>onClick()</code> is an example of such a function, which is an <code>Event</code> that occurs, when a User clicks on a <code>&lt;button&gt;</code> - some time in the future // right <em>after</em> you // the user executed the first function (<code>onClick()</code>). Note that, it is also possible, that this function is called (by the other function) multiple times in the future.</li>
 <li><u>Note</u>: Callback Functions - that are activated by Events - are one of the most important concepts of <code>JavaScript</code>!</li>
 </ul></li>
+<li><strong>Event-Listener</strong>: Das ist <em>basically dasselbe, wie eine Callback-Funktion</em>. Hierbei wird mittels <code>.addEventListener(Event, FunktionToCall())</code>-Methode einem HTML-Element eine (Callback-) Funktion angeheftet, welche NUR ge-called wird, wenn der Event vom User getriggert wird (= das ist dasselbe Prinzip, wie eine Callback Function). Gemäss <a href="https://www.quora.com/What-is-the-difference-between-a-callback-function-and-an-event-listener">diesem Internet-Thread</a>, gibt es keinen wirklichen Unterschied zwischen Event-Listeners &amp; Callback Funktionen.</li>
 <li><strong>(Normal) Queue</strong>: Given that you have a list // array: a “normal queue” adds new items to the back, picks item from the front of the list.</li>
 <li><strong>Deffering Images</strong>: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.</li>
 </ul>

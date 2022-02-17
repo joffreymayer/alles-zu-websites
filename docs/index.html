@@ -169,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#install-packages"><i class="fa fa-check"></i><b>1.2.3</b> Install packages</a></li>
 <li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#overview-of-packages"><i class="fa fa-check"></i><b>1.2.4</b> Overview of packages</a></li>
 <li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#overview-of-every-venv"><i class="fa fa-check"></i><b>1.2.5</b> Overview of every <code>venv</code></a></li>
-<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.2.6</b> Execute any python skript</a></li>
+<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.2.6</b> Execute any Python skript</a></li>
 <li class="chapter" data-level="1.2.7" data-path="index.html"><a href="index.html#deactivate-the-venv"><i class="fa fa-check"></i><b>1.2.7</b> Deactivate the <code>venv</code></a></li>
 <li class="chapter" data-level="1.2.8" data-path="index.html"><a href="index.html#delete-a-venv"><i class="fa fa-check"></i><b>1.2.8</b> Delete a <code>venv</code></a></li>
 </ul></li>
@@ -182,8 +182,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#create-a-bookdown-website"><i class="fa fa-check"></i><b>1.4</b> Create a Bookdown-Website</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#show-hidden-files"><i class="fa fa-check"></i><b>1.5</b> Show Hidden Files?</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#for-the-future"><i class="fa fa-check"></i><b>1.6</b> For the Future</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#wörterbuch"><i class="fa fa-check"></i><b>1.7</b> Wörterbuch</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#relative-vs.-absolute-paths-in-html"><i class="fa fa-check"></i><b>1.6</b> Relative VS. Absolute Paths in HTML</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#example-what-is-a-href"><i class="fa fa-check"></i><b>1.6.1</b> Example: what is <code>&lt;a href="/"&gt;</code>?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#for-the-future"><i class="fa fa-check"></i><b>1.7</b> For the Future</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#wörterbuch"><i class="fa fa-check"></i><b>1.8</b> Wörterbuch</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="seo.html"><a href="seo.html"><i class="fa fa-check"></i><b>2</b> SEO</a><ul>
 <li class="chapter" data-level="2.1" data-path="seo.html"><a href="seo.html#outline"><i class="fa fa-check"></i><b>2.1</b> Outline</a><ul>
@@ -526,7 +529,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>conda env list</code></pre>
 </div>
 <div id="execute-any-python-skript" class="section level3">
-<h3><span class="header-section-number">1.2.6</span> Execute any python skript</h3>
+<h3><span class="header-section-number">1.2.6</span> Execute any Python skript</h3>
 <p>In order to execute a <code>Python</code>-script, you will need to head towards the directory that the <code>.py</code>-file is and - then - type in:</p>
 <pre><code>cd go-to-the-dir-where-your-file-is
 python my-script.py</code></pre>
@@ -608,14 +611,26 @@ Achtung
 <p>Because - <strong>if you ever need to change to change to a new computer</strong> - you will need to setup this new computer. Using hidden <code>.</code>-Files on your <em>old</em> computer will help you to automate this process.</p>
 <p>There is a <a href="https://www.youtube.com/watch?v=r_MpUP6aKiQ">Youtube-Tutorial on how to configure your <em>new</em> computer exactly like your <em>old</em> computer</a>.</p>
 </div>
+<div id="relative-vs.-absolute-paths-in-html" class="section level2">
+<h2><span class="header-section-number">1.6</span> Relative VS. Absolute Paths in HTML</h2>
+<p>When you build your website, you will need to create a navigation with the help of <code>&lt;a href="YourPathHere"&gt;</code>.</p>
+<p>In order for you to master the structure &amp; internal linking of each of your HTML-pages you created, you will need to know how to use <strong>absolute &amp; relative paths in <u>HTML</u></strong> (this is slightly different than - for example - paths in your terminal).</p>
+<div id="example-what-is-a-href" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> Example: what is <code>&lt;a href="/"&gt;</code>?</h3>
+<p>In HTML, the <code>/</code> stands for the <strong>root of the website</strong> (and <u>not</u> the root of the document // folder). That is also why - when you use the <code>Local-Host</code> in <code>VS Code</code> on your <code>ch-precision.html</code> - you will be able to see the HTML rendered, while on Tee’s computer, you will not see anything, because Tee’s computer does not have a <code>Local Host</code> when he uses <code>Dreamweaver</code>!</p>
+<ul>
+<li><u>Quelle</u>: A very good overview over absolute VS. relative Paths is on <a href="https://stackoverflow.com/questions/24028561/relative-path-in-html">this Stackoverflow Thread (first answer)</a>.</li>
+</ul>
+</div>
+</div>
 <div id="for-the-future" class="section level2">
-<h2><span class="header-section-number">1.6</span> For the Future</h2>
+<h2><span class="header-section-number">1.7</span> For the Future</h2>
 <ul>
 <li><u>Check out this Github-Repo with many free Open-Source Softwares to use</u>: <a href="https://github.com/RunaCapital/awesome-oss-alternatives" class="uri">https://github.com/RunaCapital/awesome-oss-alternatives</a></li>
 </ul>
 </div>
 <div id="wörterbuch" class="section level2">
-<h2><span class="header-section-number">1.7</span> Wörterbuch</h2>
+<h2><span class="header-section-number">1.8</span> Wörterbuch</h2>
 <ul>
 <li>Terminal // Shell // Command Line</li>
 </ul>

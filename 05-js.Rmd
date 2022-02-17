@@ -6,9 +6,9 @@ In my opinion, JavaScript is not even really necessary in order to create a very
 
 ## Konzept
 
-JavaScript ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich, wie `Python`, wird jedoch insbesondere bei Webseiten benötigt. 
+JavaScript (JS) ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich, wie `Python`, wird jedoch insbesondere bei Webseiten benötigt. 
 
-<mark>Grundsätzlich ist die Beherrschung von JavaScript - **alleine** - nicht besonders wertvoll, denn JavaScript kann _ohne_ das DOM - also das **Document Object Model** - <u>überhaupt nicht</u> mit dem HTML-Code interagieren. Das DOM agiert als wichtige **Schnittstelle // API** (= Application Programming INterface // aka eine Art Kellner, der zwischen der Küche & dem Kunden am Tisch interagiert), mit welchem es möglich wird, das "Verhalten" (zum Beispiel beim Klick eines Users auf einen Knopf) einer Webseite zu definieren (mittels JavaScript Code) und z.B. eine E-Mail an eine Adresse zu versenden.</mark>
+<mark>Grundsätzlich ist die Beherrschung von JavaScript - **alleine, insbesondere für einen kompletten Laien in Programmierung** - nicht besonders wertvoll (später schon, wenn du häufiger programmiert hast, kannst du mit z.B. dem `React`-Framework, eine gesamte Seite in "Pseudo"-JS bauen), denn JavaScript kann _ohne_ das DOM - also das **Document Object Model** - <u>überhaupt nicht</u> mit dem HTML-Code interagieren. Das DOM agiert als wichtige **Schnittstelle // API** (= Application Programming Interface // aka eine Art Kellner, der zwischen der Küche & dem Kunden am Tisch interagiert), mit welchem es möglich wird, das "Verhalten" (zum Beispiel beim Klick eines Users auf einen Knopf) einer Webseite zu definieren (mittels JavaScript Code) und z.B. eine E-Mail an eine Adresse zu versenden.</mark>
 
 - <u>Hier eine Illustration, wie das DOM als API zwischen JavaScript & HTML interagiert</u>:
 
@@ -16,9 +16,10 @@ JavaScript ist eine Programmier-Sprache, wie jede andere auch. Sie ist ähnlich,
 
 ## Definitionen
 
-- **Callback Function**: [A 25 seconds Video](https://www.youtube.com/watch?v=587qclhguQg&t=10s) that explains this concept. 
-  - <u>In my words</u>: This is a function, which will be called // executed by another function - `onClick()` is an example of such a function, which is an `Event` that occurs, when a User clicks on a `button` - some time in the future // right _after_ you executed the first function (`onClick()`). It is possible, that this function is called (by the other function) multiple times in the future.
+- **Callback Function**: [A 15 seconds Video (ab 0:10-0:25)](https://www.youtube.com/watch?v=587qclhguQg&t=10s) that explains this concept. 
+  - <u>In my words</u>: This is a function, which will ONLY be called // executed by another function - `onClick()` is an example of such a function, which is an `Event` that occurs, when a User clicks on a `<button>` - some time in the future // right _after_ you // the user executed the first function (`onClick()`). Note that, it is also possible, that this function is called (by the other function) multiple times in the future.
   - <u>Note</u>: Callback Functions - that are activated by Events - are one of the most important concepts of `JavaScript`!
+- **Event-Listener**: Das ist *basically dasselbe, wie eine Callback-Funktion*. Hierbei wird mittels `.addEventListener(Event, FunktionToCall())`-Methode einem HTML-Element eine (Callback-) Funktion angeheftet, welche NUR ge-called wird, wenn der Event vom User getriggert wird (= das ist dasselbe Prinzip, wie eine Callback Function). Gemäss [diesem Internet-Thread](https://www.quora.com/What-is-the-difference-between-a-callback-function-and-an-event-listener), gibt es keinen wirklichen Unterschied zwischen Event-Listeners &amp; Callback Funktionen.
 - **(Normal) Queue**: Given that you have a list // array: a "normal queue" adds new items to the back, picks item from the front of the list.
 - **Deffering Images**: This means delaying the loading of images that appear below-the-fold (= not on viewport) on the page.
 
