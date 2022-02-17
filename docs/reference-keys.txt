@@ -129,6 +129,8 @@ svg-bilder
 implementierung-mit-figma
 implementierung-mit-gimp
 terminal
+terminal-magic-commands-for-being-faster
+syntax-im-terminal
 bash
 what-can-you-do-with-a-terminal
 geschichtlicher-ursprung-von-bash
@@ -143,11 +145,9 @@ change-directory
 creating-a-new-directory
 create-a-new-file
 remove-files
-terminal-magic-commands-for-being-faster
-syntax-im-terminal
-beispiel-delete-all-files-in-a-folder-that-start-with-the-letter-a
-beispiel-how-to-return-to-your-home-directory
-how-to-activate-use-python
+how-to-delete-all-files-in-a-folder-that-start-with-the-letter-a
+how-to-return-to-your-home-directory
+how-to-activate-use-python-by-using-the-terminal
 git
 wörterbuch-1
 first-time-using-git-github

@@ -8,6 +8,19 @@ The **Terminal // Command Line** is a place that helps you:
 - setup a `git`-repo 
 - etc...
 
+## Terminal Magic-Commands for being faster?
+
+- <u>Trick #1</u>: hit the "Tab-Taste" == will automatically auto-fill the name of the file / directories etc.
+  - <u>Example</u>: Type `cd Dok` + "Tab"-Taste --> *auto-fill activates* --> im Terminal steht dann der automatisch ausgefüllte Name des Files / Directories, zum Beispiel `cd Dokumente` bzw. `cd Name_Of_Child_Directory` 
+- <u>Trick #2</u>: How to find a path of a directory that is situated very deeply in your local computer?
+  - <u>Example</u>: Type `cd ` + drag-&-drop the **folder** that is deep in your computer with the file in it.
+  
+## Syntax im Terminal
+
+- `*`-Zeichen == Represents "all files".
+- `.`-Zeichen == use the `.` character to represent the **current folder**.
+- `~`-Zeichen == represents the "home directory".
+
 ## Bash
 
 In order to interact with the computer you need to write commands that the computer will be able to understand.
@@ -91,18 +104,7 @@ A terminal will be essential for your projects, since you will - oftentimes - in
 
 `rm index.html app.css capture.png` = This will delete the `index.html`-, the `app.css` and the `capture.png`-files from the current (working-) directory you are currently in.
 
-## Terminal Magic-Commands for being faster?
-
-- <u>Trick #1</u>: hit the "Tab-Taste" == will automatically auto-fill the name of the file / directories etc.
-  - <u>Example</u>: Type `cd Dok` + "Tab"-Taste --> *auto-fill activates* --> im Terminal steht dann der automatisch ausgefüllte Name des Files / Directories, zum Beispiel `cd Dokumente` bzw. `cd Name_Of_Child_Directory` 
-- <u>Trick #2</u>: How to find a path of a directory that is situated very deeply in your local computer?
-  - <u>Example</u>: Type `cd ` + drag-&-drop the **folder** that is deep in your computer with the file in it.
-  
-### Syntax im Terminal
-
-- `*`-Zeichen == Represents "all files".
-
-#### <u>Beispiel</u>: Delete all Files in a folder that start with the letter `a`?
+### How to delete all Files in a folder that start with the letter `a`?
 
 To delete all files in a folder that start with the letter `a`, then you should write:
 
@@ -110,10 +112,7 @@ To delete all files in a folder that start with the letter `a`, then you should 
 /folder/a*
 ```
 
-- `.`-Zeichen == use the `.` character to represent the **current folder**.
-- `~`-Zeichen == represents the "home directory".
-
-#### <u>Beispiel</u>: how to return to your home directory?
+### How to return to your home directory?
 
 You should use:
 
@@ -121,7 +120,7 @@ You should use:
 cd ~
 ```
 
-## How to activate &amp; use Python?
+## How to activate &amp; use Python by using the Terminal?
 
 `Python` can be executed on your local computer via a `Jupyter Notebook`, which can be accessed through an IDE. `R`, `Visual Studio Code` or `PyCharm` are examples of IDEs. 
 
