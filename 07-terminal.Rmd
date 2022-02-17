@@ -8,6 +8,54 @@ The **Terminal // Command Line** is a place that helps you:
 - setup a `git`-repo 
 - etc...
 
+## Bash
+
+In order to interact with the computer you need to write commands that the computer will be able to understand.
+
+For this purpose, you can use `bash`: **a command language interpreter** for
+interacting with a computer from the command line (= terminal). 
+
+**In other words, `bash` is nothing else than the API // Schnittstelle between you - as a programmer - and the computer.**
+
+### What can you do with a Terminal?
+
+Another synonym for the terminal would be "**the shell**", because it surrounds the operating-system (= OS) kernel to hide its intricate details while allowing you - the programmer - to do important stuff like:
+
+- **access data** and 
+- **write files**, by typing simple commands 
+
+These two functionalities - enabled through the language `bash` - were a revolutionary concept when it was developed in the early 70s back when programmers were still using punch cards. 
+
+### Geschichtlicher Ursprung von `bash`?
+
+The shell-concept evolved over the years with the "bourne shell" being the most popular version that was used, until 1989 when the **<u>B</u>ourne-<u>A</u>gain shell** - aka `bash` - came about.
+
+### How Terminal & `bash` works | Theoretical Concept
+
+When you open up the Terminal on a *Unix-Machine* - like Mac OS and most linux
+distros - the **default shell** is usually `bash`. It provides a "prompt" (siehe Bild unten), where you can type a command, which will then be:
+
+1) **interpreted by the shell** and 
+2) **executed on the operating system (= OS)** 
+
+![This is the "prompt".](./bilder/terminal/prompt.png)
+
+### Find out, which Language the Terminal is currently understanding
+
+To find out, if you're running `bash` on your terminal, simply type the following from the command line:
+
+```
+which $SHELL
+```
+
+### Automation 
+
+*But `bash` *is also a programming language, that allows us to write scripts*.
+
+**This means that anything we type manually into the command line can be automated with code**. 
+
+- <u>Example</u>: Watch [this Youtube-Video (ab 0:53-2:23)](https://www.youtube.com/watch?v=I4EWvMFj37g&t=53s).
+
 ## Terminal-Commands:
 
 A terminal will be essential for your projects, since you will - oftentimes - install packages or move files around your repositories with it. Here, you will find the most useful things you should know when using the `Terminal`.

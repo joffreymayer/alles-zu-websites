@@ -41,6 +41,7 @@ nützliche-hexadecimals
 create-a-bookdown-website
 show-hidden-files
 for-the-future
+wörterbuch
 seo
 outline
 wenn-dein-outline-falsch-ist
@@ -128,6 +129,12 @@ svg-bilder
 implementierung-mit-figma
 implementierung-mit-gimp
 terminal
+bash
+what-can-you-do-with-a-terminal
+geschichtlicher-ursprung-von-bash
+how-terminal-bash-works-theoretical-concept
+find-out-which-language-the-terminal-is-currently-understanding
+automation
 terminal-commands
 aktuelle-position-directory
 showing-the-child-directories-inside-the-directory-you-are-currently-in
@@ -142,7 +149,7 @@ beispiel-delete-all-files-in-a-folder-that-start-with-the-letter-a
 beispiel-how-to-return-to-your-home-directory
 how-to-activate-use-python
 git
-wörterbuch
+wörterbuch-1
 first-time-using-git-github
 key-concepts-in-git
 start-project-via-github-remote-possibility
