@@ -282,7 +282,3 @@ In HTML, the `/` stands for the **root of the website** (and <u>not</u> the root
 ## For the Future
 
 - <u>Check out this Github-Repo with many free Open-Source Softwares to use</u>: https://github.com/RunaCapital/awesome-oss-alternatives
-
-## Wörterbuch
-
-- Terminal // Shell // Command Line
