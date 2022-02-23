@@ -79,9 +79,18 @@ Die beste Technik um **mehrere Bilder** gleichzeitig zu komprimieren // resizen,
 "Original-Bild"
 ```
 
-
 - **Wenn du nur 1 Bild sehr genau bearbeiten // komprimieren willst**, dann verwende [BeFunky.com](https://www.befunky.com/).
 - Alternative, die auch andere - modernere(!) - Formate & Kompressionen erreichen kann, ist die Webapp [Squoosh.app](https://squoosh.app/).
+
+### Bonus
+
+Ich war schon immer neugierig, wie breit & hoch ein **A4-Blatt** in Pixel ist. Dies habe ich nun gefunden:
+
+```
+A4-Format Pixel-WIDTH == 595px;
+
+A4-Format Pixel HEIGHT == 842px;
+```
 
 ## Das neue `WebP`-Format
 

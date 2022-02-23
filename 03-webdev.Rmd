@@ -24,6 +24,7 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 - **DRY** // Don't repeat yourself (= is a programming "state-of-the-art" of writing code)
 - **Query** // Request // Question that we "ask" the database.
 - **AJAX** // Asynchronous JavaScript and XML.
+- **json** // JavaScript Object Notation
 
 
 

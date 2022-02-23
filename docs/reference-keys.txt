@@ -117,6 +117,7 @@ strange-small-white-space-below-image-used-as-a-produkt-karte
 kompression
 das-problem
 die-lösung
+bonus
 das-neue-webp-format
 hero-image
 das-problem-mit-responive-webseiten
