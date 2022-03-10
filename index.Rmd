@@ -279,6 +279,14 @@ In HTML, the `/` stands for the **root of the website** (and <u>not</u> the root
 
 - <u>Quelle</u>: A very good overview over absolute VS. relative Paths is on [this Stackoverflow Thread (first answer)](https://stackoverflow.com/questions/24028561/relative-path-in-html).
 
+## Create a Custom Email for FREE
+
+Note that this method I am about to show you is currently <u>only</u> in support of `.com`-domains, but **NOT** `.ch`-domains! Also, you should buy the domain on `google.domains` if you want to do this.
+
+_After_ you purchased the domain, you simply have to watch this tutorial:
+
+- https://www.youtube.com/watch?v=b4ij06Tt3U4
+
 ## For the Future
 
 - <u>Check out this Github-Repo with many free Open-Source Softwares to use</u>: https://github.com/RunaCapital/awesome-oss-alternatives
