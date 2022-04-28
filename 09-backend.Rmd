@@ -1,0 +1,69 @@
+# Backend
+
+In diesem Kapitel geht es um das Backend, also die "Cloud" // Webserver, welche meine gesamte Webseite (HTML, CSS & JS) hosted.
+
+## Allgemein
+
+- **200-er Statuscode** = Wenn der Webserver bei der HTTP-Response einen 200-er Statuscode schickt, dann meint er, er habe die HTTP-Request vom Browser erfolreich zurückgeben können. _Es steht also für "OK, du hast genau das bekommen, was du gefragt hast"_.  
+- **404-er Statuscode** = Steht für "Not Found". 
+- **HTTP-Headers** = Das sind _Key-Value_-Paare, welche in der HTTP-Request ODER -Response stehen.
+  - <u>Beispiel</u>: `Date: Mon, 28 Aug 2017 09:02:55 GMT` oder `Content-Encoding: gzip` wären sogenannte **HTTP-Headers**.
+- **Payload** = Nutzdaten, welche bei der HTTP-Response eines Webservers für den Browser // Client zur Verfügung steht. 
+
+## Synonyme
+
+- **Webserver** = Host = Server-Softwar (manchmal ist diese auch damit gemeint)
+
+
+## Kontext
+
+### Was ist eigentlich ein Webserver? Und was versteht man unter _Client-Server-Technologie_?
+
+Ein Webserver ist ein Computer, der **24/7** // rund um die Uhr online ist und seine gepeicherten Inhalte auf Anfrage zur Verfügung stellen kann.
+
+_So wartet etwa ein **Web-Server** darauf, dass Anfragen eintreffen, die **Web-Seiten** auf dem Server-Rechner abrufen wollen_.
+
+**Clients** sind dagegen Software-Programme - beispielsweise der `Google-Chrome`-Browser oder der `Safari`-Browser - die typischerweise Daten von Servern anfordern. Der Browser selbst verfügt über eine Software, die in der Lage ist, die `html`-Seiten richtig anzuzeigen auf dem Computer-Bildschirm.
+
+Um die Kommunikation zwischen Clients und Servern zu regeln, gibt es entsprechende **Protokolle**.
+
+![Client-Server Kommunkation](./bilder/backend/client-server-kommunikation.png)
+## Das `HTTP`-Protoll für die Client-Server-Kommunikation
+
+Bei `HTTP` (= kurz für "hyptertext transfer protocol) handelt es sich um eine **Art Sprache, in der ein Webserver und ein Browser miteinander kommunizieren**.
+
+> Kontext: Wieso ist es wichtig zu wissen, wie das `HTTP`-Protokoll funktioniert?
+
+Es ist notwendig, das `HTTP`-Protokoll zu kennen, **wenn du Datentransfers zwischen Client & Servern programmieren willst**. Dies kann entweder _client-seitig_ erfolgen, z.B. über die Scriptsprache `JavaScript`, oder mit einer _serverseitigen_ Skriptsprache, z.B. `Python`, `PHP`, `Java`, `Perl` oder `ASP.NET`. 
+
+> Request und Response
+
+Kommunikation zwischen Browser & Server per HTTP geschieht <u>immer</u> in dieser **Reihenfolge**:
+
+1) Request
+2) Response
+
+Ruft ein Seitenbesucher mit seinem Browser eine Internetseite auf, so sendet der Browser eine _Anfrage_ (**Request**, englisch für Bitte/Wunsch/Anfrage) an den Webserver, die von diesem mit einer **Response** (englisch für _Antwort_/Erwiderung/Reaktion) beantwortet wird.
+
+- <u>Wichtige Bemerkung</u>: Browser & Webserver können sich über `HTTP` <u>ausschließlich</u> **Textdateien** zusenden! Diese werden an den Client häufig (immer?) codiert, beispielsweise im `base64`-Format für `GIFs`-Dateien.
+
+> Content-Type
+
+Bei der HTTP-Repsonse des Servers gibt es einen HTTP-Header, welcher besonders wichtig ist: den "Content-Type"-Header. _Hierbei kann der Programmierer dem Server die Anweisung gegeben, in welchem Daten-Format (also als `.html` oder als `.css` oder als `.jpeg` etc...) er dem Client die Angefragte Datei zusenden soll.
+
+Für eine Übersicht zu allen Daten-Formaten, empfiehlt sich [diese Webseite](https://wiki.selfhtml.org/wiki/MIME-Type).
+
+- <u>Beispiel, eines "Content-Type"-Headers, der eine `.html`-Seite als Response dem Client zur Verfügung gestellt werden würde</u>: `Content-Type: text/html; charset=UTF-8`.
+
+> `GET` und `POST`
+
+
+
+
+### Was macht eine Server-Software?
+
+Die Server-Software ist zuständig für die Organisation: 
+
+1) Der Zusammenstellung der Daten, und 
+2) Der Übertragung der Daten.
+

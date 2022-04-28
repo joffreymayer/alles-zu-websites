@@ -5,7 +5,7 @@ Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 ## Synonyme 
 
 - **Folders (of a website)** // Directories
-- **Backend** // Server
+- **Backend** // Server // Web-Server // Host
 - **Constraint** // Rule // Annahme(n)
 - **(above the) Fold** // Viewport // Alles, was beim Laden einer HTML-Seite "visible" wird auf dem Screen eines Users
 - **Store data (for example, in an array)** // present data

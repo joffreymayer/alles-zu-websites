@@ -289,4 +289,5 @@ _After_ you purchased the domain, you simply have to watch this tutorial:
 
 ## For the Future
 
+- <u>Sehr gute Deutsche Seite zum Internet & Webseiten</u>: https://wiki.selfhtml.org/wiki/Webserver
 - <u>Check out this Github-Repo with many free Open-Source Softwares to use</u>: https://github.com/RunaCapital/awesome-oss-alternatives
