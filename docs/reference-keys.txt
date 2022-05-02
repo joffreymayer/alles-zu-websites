@@ -167,7 +167,11 @@ allgemein
 synonyme-1
 kontext
 was-ist-eigentlich-ein-webserver-und-was-versteht-man-unter-client-server-technologie
-was-macht-eine-server-software
+statische-vs.-dynamische-webseiten
+web-techniken-für-das-backend
+caching
+grundvoraussetzung
+was-die-implementierung-von-einer-guten-caching-strategie-so-schwierig-macht
 gsap
 advantages-of-using-gsap
 api

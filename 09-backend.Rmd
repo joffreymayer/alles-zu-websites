@@ -4,6 +4,8 @@ In diesem Kapitel geht es um das Backend, also die "Cloud" // Webserver, welche 
 
 ## Allgemein
 
+- **rendern** = Die Übersetzung des Quellcodes in eine visuelle Darstellung wird als _rendern_ (englisch für wiedergeben, darstellen) bezeichnet. Ein **rendering engine** ist ein Programm, das HTML (und XML-Dokumente) verarbeitet und darstellt.
+- **parsen** = Das elektronische Aufbereiten einer Zeichenfolge (= z.B. Bytes) wird als parsen (_englisch für **analysieren**_) bezeichnet. Beispielsweise erstellt - <u>nachdem</u> der Browser die HTML-Seite (als _text_-Datei!!) vom Server erhalten hat - ein HTML-Parser die Dokumentenstruktur - aka das DOM - welches im Anschluss durch den Renderer visuell dargestellt wird.
 - **200-er Statuscode** = Wenn der Webserver bei der HTTP-Response einen 200-er Statuscode schickt, dann meint er, er habe die HTTP-Request vom Browser erfolreich zurückgeben können. _Es steht also für "OK, du hast genau das bekommen, was du gefragt hast"_.  
 - **404-er Statuscode** = Steht für "Not Found". 
 - **HTTP-Headers** = Das sind _Key-Value_-Paare, welche in der HTTP-Request ODER -Response stehen.
@@ -36,6 +38,10 @@ Bei `HTTP` (= kurz für "hyptertext transfer protocol) handelt es sich um eine *
 
 Es ist notwendig, das `HTTP`-Protokoll zu kennen, **wenn du Datentransfers zwischen Client & Servern programmieren willst**. Dies kann entweder _client-seitig_ erfolgen, z.B. über die Scriptsprache `JavaScript`, oder mit einer _serverseitigen_ Skriptsprache, z.B. `Python`, `PHP`, `Java`, `Perl` oder `ASP.NET`. 
 
+> Praxis: Probiere es selber aus und siehe, wie das HTTP-Protokoll "live" funktioniert auf deiner eigenen Webseite
+
+- <u>Mein Youtube-Video</u>: https://www.youtube.com/watch?v=Jd_u7gAsAwk&feature=youtu.be
+
 > Request und Response
 
 Kommunikation zwischen Browser & Server per HTTP geschieht <u>immer</u> in dieser **Reihenfolge**:
@@ -57,13 +63,49 @@ Für eine Übersicht zu allen Daten-Formaten, empfiehlt sich [diese Webseite](ht
 
 > `GET` und `POST`
 
+Gleich in der ersten Zeile der HTTP-`Request` steht das Keyword `GET`. Dieses wird **verwendet, wenn du Daten auf dem Server abrufen möchtest**.  
 
+Manchmal aber **wollen wir Daten auf den Webserver übertragen // speichern**, wie z. B. bei einem **Login-Formular**. Dazu gibt es eine weitere Methode, nämlich `POST`. 
 
+## Statische VS. Dynamische Webseiten
 
-### Was macht eine Server-Software?
+Aus Sicht des `HTTP`-Protokolls ist es völlig egal, ob eine vom Client angeforderte Ressource auf dem Server fertig gespeichert ist <u>oder</u> ob es erst im Moment der Anforderung durch ein Programm wie `PHP` aus Bausteinen zusammengesetzt wird. 
 
-Die Server-Software ist zuständig für die Organisation: 
+Allerdings wurde diesen beiden Möglichkeiten, eine Webseite zu "rendern" (= Darstellung auf dem Browser des Clients), einen Namen gegeben:
 
-1) Der Zusammenstellung der Daten, und 
-2) Der Übertragung der Daten.
+- **Statische** HTML-Seiten liegen als fertige Dokumente auf dem Server vor und müssen nur (zum Client) übertragen werden. Meine Webseite `https://www.audiophil-dreams.com/` ist ein Beispiel, für eine statische Webseite.
+- **Dynamische** Webseiten werden vom Server aus Datenbankinhalten erzeugt und mit Header und Navigation versehen. Beispiel hierfür wären Instagram oder Facebook.
 
+## Web-Techniken für das Backend
+
+## Caching
+
+_Mit Caching kann die Performance // Ladezeit einer Webseite extrem verbessert werden (**wenn das Caching richtig implementiert wurde!**), was wiederum zu einer besseren User-Experience führt (weil die Leute wollen deinen Content sehen, je schneller, desto besser!), was wiederum zu besseren Rankings führt (langfristig)._ 
+
+Insbesondere nachdem Google den **"Mobile-First"-Approach** gewählt hat, werden Cache-Strategien & Best-Practices in diesem Bereich relevanter denn je...
+
+### Grundvoraussetzung
+
+Voraussetzung, um eine gute Cache-Strategie implementieren zu können, ist, dass du **das Konzept vom `HTTP`-Kommunikationsprinzip zwischen einem "Client" und einem "Server" verstehst**.
+
+- _Key to note_: `no-cache` **<u>doesn't</u> mean "don't cache"**, it means it must check (or "**revalidate**" as it calls it) with the server before using the cached resource. `no-store` tells the browser not to cache it at all. Also must-revalidate <u>doesn't</u> mean "must revalidate", it means the local resource can be used if it's _younger_ than the provided `max-age`, otherwise it must revalidate. Yeah. I know, it is confusing... xD
+
+### Was die Implementierung von einer "guten" Caching-Strategie so schwierig macht
+
+Auch wenn der Webserver am Browser (= Client) den Befehl gibt, eine Datei für 1 Monat im Cache zu behalten, kann es sein, dass der Brwoser diese dropped. 
+
+> Das (problematische) Beispiel, welche die Schwierigkeit von Caching darstellt: 
+
+Angenommen, du hast 1 HTML-Seite, 1 CSS-Datei & 1 JS-Datei hast, _welche alle voneinander abhängig sind UND auch ge-cached sind **für 10 Minuten**_. Nun machst du ein **Update der CSS-Datei & HTML-Seite**, weil du zusätzlichen Inhalt auf der HTML-Seite hinzufügen UND verschönern willst. 
+
+Zusätzlich nehme ich an, dass es einen Besucher gibt, welcher _vor 5 Minuten_ auf deiner Webseite war - **und deshalb alle 3 Files im Cache gespeichert bekommen hat** - wobei nun jedoch noch <u>nicht</u> 10 Minuten vergangen ist, macht eine erneute HTTP-Request, um auf die HTML-Seite zu gelangen, _ohne zu wissen, dass du Änderungen auf der CSS-Datei UND HTML-Seite gemacht hast_. "Kein Problem", könntest du dir denken, da ja der Browser eigentlich noch die 3 "veralteten" Files im Cache haben sollte (und der Besucher somit mit der veralteten Version in Kontakt treten sollte). <u>In der realen Welt</u> kann es allerdings durchaus sein, dass im Cache <u>nur noch</u> **die HTML-Seite & die JS-Datei** sind, <u>nicht jedoch</u> die **CSS-Datei**, weil der Browser diese (_ohne Vorwarnung_!!) gedropped hat - **trotz der Anweisung des Servers, diese im Cache zu behalten** (wurde jedoch nicht vom Browser getan... xD)! Somit würde also der Client nochmals beim Server die CSS-Datei verlangen, da er diese im Cache nicht finden kann. Hierbei ist nun wichtig zu bemerken, dass die CSS-Datei allerdings verändert wurde und somit vielleicht gewisse Styles gar nicht mehr auf die (alte) HTML-Seite anwendbar sind (weil der Browser hat diese ja im Cache gespeichert und fragt sie - fälschlicherweise - nicht an, obwohl sich diese ja auch verändert hat! Da `max-age` jedoch noch <u>nicht</u> überschritten ist (< 10 Minuten sind vergangen), hat er die Anweisung des Servers bekommen, das nicht zu tun. xD
+
+- <u>Die böse Konsequenz des Beispiels</u>: For the user, this can result in broken layout (CSS) and/or functionality (JS).
+
+- <u>Lösung</u>: A refresh will solve this issue! If the page is loaded as part of a refresh, browsers will <u>**always**</u> revalidate with the server, ignoring `max-age`.
+  - <u>Alternative Lösung</u>: Verwende einen "Proxy" // CDN, wie zum Beispiel "Cloudfare", welche als "Client" mit deinem Webserver in Kontakt tritt. Der Server gibt dem CDN die Caching-Anweisungen. Anschliessend wird der CDN nun mit den einzelnen Browser-Caches kommunizieren. Dies wird in diesem Video erklärt (ab )
+- <u>Link für audio-visuelle Alternative über dieses Beispiel</u>: https://www.youtube.com/watch?v=z4XdfFscxSk
+
+### Meine gewählte Strategie
+
+Schlussendlich habe ich mich für folgende Strategie entschieden: https://www.youtube.com/watch?v=JXAg8zpZIJg
