@@ -49,6 +49,9 @@ outline
 wenn-dein-outline-falsch-ist
 pdfs
 webdevelopment
+wo-stehen-wir-aktuell-in-2022-kontext
+server-side-programming
+statische-webseiten
 synonyme
 definitionen
 how-does-the-web-work
@@ -172,6 +175,7 @@ web-techniken-für-das-backend
 caching
 grundvoraussetzung
 was-die-implementierung-von-einer-guten-caching-strategie-so-schwierig-macht
+meine-gewählte-strategie
 gsap
 advantages-of-using-gsap
 api

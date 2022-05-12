@@ -2,6 +2,30 @@
 
 Hier liste ich allgemein Nützliches & Begriffe zum Thema "WebDev".
 
+## Wo stehen wir "aktuell", in 2022? | Kontext
+
+### Server-Side Programming
+
+Eines der aktuell beliebstesten Paradigmen im Web ist sogenanntes "**server-side programming**", bei denen Webseiten - teilweise - "dynamisch" (dh Webseiten-Inhalt, welcher für verschiedene User **variiert, obwohl sie dieselbe URL abrufen**) im Hintergrund auf dem Web-Server HTML-Code generieren, auf der Basis von Datenbanken. 
+
+![Architektur // Schema, wie "Server-Side Programming" funktioniert](./bilder/webdev/server-side-programming.png)
+Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change —typically: CSS, JavaScript, Images, pre-created PDF files etc).
+
+Requests for dynamic resources are instead forwarded (2) to server-side code (shown in the diagram as a Web Application). For "dynamic requests" the server interprets the request, reads required information from the database (3), combines the retrieved data with HTML templates (4), and sends back a response containing the generated HTML (5,6).
+
+<u>Die Vorteile von "Server-Side Programming" sind vor allem</u>:
+
+- Es kann eine "customisierte User-Experience" generiert werden (basierend auf Surf-Gewohnheiten & User-Präferenzen, welche mittels Cookies // Tracking generiert wurden). Es kann sogar Interaktionen mit dem Nutzer stattfinden (Notifications) oder der User kann via Email-Updates auf dem neusten Stand gehalten werden.
+- Technisch gesehen, ist es _effizienter_, riesige Mengen an Content zu lagern, im Vergleich zu statisch generierten Webseiten.
+
+### Statische Webseiten
+
+Im Kontrast dazu, sind _meine_ bisherigen Webseiten "statisch" generiert (Audiophil-Dreams.com oder OptimizeAudio.com), dh hier habe den gesamten Code - HTML, CSS & JavaScript - in einen Webserver gespeichert, welcher bei Anfragen eines Clients die geforderten Resourcen einfach liefern. Das wär's. Es ist relativ simpel.
+
+![Architektur einer statischen Webseite, zum Beispiel von Audiophil-Dreams.com](./bilder/webdev/static-sites-architecture.png)
+
+The server retrieves the requested document from its file system and returns an HTTP response containing the document and a success status (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned.
+
 ## Synonyme 
 
 - **Folders (of a website)** // Directories
