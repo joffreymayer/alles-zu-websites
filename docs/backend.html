@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-05-12" />
+<meta name="date" content="2022-05-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -196,8 +196,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="webdevelopment.html"><a href="webdevelopment.html"><i class="fa fa-check"></i><b>3</b> Webdevelopment</a><ul>
 <li class="chapter" data-level="3.1" data-path="webdevelopment.html"><a href="webdevelopment.html#wo-stehen-wir-aktuell-in-2022-kontext"><i class="fa fa-check"></i><b>3.1</b> Wo stehen wir “aktuell”, in 2022? | Kontext</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="webdevelopment.html"><a href="webdevelopment.html#server-side-programming"><i class="fa fa-check"></i><b>3.1.1</b> Server-Side Programming</a></li>
-<li class="chapter" data-level="3.1.2" data-path="webdevelopment.html"><a href="webdevelopment.html#statische-webseiten"><i class="fa fa-check"></i><b>3.1.2</b> Statische Webseiten</a></li>
+<li class="chapter" data-level="3.1.1" data-path="webdevelopment.html"><a href="webdevelopment.html#server-side-programming-für-dynamische-webseiten"><i class="fa fa-check"></i><b>3.1.1</b> Server-Side Programming für dynamische Webseiten</a></li>
+<li class="chapter" data-level="3.1.2" data-path="webdevelopment.html"><a href="webdevelopment.html#client-side-programming-für-statische-webseiten"><i class="fa fa-check"></i><b>3.1.2</b> Client-Side Programming für Statische Webseiten</a></li>
+<li class="chapter" data-level="3.1.3" data-path="webdevelopment.html"><a href="webdevelopment.html#are-server-side-and-client-side-programming-the-same"><i class="fa fa-check"></i><b>3.1.3</b> Are server-side and client-side programming the same?</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="webdevelopment.html"><a href="webdevelopment.html#synonyme"><i class="fa fa-check"></i><b>3.2</b> Synonyme</a></li>
 <li class="chapter" data-level="3.3" data-path="webdevelopment.html"><a href="webdevelopment.html#definitionen"><i class="fa fa-check"></i><b>3.3</b> Definitionen</a></li>
@@ -382,6 +383,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><u>Beispiel</u>: <code>Date: Mon, 28 Aug 2017 09:02:55 GMT</code> oder <code>Content-Encoding: gzip</code> wären sogenannte <strong>HTTP-Headers</strong>.</li>
 </ul></li>
 <li><strong>Payload</strong> = Nutzdaten, welche bei der HTTP-Response eines Webservers für den Browser // Client zur Verfügung steht.</li>
+<li><strong><code>HTTP</code> Requests</strong>:
+<ul>
+<li><code>GET</code> = Get a specific resource (e.g. an HTML file containing information about a product, or a list of products).</li>
+<li><code>POST</code> = Create a new resource (e.g. add a new article to a wiki, add a new contact to a database).</li>
+<li><code>HEAD</code> = Get the metadata information about a specific resource <u>without</u> getting the body like <code>GET</code> would. You might for example use a <code>HEAD</code> request to find out the last time a resource was updated, and then only use the (more “expensive”) <code>GET</code> request to download the resource if it has changed.</li>
+<li><code>PUT</code> = Update an existing resource (or create a new one if it doesn’t exist). <em>This is useful to update the current stock of an item in an E-commerce store, for example</em>.</li>
+<li><code>DELETE</code> = Delete the specified resource.</li>
+<li><code>TRACE</code>, <code>OPTIONS</code>, <code>CONNECT</code>, <code>PATCH</code>: These verbs are for less common/advanced tasks, so we won’t cover them here.</li>
+</ul></li>
 </ul>
 </div>
 <div id="synonyme-1" class="section level2">

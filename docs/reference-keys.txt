@@ -50,8 +50,10 @@ wenn-dein-outline-falsch-ist
 pdfs
 webdevelopment
 wo-stehen-wir-aktuell-in-2022-kontext
-server-side-programming
-statische-webseiten
+server-side-programming-für-dynamische-webseiten
+client-side-programming-für-statische-webseiten
+are-server-side-and-client-side-programming-the-same
+server-side-code-vs.-client-side-code
 synonyme
 definitionen
 how-does-the-web-work

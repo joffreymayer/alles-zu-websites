@@ -11,6 +11,13 @@ In diesem Kapitel geht es um das Backend, also die "Cloud" // Webserver, welche 
 - **HTTP-Headers** = Das sind _Key-Value_-Paare, welche in der HTTP-Request ODER -Response stehen.
   - <u>Beispiel</u>: `Date: Mon, 28 Aug 2017 09:02:55 GMT` oder `Content-Encoding: gzip` wären sogenannte **HTTP-Headers**.
 - **Payload** = Nutzdaten, welche bei der HTTP-Response eines Webservers für den Browser // Client zur Verfügung steht. 
+- **`HTTP` Requests**:
+  - `GET` = Get a specific resource (e.g. an HTML file containing information about a product, or a list of products).
+  - `POST` = Create a new resource (e.g. add a new article to a wiki, add a new contact to a database).
+  - `HEAD` = Get the metadata information about a specific resource <u>without</u> getting the body like `GET` would. You might for example use a `HEAD` request to find out the last time a resource was updated, and then only use the (more "expensive") `GET` request to download the resource if it has changed.
+  - `PUT` = Update an existing resource (or create a new one if it doesn't exist). _This is useful to update the current stock of an item in an E-commerce store, for example_.
+  - `DELETE` = Delete the specified resource.
+  - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: These verbs are for less common/advanced tasks, so we won't cover them here.
 
 ## Synonyme
 
@@ -66,6 +73,8 @@ Für eine Übersicht zu allen Daten-Formaten, empfiehlt sich [diese Webseite](ht
 Gleich in der ersten Zeile der HTTP-`Request` steht das Keyword `GET`. Dieses wird **verwendet, wenn du Daten auf dem Server abrufen möchtest**.  
 
 Manchmal aber **wollen wir Daten auf den Webserver übertragen // speichern**, wie z. B. bei einem **Login-Formular**. Dazu gibt es eine weitere Methode, nämlich `POST`. 
+
+
 
 ## Statische VS. Dynamische Webseiten
 
